@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#06111f">
+<meta name="description" content="BrightSmile Dental Clinic — premium dental care, experienced doctors, and easy online appointments.">
+<title>BrightSmile Dental Clinic | Premium Dental Care</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#06111f;
+  --navy-2:#091a2d;
+  --navy-3:#0d2238;
+  --cyan:#18d7e8;
+  --cyan-2:#68f4ff;
+  --white:#ffffff;
+  --text:#eaf7fb;
+  --muted:#9bb3c2;
+  --glass:rgba(255,255,255,.075);
+  --glass-border:rgba(255,255,255,.13);
+  --shadow:0 24px 70px rgba(0,0,0,.35);
+  --radius:24px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--navy);
+  color:var(--text);
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+body.no-scroll{
+  overflow:hidden;
+}
+
+img{
+  display:block;
+  width:100%;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1180px,calc(100% - 40px));
+  margin:auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  padding:18px 0;
+  transition:.3s ease;
+}
+
+.navbar.scrolled{
+  background:rgba(6,17,31,.86);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding:12px 0;
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-family:"Manrope",sans-serif;
+  font-weight:800;
+  font-size:20px;
+  white-space:nowrap;
+}
+
+.logo-mark{
+  width:40px;
+  height:40px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--cyan),#1685a0);
+  color:#03111c;
+  font-weight:800;
+  box-shadow:0 8px 28px rgba(24,215,232,.3);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-links a{
+  color:#d6e7ed;
+  font-size:14px;
+  font-weight:600;
+  transition:.25s ease;
+}
+
+.nav-links a:hover{
+  color:var(--cyan-2);
+}
+
+.nav-book{
+  padding:11px 18px;
+  border:1px solid rgba(104,244,255,.4);
+  border-radius:13px;
+  background:rgba(24,215,232,.1);
+}
+
+.menu-btn{
+  display:none;
+  width:44px;
+  height:44px;
+  border:1px solid var(--glass-border);
+  border-radius:13px;
+  background:var(--glass);
+  color:white;
+  font-size:23px;
+  align-items:center;
+  justify-content:center;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  min-height:780px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  isolation:isolate;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,12,23,.68) 0%,
+      rgba(3,12,23,.42) 38%,
+      rgba(3,12,23,.12) 72%,
+      rgba(3,12,23,.06) 100%
+    ),
+    url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=2200&q=85")
+    center/cover no-repeat;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 78% 28%,
+      rgba(24,215,232,.16),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6,17,31,.02) 0%,
+      rgba(6,17,31,.06) 55%,
+      rgba(6,17,31,.28) 100%
+    );
+
+  z-index:-1;
+}
+
+.hero-content{
+  width:100%;
+  padding-top:90px;
+}
+
+.hero-copy{
+  max-width:720px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 13px;
+  border:1px solid rgba(104,244,255,.25);
+  background:rgba(24,215,232,.08);
+  color:var(--cyan-2);
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.5px;
+  margin-bottom:22px;
+}
+
+.eyebrow-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 15px var(--cyan);
+}
+
+.hero h1{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.02;
+  letter-spacing:-3px;
+  margin-bottom:22px;
+  text-shadow:0 8px 35px rgba(0,0,0,.25);
+}
+
+.hero h1 span{
+  color:var(--cyan-2);
+}
+
+.hero-text{
+  max-width:590px;
+  color:#e0edf2;
+  font-size:18px;
+  line-height:1.75;
+  margin-bottom:30px;
+  text-shadow:0 3px 18px rgba(0,0,0,.3);
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:0 22px;
+  border-radius:14px;
+  border:1px solid transparent;
+  font-weight:700;
+  transition:.25s ease;
+}
+
+.btn-primary{
+  color:#03121b;
+  background:linear-gradient(135deg,var(--cyan-2),var(--cyan));
+  box-shadow:0 12px 35px rgba(24,215,232,.2);
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 17px 42px rgba(24,215,232,.3);
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.09);
+  border-color:rgba(255,255,255,.25);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,.16);
+}
+
+.hero-mini{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:30px;
+  color:#e0edf2;
+  font-size:13px;
+  text-shadow:0 2px 12px rgba(0,0,0,.3);
+}
+
+.hero-mini span{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.hero-mini strong{
+  color:var(--cyan-2);
+}
+
+/* floating card */
+
+.hero-card{
+  position:absolute;
+  right:6%;
+  bottom:90px;
+  width:280px;
+  padding:22px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(7,22,38,.48);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+  box-shadow:var(--shadow);
+}
+
+.hero-card-top{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:center;
+  margin-bottom:17px;
+}
+
+.hero-card-label{
+  color:#b7cbd4;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.hero-card h3{
+  font-family:"Manrope",sans-serif;
+  font-size:21px;
+  margin-top:3px;
+}
+
+.hero-card-icon{
+  width:43px;
+  height:43px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:rgba(24,215,232,.13);
+  color:var(--cyan-2);
+}
+
+.hero-card p{
+  color:#c9d9df;
+  font-size:13px;
+  margin-bottom:17px;
+}
+
+.hero-card-line{
+  height:1px;
+  background:rgba(255,255,255,.12);
+  margin-bottom:15px;
+}
+
+.hero-card-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+}
+
+.available{
+  color:#77f3c3;
+}
+
+.hero-card a{
+  color:var(--cyan-2);
+  font-weight:700;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  position:relative;
+}
+
+.section{
+  padding:105px 0;
+}
+
+.section-heading{
+  max-width:650px;
+  margin-bottom:48px;
+}
+
+.section-kicker{
+  color:var(--cyan-2);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.section-heading h2{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.12;
+  letter-spacing:-1.8px;
+  margin-bottom:15px;
+}
+
+.section-heading p{
+  color:var(--muted);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+  margin-top:-1px;
+  background:#081727;
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+  padding:35px 20px;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.07);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat strong{
+  display:block;
+  font-family:"Manrope",sans-serif;
+  font-size:34px;
+  color:var(--cyan-2);
+  margin-bottom:3px;
+  min-height:52px;
+  line-height:1.4;
+  text-shadow:0 0 22px rgba(24,215,232,.15);
+}
+
+.stat span{
+  color:#91a8b5;
+  font-size:13px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+  background:
+    radial-gradient(circle at 10% 20%,rgba(24,215,232,.07),transparent 30%),
+    var(--navy);
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.service-card{
+  min-height:245px;
+  padding:27px;
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+  transition:.3s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(104,244,255,.3);
+  box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+
+.service-icon{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background:rgba(24,215,232,.1);
+  color:var(--cyan-2);
+  font-size:23px;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  font-family:"Manrope",sans-serif;
+  font-size:20px;
+  margin-bottom:9px;
+}
+
+.service-card p{
+  color:#91aab8;
+  font-size:14px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  background:#081727;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-image{
+  position:relative;
+  min-height:510px;
+  border-radius:30px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);
+
+  background:
+    url("https://images.unsplash.com/photo-1606265752439-1f18756aa2a2?auto=format&fit=crop&w=1200&q=85")
+    center/cover no-repeat;
+
+  box-shadow:var(--shadow);
+}
+
+.about-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(3,12,23,.08) 65%,
+      rgba(3,12,23,.38) 100%
+    );
+}
+
+.about-badge{
+  position:absolute;
+  left:22px;
+  bottom:22px;
+  z-index:1;
+  padding:18px 20px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(6,17,31,.52);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+
+.about-badge strong{
+  display:block;
+  font-family:"Manrope",sans-serif;
+  font-size:25px;
+  color:var(--cyan-2);
+}
+
+.about-badge span{
+  font-size:12px;
+  color:#d2e0e5;
+}
+
+.about-copy h2{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.12;
+  letter-spacing:-1.8px;
+  margin-bottom:20px;
+}
+
+.about-copy > p{
+  color:#9db2be;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.about-list{
+  display:grid;
+  gap:14px;
+}
+
+.about-list div{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  color:#c9d8df;
+  font-size:14px;
+}
+
+.check{
+  flex:0 0 25px;
+  width:25px;
+  height:25px;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  background:rgba(24,215,232,.1);
+  color:var(--cyan-2);
+  font-size:12px;
+}
+
+/* =========================
+   DOCTORS
+========================= */
+
+.doctors{
+  background:var(--navy);
+}
+
+.doctor-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  max-width:900px;
+}
+
+.doctor-card{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  min-height:280px;
+  overflow:hidden;
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.045);
+}
+
+.doctor-image{
+  background-size:cover;
+  background-position:center;
+}
+
+.doctor-one{
+  background-image:url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=85");
+}
+
+.doctor-two{
+  background-image:url("https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=85");
+}
+
+.doctor-info{
+  padding:27px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.doctor-info small{
+  color:var(--cyan-2);
+  font-weight:700;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.doctor-info h3{
+  font-family:"Manrope",sans-serif;
+  font-size:23px;
+  margin:6px 0 8px;
+}
+
+.doctor-info p{
+  color:#91aab8;
+  font-size:14px;
+}
+
+/* =========================
+   BOOKING CTA
+========================= */
+
+.booking-cta{
+  padding:100px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,16,28,.70),
+      rgba(4,16,28,.42)
+    ),
+    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=85")
+    center/cover no-repeat;
+}
+
+.booking-box{
+  padding:55px;
+  border-radius:30px;
+  border:1px solid rgba(104,244,255,.2);
+  background:rgba(6,17,31,.42);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.booking-box h2{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(32px,4vw,51px);
+  line-height:1.1;
+  margin-bottom:15px;
+}
+
+.booking-box p{
+  max-width:600px;
+  margin:0 auto 25px;
+  color:#c6d7de;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+  background:#081727;
+}
+
+.faq-list{
+  max-width:850px;
+  display:grid;
+  gap:12px;
+}
+
+.faq-item{
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:18px;
+  background:rgba(255,255,255,.035);
+  overflow:hidden;
+}
+
+.faq-question{
+  width:100%;
+  padding:21px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border:0;
+  background:transparent;
+  color:white;
+  text-align:left;
+  font-weight:700;
+}
+
+.faq-plus{
+  color:var(--cyan-2);
+  font-size:23px;
+  flex:0 0 auto;
+  transition:.25s ease;
+}
+
+.faq-answer{
+  display:none;
+  padding:0 22px 21px;
+  color:#94aab6;
+  font-size:14px;
+}
+
+.faq-item.open .faq-answer{
+  display:block;
+}
+
+.faq-item.open .faq-plus{
+  transform:rotate(45deg);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  background:var(--navy);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.contact-card{
+  padding:27px;
+  border:1px solid var(--glass-border);
+  border-radius:22px;
+  background:rgba(255,255,255,.045);
+}
+
+.contact-card-icon{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:rgba(24,215,232,.1);
+  color:var(--cyan-2);
+  margin-bottom:17px;
+}
+
+.contact-card h3{
+  margin-bottom:7px;
+  font-family:"Manrope",sans-serif;
+}
+
+.contact-card p{
+  color:#91aab8;
+  font-size:14px;
+}
+
+.contact-card a{
+  color:var(--cyan-2);
+  font-weight:600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:45px 0 30px;
+  background:#040d18;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:flex-start;
+}
+
+.footer-brand{
+  max-width:390px;
+}
+
+.footer-brand p{
+  color:#8198a5;
+  font-size:13px;
+  margin-top:14px;
+}
+
+.footer-links{
+  display:flex;
+  gap:25px;
+  color:#91a9b5;
+  font-size:13px;
+}
+
+.footer-links a:hover{
+  color:var(--cyan-2);
+}
+
+.footer-bottom{
+  margin-top:35px;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.06);
+  color:#607987;
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+/* =========================
+   AI ASSISTANT
+========================= */
+
+.bs-ai-button{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  z-index:1200;
+  width:62px;
+  height:62px;
+  border:0;
+  border-radius:20px;
+  background:linear-gradient(135deg,var(--cyan-2),var(--cyan));
+  color:#03121b;
+  box-shadow:0 15px 45px rgba(24,215,232,.28);
+  font-size:25px;
+  display:grid;
+  place-items:center;
+  transition:.25s ease;
+}
+
+.bs-ai-button:hover{
+  transform:translateY(-3px) scale(1.03);
+}
+
+.bs-ai-panel{
+  position:fixed;
+  right:25px;
+  bottom:100px;
+  z-index:1199;
+  width:min(390px,calc(100vw - 30px));
+  height:min(650px,calc(100dvh - 125px));
+  min-height:450px;
+  border:1px solid rgba(104,244,255,.2);
+  border-radius:25px;
+  overflow:hidden;
+  background:#071827;
+  box-shadow:0 30px 90px rgba(0,0,0,.55);
+  display:none;
+  flex-direction:column;
+}
+
+.bs-ai-panel.open{
+  display:flex;
+}
+
+.bs-ai-head{
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.035);
+}
+
+.bs-ai-title{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+
+.bs-ai-avatar{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--cyan-2),var(--cyan));
+  color:#03121b;
+  font-weight:800;
+}
+
+.bs-ai-title strong{
+  display:block;
+  font-family:"Manrope",sans-serif;
+  font-size:15px;
+}
+
+.bs-ai-title span{
+  display:block;
+  color:#7f99a6;
+  font-size:11px;
+  margin-top:2px;
+}
+
+.bs-ai-close{
+  width:36px;
+  height:36px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:11px;
+  background:rgba(255,255,255,.05);
+  color:white;
+  font-size:20px;
+}
+
+.bs-ai-messages{
+  flex:1;
+  overflow-y:auto;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.bs-ai-message{
+  max-width:88%;
+  padding:12px 14px;
+  border-radius:15px;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.bs-ai-message.bot{
+  align-self:flex-start;
+  background:rgba(255,255,255,.06);
+  color:#c9d9df;
+  border:1px solid rgba(255,255,255,.07);
+}
+
+.bs-ai-message.user{
+  align-self:flex-end;
+  background:linear-gradient(135deg,var(--cyan),#159bb0);
+  color:#03121b;
+  font-weight:600;
+}
+
+.bs-ai-input{
+  padding:13px;
+  display:flex;
+  gap:9px;
+  border-top:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.15);
+}
+
+.bs-ai-input input{
+  flex:1;
+  min-width:0;
+  height:45px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:13px;
+  padding:0 13px;
+  outline:none;
+  background:rgba(255,255,255,.05);
+  color:white;
+}
+
+.bs-ai-input input::placeholder{
+  color:#708894;
+}
+
+.bs-ai-input button{
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:13px;
+  background:var(--cyan);
+  color:#03121b;
+  font-weight:800;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  .container{
+    width:min(100% - 30px,700px);
+  }
+
+  .nav-links{
+    position:absolute;
+    top:72px;
+    left:15px;
+    right:15px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:4px;
+    padding:12px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    background:rgba(6,17,31,.96);
+    backdrop-filter:blur(22px);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:13px;
+    border-radius:10px;
+  }
+
+  .nav-links a:hover{
+    background:rgba(255,255,255,.06);
+  }
+
+  .menu-btn{
+    display:flex;
+  }
+
+  .hero{
+    min-height:760px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3,12,23,.45) 0%,
+        rgba(3,12,23,.28) 42%,
+        rgba(3,12,23,.50) 100%
+      ),
+      url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=85")
+      center/cover no-repeat;
+  }
+
+  .hero::before{
+    background:
+      radial-gradient(
+        circle at 70% 25%,
+        rgba(24,215,232,.14),
+        transparent 35%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(6,17,31,.02),
+        rgba(6,17,31,.18)
+      );
+  }
+
+  .hero-content{
+    padding-top:95px;
+  }
+
+  .hero-copy{
+    max-width:100%;
+  }
+
+  .hero h1{
+    font-size:clamp(40px,11vw,62px);
+    letter-spacing:-2px;
+  }
+
+  .hero-text{
+    font-size:16px;
+  }
+
+  .hero-card{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    width:100%;
+    max-width:390px;
+    margin-top:35px;
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat:nth-child(-n+2){
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .about-image{
+    min-height:430px;
+  }
+
+  .doctor-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-top{
+    flex-direction:column;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+}
+
+@media(max-width:600px){
+
+  .section{
+    padding:75px 0;
+  }
+
+  .hero{
+    min-height:820px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-mini{
+    flex-direction:column;
+    gap:9px;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    padding:25px 10px;
+  }
+
+  .stat strong{
+    font-size:28px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card{
+    min-height:auto;
+  }
+
+  .doctor-card{
+    grid-template-columns:1fr;
+  }
+
+  .doctor-image{
+    min-height:250px;
+  }
+
+  .booking-cta{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(4,16,28,.48),
+        rgba(4,16,28,.62)
+      ),
+      url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85")
+      center/cover no-repeat;
+  }
+
+  .booking-box{
+    padding:35px 20px;
+  }
+
+  .footer-links{
+    flex-wrap:wrap;
+  }
+
+  .bs-ai-button{
+    right:16px;
+    bottom:16px;
+    width:58px;
+    height:58px;
+  }
+
+  .bs-ai-panel{
+    right:10px;
+    bottom:84px;
+    width:calc(100vw - 20px);
+    height:calc(100dvh - 105px);
+    min-height:430px;
+    border-radius:21px;
+  }
+}
+
+@media(max-width:380px){
+
+  .logo{
+    font-size:17px;
+  }
+
+  .logo-mark{
+    width:36px;
+    height:36px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stat{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+
+  .stat:last-child{
+    border-bottom:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+
+    <a href="#home" class="logo">
+      <span class="logo-mark">✦</span>
+      BrightSmile
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="booking.html" class="nav-book">Book Appointment</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        PREMIUM DENTAL CARE
+      </div>
+
+      <h1>
+        Your smile deserves
+        <span>exceptional care.</span>
+      </h1>
+
+      <p class="hero-text">
+        Modern dentistry, experienced doctors, and a comfortable patient
+        experience — all designed around your healthiest, most confident smile.
+      </p>
+
+      <div class="hero-actions">
+        <a href="booking.html" class="btn btn-primary">
+          Book an Appointment
+        </a>
+
+        <a href="#services" class="btn btn-secondary">
+          Explore Services
+        </a>
+      </div>
+
+      <div class="hero-mini">
+        <span>✓ <strong>Experienced Doctors</strong></span>
+        <span>✓ Modern Treatment</span>
+        <span>✓ Patient First Care</span>
+      </div>
+
+    </div>
+
+    <div class="hero-card">
+
+      <div class="hero-card-top">
+        <div>
+          <div class="hero-card-label">Appointments</div>
+          <h3>Easy & Simple</h3>
+        </div>
+
+        <div class="hero-card-icon">📅</div>
+      </div>
+
+      <p>
+        Choose your service, doctor and preferred time online.
+      </p>
+
+      <div class="hero-card-line"></div>
+
+      <div class="hero-card-bottom">
+        <span class="available">● Online Booking</span>
+        <a href="booking.html">Book →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <strong class="counter" data-target="10" data-display="10+">0</strong>
+      <span>Years Experience</span>
+    </div>
+
+    <div class="stat">
+      <strong class="counter" data-target="5000" data-display="5K+">0</strong>
+      <span>Happy Patients</span>
+    </div>
+
+    <div class="stat">
+      <strong class="counter" data-target="6" data-display="6+">0</strong>
+      <span>Dental Services</span>
+    </div>
+
+    <div class="stat">
+      <strong>24/7</strong>
+      <span>Online Booking</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-kicker">OUR SERVICES</div>
+      <h2>Complete dental care under one roof.</h2>
+      <p>
+        From preventive care to advanced cosmetic and restorative treatment,
+        our team is here to protect and improve your smile.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card">
+        <div class="service-icon">🦷</div>
+        <h3>General Dentistry</h3>
+        <p>
+          Complete routine dental care, examinations, cleaning and prevention
+          for long-term oral health.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Teeth Whitening</h3>
+        <p>
+          Professional whitening treatments designed to give your smile a
+          brighter and more confident appearance.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🔹</div>
+        <h3>Dental Implants</h3>
+        <p>
+          Modern implant solutions for replacing missing teeth with natural
+          looking and functional results.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">💎</div>
+        <h3>Gum Care</h3>
+        <p>
+          Professional periodontal care focused on healthy gums and preventing
+          gum disease.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">😁</div>
+        <h3>Cosmetic Dentistry</h3>
+        <p>
+          Smile-focused treatments designed to improve the appearance,
+          confidence and harmony of your teeth.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">👨‍👩‍👧</div>
+        <h3>Family Dentistry</h3>
+        <p>
+          Comfortable dental care for children, adults and families in a
+          welcoming environment.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="container about-grid">
+
+    <div class="about-image">
+      <div class="about-badge">
+        <strong>10+</strong>
+        <span>Years of trusted dental care</span>
+      </div>
+    </div>
+
+    <div class="about-copy">
+      <div class="section-kicker">WHY BRIGHTSMILE</div>
+
+      <h2>Professional care with a human touch.</h2>
+
+      <p>
+        We combine modern dental technology, experienced professionals and
+        personalized treatment plans to make every visit comfortable and
+        effective.
+      </p>
+
+      <div class="about-list">
+
+        <div>
+          <span class="check">✓</span>
+          <span>Experienced and caring dental professionals</span>
+        </div>
+
+        <div>
+          <span class="check">✓</span>
+          <span>Modern treatment techniques and equipment</span>
+        </div>
+
+        <div>
+          <span class="check">✓</span>
+          <span>Transparent appointment and service information</span>
+        </div>
+
+        <div>
+          <span class="check">✓</span>
+          <span>Easy online appointment booking</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section doctors" id="doctors">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-kicker">OUR DOCTORS</div>
+      <h2>Meet your dental care team.</h2>
+      <p>
+        Experienced professionals focused on delivering personalized,
+        comfortable and high-quality dental treatment.
+      </p>
+    </div>
+
+    <div class="doctor-grid">
+
+      <article class="doctor-card">
+
+        <div class="doctor-image doctor-one"></div>
+
+        <div class="doctor-info">
+          <small>General Dentistry</small>
+          <h3>Dr. Sarah</h3>
+          <p>
+            Focused on preventive, general and patient-centered dental care.
+          </p>
+        </div>
+
+      </article>
+
+      <article class="doctor-card">
+
+        <div class="doctor-image doctor-two"></div>
+
+        <div class="doctor-info">
+          <small>Cosmetic & Restorative</small>
+          <h3>Dr. Michael</h3>
+          <p>
+            Focused on cosmetic dentistry and restorative treatment solutions.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="booking-cta">
+  <div class="container">
+
+    <div class="booking-box">
+
+      <div class="section-kicker">READY FOR YOUR NEXT VISIT?</div>
+
+      <h2>Take the first step toward a healthier smile.</h2>
+
+      <p>
+        Book your dental appointment online and choose the service and doctor
+        that works best for you.
+      </p>
+
+      <a href="booking.html" class="btn btn-primary">
+        Book Your Appointment
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-kicker">FAQ</div>
+      <h2>Questions patients often ask.</h2>
+      <p>
+        Quick answers to help you understand our appointments and services.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How can I book an appointment?
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer">
+          You can use our online booking page to select your service, doctor,
+          preferred date and available appointment time.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I choose my doctor?
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. Our booking system allows patients to select an available doctor
+          based on the service they need.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What services do you provide?
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer">
+          We provide general dentistry, teeth whitening, dental implants,
+          gum care, cosmetic dentistry and family dentistry.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I contact the clinic directly?
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. You can contact the clinic using the contact information shown
+          below.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-kicker">CONTACT US</div>
+      <h2>We're here when you need us.</h2>
+      <p>
+        Contact BrightSmile Dental Clinic or book your appointment online.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <h3>Location</h3>
+        <p>BrightSmile Dental Clinic</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <h3>Phone</h3>
+        <p>
+          <a href="tel:+251900000000">+251 900 000 000</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">✉</div>
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:info@brightsmile.com">info@brightsmile.com</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">✦</span>
+          BrightSmile
+        </a>
+
+        <p>
+          Premium dental care designed around your health, comfort and
+          confidence.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#doctors">Doctors</a>
+        <a href="booking.html">Book Appointment</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 BrightSmile Dental Clinic. All rights reserved.</span>
+      <span>Professional Dental Care</span>
+    </div>
+
+  </div>
+</footer>
+
+<button class="bs-ai-button" id="bsAiButton" aria-label="Open AI assistant">
+  ✦
+</button>
+
+<div class="bs-ai-panel" id="bsAiPanel">
+
+  <div class="bs-ai-head">
+
+    <div class="bs-ai-title">
+      <div class="bs-ai-avatar">✦</div>
+
+      <div>
+        <strong>BrightSmile AI</strong>
+        <span>Dental Assistant • Online</span>
+      </div>
+    </div>
+
+    <button class="bs-ai-close" id="bsAiClose">×</button>
+
+  </div>
+
+  <div class="bs-ai-messages" id="bsAiMessages">
+
+    <div class="bs-ai-message bot">
+      Hi! 👋 I'm the BrightSmile AI assistant. I can help you learn about
+      our services, doctors and appointments.
+    </div>
+
+  </div>
+
+  <div class="bs-ai-input">
+
+    <input
+      id="bsAiInput"
+      type="text"
+      placeholder="Ask about appointments..."
+      autocomplete="off"
+    >
+
+    <button id="bsAiSend">➤</button>
+
+  </div>
+
+</div>
+
+<script>
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 20){
+    navbar.classList.add("scrolled");
+  }else{
+    navbar.classList.remove("scrolled");
+  }
+});
+
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+  });
+});
+
+
+/* ==========================================
+   FAQ
+========================================== */
+
+document.querySelectorAll(".faq-question").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const item = button.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(other => {
+      if(other !== item){
+        other.classList.remove("open");
+      }
+    });
+
+    item.classList.toggle("open");
+
+  });
+
+});
+
+
+/* ==========================================
+   PREMIUM STAT COUNTERS
+========================================== */
+
+const counters = document.querySelectorAll(".counter");
+const statsSection = document.querySelector(".stats");
+
+function animateCounter(counter){
+
+  const target = Number(counter.dataset.target);
+  const finalDisplay = counter.dataset.display || target.toString();
+
+  const duration = 1800;
+  const startTime = performance.now();
+
+  function updateCounter(currentTime){
+
+    const elapsed = currentTime - startTime;
+
+    const progress = Math.min(
+      elapsed / duration,
+      1
+    );
+
+    /* Smooth ease-out animation */
+    const easedProgress =
+      1 - Math.pow(1 - progress, 3);
+
+    const currentValue =
+      Math.floor(target * easedProgress);
+
+    if(target >= 1000){
+
+      counter.textContent =
+        currentValue.toLocaleString();
+
+    }else{
+
+      counter.textContent =
+        currentValue;
+
+    }
+
+    if(progress < 1){
+
+      requestAnimationFrame(updateCounter);
+
+    }else{
+
+      counter.textContent = finalDisplay;
+
+    }
+
+  }
+
+  requestAnimationFrame(updateCounter);
+}
+
+
+/* Start counting when statistics enter the screen */
+
+if(statsSection && counters.length){
+
+  const statsObserver =
+    new IntersectionObserver(
+      (entries, observer) => {
+
+        entries.forEach(entry => {
+
+          if(entry.isIntersecting){
+
+            counters.forEach((counter, index) => {
+
+              setTimeout(() => {
+
+                animateCounter(counter);
+
+              }, index * 180);
+
+            });
+
+            observer.unobserve(statsSection);
+
+          }
+
+        });
+
+      },
+      {
+        threshold:0.35
+      }
+    );
+
+  statsObserver.observe(statsSection);
+}
+
+
+/* ==========================================
+   AI ASSISTANT
+========================================== */
+
+const bsAiButton =
+  document.getElementById("bsAiButton");
+
+const bsAiPanel =
+  document.getElementById("bsAiPanel");
+
+const bsAiClose =
+  document.getElementById("bsAiClose");
+
+const bsAiInput =
+  document.getElementById("bsAiInput");
+
+const bsAiSend =
+  document.getElementById("bsAiSend");
+
+const bsAiMessages =
+  document.getElementById("bsAiMessages");
+
+
+bsAiButton.addEventListener("click", () => {
+
+  bsAiPanel.classList.toggle("open");
+
+  if(bsAiPanel.classList.contains("open")){
+    bsAiInput.focus();
+  }
+
+});
+
+
+bsAiClose.addEventListener("click", () => {
+
+  bsAiPanel.classList.remove("open");
+
+});
+
+
+function addAiMessage(text,type){
+
+  const message =
+    document.createElement("div");
+
+  message.className =
+    "bs-ai-message " + type;
+
+  message.textContent = text;
+
+  bsAiMessages.appendChild(message);
+
+  bsAiMessages.scrollTop =
+    bsAiMessages.scrollHeight;
+}
+
+
+function getAiReply(message){
+
+  const text =
+    message.toLowerCase();
+
+
+  if(
+    text.includes("book") ||
+    text.includes("appointment") ||
+    text.includes("schedule")
+  ){
+
+    return "Absolutely! You can book an appointment online by choosing your service, doctor and preferred time.";
+
+  }
+
+
+  if(
+    text.includes("service") ||
+    text.includes("treatment")
+  ){
+
+    return "We offer General Dentistry, Teeth Whitening, Dental Implants, Gum Care, Cosmetic Dentistry and Family Dentistry.";
+
+  }
+
+
+  if(
+    text.includes("doctor") ||
+    text.includes("dentist")
+  ){
+
+    return "Our dental team currently includes Dr. Sarah for General Dentistry and Dr. Michael for Cosmetic & Restorative Dentistry.";
+
+  }
+
+
+  if(
+    text.includes("price") ||
+    text.includes("cost")
+  ){
+
+    return "Our services have different prices. Please use the booking page to see the available service information.";
+
+  }
+
+
+  if(
+    text.includes("hello") ||
+    text.includes("hi") ||
+    text.includes("hey")
+  ){
+
+    return "Hello! 👋 How can I help you with your dental appointment today?";
+
+  }
+
+
+  return "I can help with appointments, dental services, doctors and general clinic information. What would you like to know?";
+
+}
+
+
+function sendAiMessage(){
+
+  const message =
+    bsAiInput.value.trim();
+
+  if(!message) return;
+
+  addAiMessage(
+    message,
+    "user"
+  );
+
+  bsAiInput.value = "";
+
+
+  setTimeout(() => {
+
+    addAiMessage(
+      getAiReply(message),
+      "bot"
+    );
+
+  },400);
+
+}
+
+
+bsAiSend.addEventListener(
+  "click",
+  sendAiMessage
+);
+
+
+bsAiInput.addEventListener(
+  "keydown",
+  (event) => {
+
+    if(event.key === "Enter"){
+      sendAiMessage();
+    }
+
+  }
+);
+
+</script>
+
+</body>
+</html>

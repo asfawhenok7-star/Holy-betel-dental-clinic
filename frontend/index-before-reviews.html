@@ -1,0 +1,2862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Holy Betel Speciality Dental Clinic Center - Professional family dental care, online appointments and AI assistance.">
+
+<title>Holy Betel Speciality Dental Clinic Center | Professional Dental Care</title>
+
+<style>
+:root{
+  --white:#ffffff;
+  --soft:#f5fbfd;
+  --soft-blue:#eaf7fb;
+  --blue:#087ea5;
+  --blue-dark:#075b78;
+  --cyan:#12bfd3;
+  --navy:#17465c;
+  --text:#244f63;
+  --muted:#678391;
+  --line:#d8eaf0;
+  --gold:#d6a84b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--white);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar{
+  background:var(--blue-dark);
+  color:#fff;
+  min-height:38px;
+}
+
+.topbar-inner{
+  max-width:1240px;
+  margin:auto;
+  padding:0 5%;
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px;
+}
+
+.topbar-left,
+.topbar-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.topbar a{
+  color:#fff;
+}
+
+.topbar a:hover{
+  text-decoration:underline;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner{
+  max-width:1240px;
+  min-height:82px;
+  margin:auto;
+  padding:0 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  white-space:nowrap;
+}
+
+.logo-mark{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--soft-blue);
+  border:1px solid #cce8ef;
+  color:var(--blue);
+  font-size:22px;
+  font-weight:900;
+}
+
+.logo-text{
+  font-size:21px;
+  font-weight:900;
+  color:var(--navy);
+  letter-spacing:-.5px;
+}
+
+.logo-text span{
+  display:block;
+  color:var(--cyan);
+  font-size:11px;
+  letter-spacing:.2px;
+  margin-top:2px;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:27px;
+}
+
+.nav a{
+  color:#526f7c;
+  font-size:14px;
+  font-weight:700;
+}
+
+.nav a:hover{
+  color:var(--blue);
+}
+
+.nav .appointment-link{
+  color:#fff;
+  background:var(--blue);
+  padding:13px 21px;
+  border-radius:5px;
+}
+
+.nav .appointment-link:hover{
+  background:var(--blue-dark);
+  color:#fff;
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:transparent;
+  color:var(--blue-dark);
+  font-size:28px;
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.98) 0%,
+      rgba(255,255,255,.95) 38%,
+      rgba(255,255,255,.65) 61%,
+      rgba(255,255,255,.08) 100%
+    ),
+    url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=2200&q=90")
+    center/cover no-repeat;
+}
+
+.hero-inner{
+  width:100%;
+  max-width:1240px;
+  margin:auto;
+  padding:95px 5%;
+}
+
+.hero-content{
+  max-width:610px;
+}
+
+.hero-label{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.8px;
+  margin-bottom:18px;
+}
+
+.hero-label::before{
+  content:"";
+  width:28px;
+  height:2px;
+  background:var(--cyan);
+}
+
+.hero h1{
+  color:var(--navy);
+  font-size:clamp(42px,5.5vw,72px);
+  line-height:1.05;
+  letter-spacing:-2.5px;
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  max-width:570px;
+  color:#617986;
+  font-size:17px;
+  line-height:1.8;
+  margin-bottom:29px;
+}
+
+.hero-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.btn{
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 23px;
+  border-radius:4px;
+  font-size:13px;
+  font-weight:900;
+  border:1px solid transparent;
+  transition:.2s ease;
+}
+
+.btn-primary{
+  background:var(--blue);
+  color:#fff;
+}
+
+.btn-primary:hover{
+  background:var(--blue-dark);
+  transform:translateY(-1px);
+}
+
+.btn-outline{
+  border-color:#bddde6;
+  background:#fff;
+  color:var(--blue-dark);
+}
+
+.btn-outline:hover{
+  border-color:var(--blue);
+  color:var(--blue);
+}
+
+
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+
+.trust-inner{
+  max-width:1240px;
+  margin:auto;
+  padding:0 5%;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+  min-height:105px;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  border-right:1px solid var(--line);
+}
+
+.trust-item:first-child{
+  border-left:1px solid var(--line);
+}
+
+.trust-icon{
+  width:43px;
+  height:43px;
+  flex:0 0 43px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--soft-blue);
+  color:var(--blue);
+  font-weight:900;
+  font-size:18px;
+}
+
+.trust-item strong{
+  display:block;
+  color:var(--navy);
+  font-size:14px;
+  margin-bottom:4px;
+}
+
+.trust-item span{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.4;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+section{
+  padding:90px 5%;
+}
+
+.section-inner{
+  max-width:1240px;
+  margin:auto;
+}
+
+.section-label{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.8px;
+  margin-bottom:13px;
+}
+
+.section-title{
+  color:var(--navy);
+  font-size:clamp(34px,4.5vw,52px);
+  line-height:1.08;
+  letter-spacing:-1.7px;
+  margin-bottom:18px;
+}
+
+.section-text{
+  color:var(--muted);
+  line-height:1.8;
+  max-width:680px;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome{
+  background:#fff;
+}
+
+.welcome-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:65px;
+  align-items:center;
+}
+
+.welcome-image{
+  min-height:500px;
+  background:
+    url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1500&q=90")
+    center/cover no-repeat;
+}
+
+.welcome-content{
+  max-width:570px;
+}
+
+.welcome-content h2{
+  color:var(--navy);
+  font-size:clamp(35px,4.3vw,53px);
+  line-height:1.08;
+  letter-spacing:-1.8px;
+  margin-bottom:20px;
+}
+
+.welcome-content h2 span{
+  color:var(--blue);
+}
+
+.welcome-content p{
+  color:var(--muted);
+  line-height:1.85;
+  margin-bottom:19px;
+}
+
+.checks{
+  margin-top:25px;
+  display:grid;
+  gap:13px;
+}
+
+.check{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#4f6e7c;
+  font-size:14px;
+  font-weight:700;
+}
+
+.check-mark{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#e3f6fa;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services{
+  background:var(--soft);
+}
+
+.services-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:42px;
+}
+
+.services-header .section-text{
+  max-width:560px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service{
+  background:#fff;
+  border:1px solid var(--line);
+  transition:.2s ease;
+}
+
+.service:hover{
+  border-color:#acd8e2;
+  transform:translateY(-3px);
+}
+
+.service-image{
+  height:215px;
+  background-size:cover;
+  background-position:center;
+}
+
+.service:nth-child(1) .service-image{
+  background-image:url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=90");
+}
+
+.service:nth-child(2) .service-image{
+  background-image:url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=90");
+}
+
+.service:nth-child(3) .service-image{
+  background-image:url("https://images.unsplash.com/photo-1606265752439-1f18756aa2f4?auto=format&fit=crop&w=1200&q=90");
+}
+
+.service:nth-child(4) .service-image{
+  background-image:url("https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1200&q=90");
+}
+
+.service:nth-child(5) .service-image{
+  background-image:url("https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=1200&q=90");
+}
+
+.service:nth-child(6) .service-image{
+  background-image:url("https://images.unsplash.com/photo-1581585094787-82f1bda8f9c7?auto=format&fit=crop&w=1200&q=90");
+}
+
+.service-content{
+  padding:23px;
+}
+
+.service-content h3{
+  color:var(--navy);
+  font-size:20px;
+  margin-bottom:9px;
+}
+
+.service-content p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
+.service-link{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+
+/* =========================================================
+   FEATURE / TECHNOLOGY
+========================================================= */
+
+.care{
+  background:#fff;
+}
+
+.care-grid{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:60px;
+  align-items:center;
+}
+
+.care-image{
+  min-height:500px;
+  background:
+    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1500&q=90")
+    center/cover no-repeat;
+}
+
+.care-content h2{
+  color:var(--navy);
+  font-size:clamp(35px,4.5vw,54px);
+  line-height:1.08;
+  letter-spacing:-1.8px;
+  margin-bottom:19px;
+}
+
+.care-content h2 span{
+  color:var(--blue);
+}
+
+.care-content p{
+  color:var(--muted);
+  line-height:1.85;
+  margin-bottom:27px;
+}
+
+.care-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.care-point{
+  padding:19px;
+  border:1px solid var(--line);
+  background:#f9fdfe;
+}
+
+.care-point strong{
+  display:block;
+  color:var(--navy);
+  font-size:14px;
+  margin-bottom:7px;
+}
+
+.care-point span{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   DOCTORS
+========================================================= */
+
+.doctors{
+  background:var(--soft);
+}
+
+.doctors-header{
+  max-width:700px;
+  margin-bottom:40px;
+}
+
+.doctors-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.doctor{
+  display:grid;
+  grid-template-columns:230px 1fr;
+  background:#fff;
+  border:1px solid var(--line);
+}
+
+.doctor-photo{
+  min-height:310px;
+  background-size:cover;
+  background-position:center top;
+}
+
+.doctor:nth-child(1) .doctor-photo{
+  background-image:url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=90");
+}
+
+.doctor:nth-child(2) .doctor-photo{
+  background-image:url("https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=90");
+}
+
+.doctor-info{
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.doctor-info .role{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-bottom:9px;
+}
+
+.doctor-info h3{
+  color:var(--navy);
+  font-size:25px;
+  margin-bottom:13px;
+}
+
+.doctor-info p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+.doctor-link{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+
+/* =========================================================
+   PATIENT EXPERIENCE
+========================================================= */
+
+.reviews{
+  background:#fff;
+}
+
+.reviews-header{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.reviews-header .section-text{
+  margin:auto;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.review{
+  padding:28px;
+  border:1px solid var(--line);
+  background:#fbfeff;
+}
+
+.stars{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.review p{
+  color:#587582;
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:22px;
+}
+
+.review strong{
+  color:var(--navy);
+  font-size:13px;
+}
+
+
+/* =========================================================
+   NEW PATIENTS / PROCESS
+========================================================= */
+
+.process{
+  background:var(--soft-blue);
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:40px;
+}
+
+.process-card{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:26px;
+}
+
+.process-number{
+  color:var(--blue);
+  font-weight:900;
+  font-size:12px;
+  margin-bottom:22px;
+}
+
+.process-card h3{
+  color:var(--navy);
+  margin-bottom:10px;
+  font-size:19px;
+}
+
+.process-card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   APPOINTMENT CTA
+========================================================= */
+
+.appointment{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,91,120,.94),
+      rgba(7,126,165,.86)
+    ),
+    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=90")
+    center/cover no-repeat;
+  color:#fff;
+}
+
+.appointment-inner{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.appointment .section-label{
+  color:#b9f3f7;
+}
+
+.appointment h2{
+  font-size:clamp(35px,5vw,56px);
+  line-height:1.08;
+  letter-spacing:-1.7px;
+  margin-bottom:17px;
+}
+
+.appointment p{
+  max-width:680px;
+  margin:0 auto 27px;
+  color:#e2f5f8;
+  line-height:1.8;
+}
+
+.appointment .btn-primary{
+  background:#fff;
+  color:var(--blue-dark);
+}
+
+.appointment .btn-primary:hover{
+  background:#effcff;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq{
+  background:#fff;
+}
+
+.faq-grid{
+  max-width:900px;
+  margin:40px auto 0;
+  display:grid;
+  gap:10px;
+}
+
+.faq-item{
+  border:1px solid var(--line);
+  background:#fff;
+}
+
+.faq-item summary{
+  cursor:pointer;
+  list-style:none;
+  padding:19px 21px;
+  color:var(--navy);
+  font-weight:800;
+  font-size:14px;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-item p{
+  padding:0 21px 20px;
+  color:var(--muted);
+  line-height:1.75;
+  font-size:13px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+  background:var(--soft);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:40px;
+}
+
+.contact-card{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:27px;
+}
+
+.contact-icon{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  background:var(--soft-blue);
+  color:var(--blue);
+  margin-bottom:17px;
+  font-size:19px;
+}
+
+.contact-card h3{
+  color:var(--navy);
+  margin-bottom:8px;
+  font-size:18px;
+}
+
+.contact-card p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:var(--navy);
+  color:#fff;
+}
+
+.footer-main{
+  max-width:1240px;
+  margin:auto;
+  padding:55px 5% 35px;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-brand .logo-text{
+  color:#fff;
+}
+
+.footer-brand p{
+  color:#b7d0d9;
+  font-size:13px;
+  line-height:1.8;
+  max-width:330px;
+  margin-top:17px;
+}
+
+.footer-column h4{
+  color:#fff;
+  font-size:13px;
+  margin-bottom:17px;
+}
+
+.footer-column a{
+  display:block;
+  color:#b7d0d9;
+  font-size:12px;
+  margin-bottom:10px;
+}
+
+.footer-column a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  max-width:1240px;
+  margin:auto;
+  padding:20px 5%;
+  border-top:1px solid rgba(255,255,255,.13);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#a9c5cf;
+  font-size:11px;
+}
+
+
+/* =========================================================
+   AI ASSISTANT
+========================================================= */
+
+.ai-button{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:2000;
+  width:58px;
+  height:58px;
+  border:0;
+  border-radius:50%;
+  background:var(--blue);
+  color:#fff;
+  font-size:23px;
+  cursor:pointer;
+  box-shadow:0 7px 25px rgba(7,91,120,.22);
+}
+
+.ai-button:hover{
+  background:var(--blue-dark);
+}
+
+.ai-panel{
+  position:fixed;
+  right:24px;
+  bottom:94px;
+  z-index:1999;
+  width:370px;
+  max-width:calc(100vw - 30px);
+  height:510px;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 12px 45px rgba(30,85,105,.18);
+}
+
+.ai-panel.active{
+  display:flex;
+}
+
+.ai-head{
+  min-height:64px;
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--blue-dark);
+  color:#fff;
+}
+
+.ai-head strong{
+  font-size:14px;
+}
+
+.ai-close{
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.ai-messages{
+  flex:1;
+  overflow-y:auto;
+  padding:17px;
+  background:#f7fcfd;
+}
+
+.ai-message{
+  max-width:84%;
+  padding:11px 13px;
+  margin-bottom:11px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:#526f7b;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.ai-message.user{
+  margin-left:auto;
+  background:#e2f7fa;
+  color:#285d70;
+}
+
+.ai-form{
+  display:flex;
+  gap:7px;
+  padding:11px;
+  border-top:1px solid var(--line);
+  background:#fff;
+}
+
+.ai-form input{
+  flex:1;
+  min-width:0;
+  padding:11px;
+  border:1px solid #c9e1e8;
+  outline:none;
+  color:var(--text);
+  background:#fbfeff;
+}
+
+.ai-form input:focus{
+  border-color:var(--cyan);
+}
+
+.ai-form button{
+  border:0;
+  padding:0 15px;
+  background:var(--blue);
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   PREMIUM SCROLL ANIMATIONS
+   FIXED + RELIABLE
+========================================================= */
+
+.bs-scroll-reveal,
+.bs-scroll-left,
+.bs-scroll-right,
+.bs-scroll-image,
+.auto-scroll{
+  opacity:0;
+  will-change:opacity,transform;
+}
+
+.bs-scroll-reveal{
+  transform:translateY(65px);
+  transition:
+    opacity .85s ease,
+    transform .85s cubic-bezier(.22,1,.36,1);
+}
+
+.bs-scroll-left{
+  transform:translateX(-100px);
+  transition:
+    opacity .95s ease,
+    transform .95s cubic-bezier(.22,1,.36,1);
+}
+
+.bs-scroll-right{
+  transform:translateX(100px);
+  transition:
+    opacity .95s ease,
+    transform .95s cubic-bezier(.22,1,.36,1);
+}
+
+.bs-scroll-image{
+  transform:translateX(110px) scale(.96);
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(.22,1,.36,1);
+}
+
+.bs-scroll-visible{
+  opacity:1 !important;
+  transform:translate3d(0,0,0) scale(1) !important;
+}
+
+
+/* Cards */
+
+.bs-stagger > *{
+  opacity:0;
+  transform:translateY(55px);
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.bs-stagger.bs-scroll-visible > *{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.bs-stagger.bs-scroll-visible > *:nth-child(1){
+  transition-delay:.05s;
+}
+
+.bs-stagger.bs-scroll-visible > *:nth-child(2){
+  transition-delay:.12s;
+}
+
+.bs-stagger.bs-scroll-visible > *:nth-child(3){
+  transition-delay:.19s;
+}
+
+.bs-stagger.bs-scroll-visible > *:nth-child(4){
+  transition-delay:.26s;
+}
+
+.bs-stagger.bs-scroll-visible > *:nth-child(5){
+  transition-delay:.33s;
+}
+
+.bs-stagger.bs-scroll-visible > *:nth-child(6){
+  transition-delay:.40s;
+}
+
+
+/* Automatic sections */
+
+.auto-scroll{
+  transform:translateY(55px);
+  transition:
+    opacity .85s ease,
+    transform .85s cubic-bezier(.22,1,.36,1);
+}
+
+.auto-scroll.bs-scroll-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .bs-scroll-reveal,
+  .bs-scroll-left,
+  .bs-scroll-right,
+  .bs-scroll-image,
+  .bs-stagger > *,
+  .auto-scroll{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:1000px){
+
+  .topbar-right{
+    display:none;
+  }
+
+  .nav{
+    position:absolute;
+    top:82px;
+    left:5%;
+    right:5%;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:14px;
+    background:#fff;
+    border:1px solid var(--line);
+  }
+
+  .nav.active{
+    display:flex;
+  }
+
+  .nav a{
+    padding:13px 10px;
+  }
+
+  .nav .appointment-link{
+    text-align:center;
+    margin-top:5px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .trust-inner{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trust-item{
+    border-bottom:1px solid var(--line);
+  }
+
+  .welcome-grid,
+  .care-grid{
+    grid-template-columns:1fr;
+  }
+
+  .welcome-image,
+  .care-image{
+    min-height:400px;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .doctor{
+    grid-template-columns:190px 1fr;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .review-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .topbar{
+    display:none;
+  }
+
+  .header-inner{
+    min-height:70px;
+  }
+
+  .nav{
+    top:70px;
+  }
+
+  .logo{
+    gap:8px;
+  }
+
+  .logo-mark{
+    width:39px;
+    height:39px;
+    font-size:19px;
+  }
+
+  .logo-text{
+    font-size:17px;
+    line-height:1.05;
+  }
+
+  .logo-text span{
+    font-size:8px;
+    margin-top:3px;
+  }
+
+  .hero{
+    min-height:650px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.94),
+        rgba(255,255,255,.76)
+      ),
+      url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=90")
+      center/cover no-repeat;
+  }
+
+  .hero-inner{
+    padding:80px 5%;
+  }
+
+  .hero h1{
+    font-size:clamp(40px,12vw,60px);
+    letter-spacing:-2px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  section{
+    padding:70px 5%;
+  }
+
+  .trust-inner{
+    grid-template-columns:1fr;
+  }
+
+  .trust-item,
+  .trust-item:first-child{
+    border-left:0;
+    border-right:0;
+  }
+
+  .services-header{
+    display:block;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .welcome-image,
+  .care-image{
+    min-height:330px;
+  }
+
+  .care-points{
+    grid-template-columns:1fr;
+  }
+
+  .doctors-grid{
+    grid-template-columns:1fr;
+  }
+
+  .doctor{
+    grid-template-columns:1fr;
+  }
+
+  .doctor-photo{
+    min-height:340px;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr;
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+    gap:27px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .ai-panel{
+    right:15px;
+    bottom:87px;
+    width:calc(100vw - 30px);
+    height:470px;
+  }
+
+  .ai-button{
+    right:15px;
+    bottom:17px;
+  }
+
+
+  /* Mobile scroll distances */
+
+  .bs-scroll-left{
+    transform:translateX(-45px);
+  }
+
+  .bs-scroll-right{
+    transform:translateX(45px);
+  }
+
+  .bs-scroll-reveal{
+    transform:translateY(35px);
+  }
+
+  .bs-scroll-image{
+    transform:translateX(50px) scale(.98);
+  }
+
+  .auto-scroll{
+    transform:translateY(35px);
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- =======================================================
+     TOP CONTACT BAR
+======================================================= -->
+
+<div class="topbar">
+
+  <div class="topbar-inner">
+
+    <div class="topbar-left">
+      <span>Holy Betel Speciality Dental Clinic Center</span>
+      <span>Professional Dental Care</span>
+    </div>
+
+    <div class="topbar-right">
+      <a href="tel:+251000000000">☎ Call the Clinic</a>
+      <a href="#contact">Clinic Information</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header class="header">
+
+  <div class="header-inner">
+
+    <a href="#home" class="logo">
+
+      <div class="logo-mark">✦</div>
+
+      <div class="logo-text">
+        Holy Betel
+        <span>Speciality Dental Clinic Center</span>
+      </div>
+
+    </a>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      aria-label="Open navigation">
+      ☰
+    </button>
+
+    <nav class="nav" id="navLinks">
+
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#reviews">Patient Reviews</a>
+      <a href="#contact">Contact</a>
+
+      <a href="booking.html" class="appointment-link">
+        Request an Appointment
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div class="hero-content">
+
+      <div class="hero-label">
+        HOLY BETEL SPECIALITY DENTAL CLINIC CENTER
+      </div>
+
+      <h1>
+        Healthy smiles.
+        <span>Confident lives.</span>
+      </h1>
+
+      <p>
+        Professional dental care for individuals and families,
+        delivered with modern technology, experienced care and
+        a comfortable patient experience.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="booking.html" class="btn btn-primary">
+          Request an Appointment
+        </a>
+
+        <a href="#services" class="btn btn-outline">
+          Explore Dental Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     TRUST STRIP
+======================================================= -->
+
+<section class="trust" aria-label="Clinic benefits">
+
+  <div class="trust-inner">
+
+    <div class="trust-item">
+
+      <div class="trust-icon">✓</div>
+
+      <div>
+        <strong>Experienced Care</strong>
+        <span>Professional dental team</span>
+      </div>
+
+    </div>
+
+    <div class="trust-item">
+
+      <div class="trust-icon">✦</div>
+
+      <div>
+        <strong>Modern Dentistry</strong>
+        <span>Contemporary treatment options</span>
+      </div>
+
+    </div>
+
+    <div class="trust-item">
+
+      <div class="trust-icon">♡</div>
+
+      <div>
+        <strong>Patient Focused</strong>
+        <span>Your comfort matters</span>
+      </div>
+
+    </div>
+
+    <div class="trust-item">
+
+      <div class="trust-icon">+</div>
+
+      <div>
+        <strong>Complete Care</strong>
+        <span>Services for the whole family</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     ABOUT / WELCOME
+======================================================= -->
+
+<section class="welcome" id="about">
+
+  <div class="section-inner">
+
+    <div class="welcome-grid">
+
+      <div class="welcome-image bs-scroll-left"></div>
+
+      <div class="welcome-content bs-scroll-right">
+
+        <div class="section-label">
+          WELCOME TO HOLY BETEL
+        </div>
+
+        <h2>
+          Dental care built around
+          <span>your needs.</span>
+        </h2>
+
+        <p>
+          At Holy Betel Speciality Dental Clinic Center, our goal is simple:
+          provide dependable dental care in a comfortable,
+          welcoming environment.
+        </p>
+
+        <p>
+          Whether you need a routine dental check-up,
+          restorative treatment, cosmetic care or family
+          dentistry, our team is here to help you maintain
+          a healthy and confident smile.
+        </p>
+
+        <div class="checks">
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            Personalized treatment planning
+          </div>
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            Comfortable patient experience
+          </div>
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            Modern dental technology
+          </div>
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            Professional and compassionate team
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     SERVICES
+======================================================= -->
+
+<section class="services" id="services">
+
+  <div class="section-inner">
+
+    <div class="services-header">
+
+      <div>
+
+        <div class="section-label">
+          DENTAL SERVICES
+        </div>
+
+        <h2 class="section-title">
+          Complete care for your smile.
+        </h2>
+
+      </div>
+
+      <p class="section-text">
+        From preventive care to cosmetic and restorative
+        dentistry, Holy Betel Speciality Dental Clinic Center provides
+        practical dental solutions for patients of different
+        ages and needs.
+      </p>
+
+    </div>
+
+
+    <div class="services-grid bs-stagger">
+
+      <article class="service">
+
+        <div class="service-image"></div>
+
+        <div class="service-content">
+
+          <h3>General Dentistry</h3>
+
+          <p>
+            Routine examinations, preventive care and
+            everyday treatments that support long-term
+            oral health.
+          </p>
+
+          <a href="booking.html" class="service-link">
+            Request a Visit →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-image"></div>
+
+        <div class="service-content">
+
+          <h3>Teeth Whitening</h3>
+
+          <p>
+            Professional whitening treatments designed
+            to brighten your smile safely and comfortably.
+          </p>
+
+          <a href="booking.html" class="service-link">
+            Request a Visit →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-image"></div>
+
+        <div class="service-content">
+
+          <h3>Dental Implants</h3>
+
+          <p>
+            Modern solutions for replacing missing teeth
+            and restoring everyday confidence and function.
+          </p>
+
+          <a href="booking.html" class="service-link">
+            Request a Visit →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-image"></div>
+
+        <div class="service-content">
+
+          <h3>Gum Care</h3>
+
+          <p>
+            Professional gum and periodontal care focused
+            on maintaining healthy gums and oral health.
+          </p>
+
+          <a href="booking.html" class="service-link">
+            Request a Visit →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-image"></div>
+
+        <div class="service-content">
+
+          <h3>Cosmetic Dentistry</h3>
+
+          <p>
+            Smile-enhancing treatments designed around
+            your appearance, goals and natural smile.
+          </p>
+
+          <a href="booking.html" class="service-link">
+            Request a Visit →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-image"></div>
+
+        <div class="service-content">
+
+          <h3>Family Dentistry</h3>
+
+          <p>
+            Comfortable dental care for children,
+            adults and families at every stage of life.
+          </p>
+
+          <a href="booking.html" class="service-link">
+            Request a Visit →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     MODERN CARE
+======================================================= -->
+
+<section class="care">
+
+  <div class="section-inner">
+
+    <div class="care-grid">
+
+      <div class="care-image bs-scroll-right"></div>
+
+      <div class="care-content bs-scroll-left">
+
+        <div class="section-label">
+          MODERN DENTAL CARE
+        </div>
+
+        <h2>
+          Better technology.
+          <span>Better experience.</span>
+        </h2>
+
+        <p>
+          We believe modern dentistry should be convenient,
+          understandable and centered around the patient.
+          Holy Betel combines professional dental care with
+          modern tools to make your experience easier.
+        </p>
+
+        <div class="care-points">
+
+          <div class="care-point">
+            <strong>Easy Online Booking</strong>
+            <span>
+              Request your appointment without needing
+              to visit the clinic first.
+            </span>
+          </div>
+
+          <div class="care-point">
+            <strong>AI Assistance</strong>
+            <span>
+              Get quick answers about services,
+              appointments and general clinic information.
+            </span>
+          </div>
+
+          <div class="care-point">
+            <strong>Personalized Care</strong>
+            <span>
+              Treatment conversations focused on your
+              individual dental needs.
+            </span>
+          </div>
+
+          <div class="care-point">
+            <strong>Modern Environment</strong>
+            <span>
+              A professional and comfortable clinic
+              experience for patients.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     DOCTORS
+======================================================= -->
+
+<section class="doctors" id="doctors">
+
+  <div class="section-inner">
+
+    <div class="doctors-header">
+
+      <div class="section-label">
+        OUR DENTAL TEAM
+      </div>
+
+      <h2 class="section-title">
+        Meet our dental professionals.
+      </h2>
+
+      <p class="section-text">
+        Our dentists combine professional knowledge,
+        modern treatment approaches and patient-focused care.
+      </p>
+
+    </div>
+
+
+    <div class="doctors-grid bs-stagger">
+
+      <article class="doctor">
+
+        <div class="doctor-photo"></div>
+
+        <div class="doctor-info">
+
+          <div class="role">
+            GENERAL DENTISTRY
+          </div>
+
+          <h3>Dr. Sarah</h3>
+
+          <p>
+            Focused on preventive, general and
+            everyday dental care with an emphasis
+            on patient comfort and long-term oral health.
+          </p>
+
+          <a href="booking.html" class="doctor-link">
+            Request an Appointment →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="doctor">
+
+        <div class="doctor-photo"></div>
+
+        <div class="doctor-info">
+
+          <div class="role">
+            COSMETIC &amp; RESTORATIVE DENTISTRY
+          </div>
+
+          <h3>Dr. Michael</h3>
+
+          <p>
+            Focused on restorative and cosmetic
+            dental treatments designed to improve
+            function, appearance and confidence.
+          </p>
+
+          <a href="booking.html" class="doctor-link">
+            Request an Appointment →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     PATIENT REVIEWS
+======================================================= -->
+
+<section class="reviews auto-scroll" id="reviews">
+
+  <div class="section-inner">
+
+    <div class="reviews-header">
+
+      <div class="section-label">
+        PATIENT EXPERIENCE
+      </div>
+
+      <h2 class="section-title">
+        Patients come first.
+      </h2>
+
+      <p class="section-text">
+        A great dental visit is about more than treatment.
+        It is about feeling comfortable, informed and cared for.
+      </p>
+
+    </div>
+
+
+    <div class="review-grid">
+
+      <article class="review">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “The team made my visit comfortable and explained
+          everything clearly. I felt well cared for from the
+          beginning.”
+        </p>
+
+        <strong>Holy Betel Patient</strong>
+
+      </article>
+
+
+      <article class="review">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “The booking process was simple and the clinic
+          experience was professional and welcoming.”
+        </p>
+
+        <strong>Holy Betel Patient</strong>
+
+      </article>
+
+
+      <article class="review">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “A friendly team and a comfortable environment.
+          I would recommend Holy Betel to families looking
+          for dependable dental care.”
+        </p>
+
+        <strong>Holy Betel Patient</strong>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     NEW PATIENT PROCESS
+======================================================= -->
+
+<section class="process auto-scroll">
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      NEW PATIENTS
+    </div>
+
+    <h2 class="section-title">
+      Your visit made simple.
+    </h2>
+
+    <p class="section-text">
+      Getting started with Holy Betel is straightforward.
+      Request an appointment and let our team guide you through
+      the next steps.
+    </p>
+
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <div class="process-number">
+          01 — REQUEST
+        </div>
+
+        <h3>Book Online</h3>
+
+        <p>
+          Choose your preferred service and submit
+          an appointment request.
+        </p>
+      </div>
+
+
+      <div class="process-card">
+        <div class="process-number">
+          02 — CONFIRM
+        </div>
+
+        <h3>We Contact You</h3>
+
+        <p>
+          Our clinic team reviews your request
+          and helps confirm the appointment.
+        </p>
+      </div>
+
+
+      <div class="process-card">
+        <div class="process-number">
+          03 — VISIT
+        </div>
+
+        <h3>Meet Your Dentist</h3>
+
+        <p>
+          Visit Holy Betel for a professional
+          and comfortable dental experience.
+        </p>
+      </div>
+
+
+      <div class="process-card">
+        <div class="process-number">
+          04 — CARE
+        </div>
+
+        <h3>Protect Your Smile</h3>
+
+        <p>
+          Receive personalized care and guidance
+          for your ongoing oral health.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     APPOINTMENT CTA
+======================================================= -->
+
+<section class="appointment auto-scroll">
+
+  <div class="section-inner">
+
+    <div class="appointment-inner">
+
+      <div class="section-label">
+        REQUEST YOUR VISIT
+      </div>
+
+      <h2>
+        Your healthier smile starts here.
+      </h2>
+
+      <p>
+        Take the next step toward professional dental care.
+        Request an appointment with Holy Betel Speciality Dental Clinic Center.
+      </p>
+
+      <a href="booking.html" class="btn btn-primary">
+        Request an Appointment
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     FAQ
+======================================================= -->
+
+<section class="faq auto-scroll">
+
+  <div class="section-inner">
+
+    <div style="text-align:center;">
+
+      <div class="section-label">
+        FREQUENTLY ASKED QUESTIONS
+      </div>
+
+      <h2 class="section-title">
+        Questions about your visit?
+      </h2>
+
+      <p class="section-text" style="margin:auto;">
+        Here are some common questions patients may have
+        before contacting Holy Betel.
+      </p>
+
+    </div>
+
+
+    <div class="faq-grid">
+
+      <details class="faq-item">
+
+        <summary>
+          How can I request an appointment?
+        </summary>
+
+        <p>
+          Use the Request an Appointment button on the website
+          to open the online booking page and submit your request.
+        </p>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          What dental services does Holy Betel provide?
+        </summary>
+
+        <p>
+          Holy Betel provides general dentistry, teeth whitening,
+          dental implants, gum care, cosmetic dentistry and
+          family dentistry.
+        </p>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          Can I ask questions before booking?
+        </summary>
+
+        <p>
+          Yes. You can use the Holy Betel AI Assistant for
+          general questions about the clinic, services and booking.
+        </p>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          Do you provide dental care for families?
+        </summary>
+
+        <p>
+          Yes. Holy Betel offers family dentistry designed
+          for children and adults.
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     CONTACT
+======================================================= -->
+
+<section class="contact auto-scroll" id="contact">
+
+  <div class="section-inner">
+
+    <div style="text-align:center;">
+
+      <div class="section-label">
+        CONTACT HOLY BETEL
+      </div>
+
+      <h2 class="section-title">
+        We are here to help.
+      </h2>
+
+      <p class="section-text" style="margin:auto;">
+        Have a question about our services or your appointment?
+        Contact the Holy Betel team.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <h3>Call the Clinic</h3>
+
+        <p>
+          Speak with the clinic team about appointments,
+          services and general questions.
+        </p>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <div class="contact-icon">
+          ◉
+        </div>
+
+        <h3>WhatsApp</h3>
+
+        <p>
+          Contact Holy Betel through WhatsApp for
+          convenient communication and support.
+        </p>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <div class="contact-icon">
+          ✉
+        </div>
+
+        <h3>Online Appointment</h3>
+
+        <p>
+          Request your preferred service and appointment
+          time through our online booking system.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     AI ASSISTANT
+======================================================= -->
+
+<button
+  class="ai-button"
+  id="aiButton"
+  aria-label="Open Holy Betel AI Assistant">
+  ✦
+</button>
+
+
+<div class="ai-panel" id="aiPanel">
+
+  <div class="ai-head">
+
+    <strong>
+      Holy Betel AI Assistant
+    </strong>
+
+    <button
+      class="ai-close"
+      id="aiClose"
+      aria-label="Close AI Assistant">
+      ×
+    </button>
+
+  </div>
+
+
+  <div class="ai-messages" id="aiMessages">
+
+    <div class="ai-message">
+      Hello! 👋 I'm the Holy Betel AI Assistant.
+      How can I help you today?
+    </div>
+
+  </div>
+
+
+  <form class="ai-form" id="aiForm">
+
+    <input
+      type="text"
+      id="aiInput"
+      placeholder="Ask about our services..."
+      autocomplete="off"
+      required>
+
+    <button type="submit">
+      Send
+    </button>
+
+  </form>
+
+</div>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+
+      <a href="#home" class="logo">
+
+        <div class="logo-mark">✦</div>
+
+        <div class="logo-text">
+          Holy Betel
+          <span>Speciality Dental Clinic Center</span>
+        </div>
+
+      </a>
+
+      <p>
+        Professional dental care focused on healthy smiles,
+        comfortable experiences and personalized treatment.
+      </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>Navigation</h4>
+
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>Patient Care</h4>
+
+      <a href="booking.html">Book Appointment</a>
+      <a href="#reviews">Patient Reviews</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>Holy Betel</h4>
+
+      <a href="#about">Our Clinic</a>
+      <a href="#services">Dental Services</a>
+      <a href="#doctors">Our Dentists</a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 Holy Betel Speciality Dental Clinic Center. All rights reserved.
+    </span>
+
+    <span>
+      Professional dental care.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script>
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+if(menuBtn && navLinks){
+
+  menuBtn.addEventListener("click",function(){
+
+    navLinks.classList.toggle("active");
+
+  });
+
+  document.querySelectorAll(".nav a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+      navLinks.classList.remove("active");
+
+    });
+
+  });
+
+}
+
+
+/* =========================================================
+   AI ASSISTANT
+========================================================= */
+
+const aiButton = document.getElementById("aiButton");
+const aiPanel = document.getElementById("aiPanel");
+const aiClose = document.getElementById("aiClose");
+const aiForm = document.getElementById("aiForm");
+const aiInput = document.getElementById("aiInput");
+const aiMessages = document.getElementById("aiMessages");
+
+
+if(aiButton){
+
+  aiButton.addEventListener("click",function(){
+
+    aiPanel.classList.toggle("active");
+
+  });
+
+}
+
+
+if(aiClose){
+
+  aiClose.addEventListener("click",function(){
+
+    aiPanel.classList.remove("active");
+
+  });
+
+}
+
+
+function addAIMessage(text,type){
+
+  const message = document.createElement("div");
+
+  message.className =
+    "ai-message " + (type || "");
+
+  message.textContent = text;
+
+  aiMessages.appendChild(message);
+
+  aiMessages.scrollTop =
+    aiMessages.scrollHeight;
+
+}
+
+
+if(aiForm){
+
+  aiForm.addEventListener("submit",async function(event){
+
+    event.preventDefault();
+
+    const message = aiInput.value.trim();
+
+    if(!message){
+      return;
+    }
+
+    addAIMessage(message,"user");
+
+    aiInput.value = "";
+
+    try{
+
+      const response = await fetch(
+        "/api/assistant",
+        {
+          method:"POST",
+
+          headers:{
+            "Content-Type":"application/json"
+          },
+
+          body:JSON.stringify({
+            message:message
+          })
+        }
+      );
+
+      const data = await response.json();
+
+      if(data && data.reply){
+
+        addAIMessage(data.reply);
+
+      }
+
+      else if(data && data.message){
+
+        addAIMessage(data.message);
+
+      }
+
+      else{
+
+        addAIMessage(
+          "I'm sorry, I couldn't process that right now. Please contact the clinic directly."
+        );
+
+      }
+
+    }
+
+    catch(error){
+
+      addAIMessage(
+        "I'm temporarily unavailable. Please contact Holy Betel Speciality Dental Clinic Center directly or book an appointment."
+      );
+
+    }
+
+  });
+
+}
+
+
+/* =========================================================
+   HOLY BETEL — RELIABLE SCROLL ANIMATION ENGINE
+========================================================= */
+
+(function(){
+
+  function initHolyBetelScroll(){
+
+    const elements =
+      document.querySelectorAll(
+        ".bs-scroll-left, " +
+        ".bs-scroll-right, " +
+        ".bs-scroll-reveal, " +
+        ".bs-scroll-image, " +
+        ".bs-stagger, " +
+        ".auto-scroll"
+      );
+
+
+    console.log(
+      "Holy Betel scroll elements:",
+      elements.length
+    );
+
+
+    if(!elements.length){
+      return;
+    }
+
+
+    if("IntersectionObserver" in window){
+
+      const observer =
+        new IntersectionObserver(
+          function(entries){
+
+            entries.forEach(function(entry){
+
+              if(entry.isIntersecting){
+
+                entry.target.classList.add(
+                  "bs-scroll-visible"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+          {
+            threshold:0.08,
+            rootMargin:"0px 0px -50px 0px"
+          }
+        );
+
+
+      elements.forEach(function(element){
+
+        const rect =
+          element.getBoundingClientRect();
+
+        if(
+          rect.top < window.innerHeight &&
+          rect.bottom > 0
+        ){
+
+          element.classList.add(
+            "bs-scroll-visible"
+          );
+
+        }
+
+        observer.observe(element);
+
+      });
+
+    }
+
+    else{
+
+      elements.forEach(function(element){
+
+        element.classList.add(
+          "bs-scroll-visible"
+        );
+
+      });
+
+    }
+
+  }
+
+
+  if(
+    document.readyState ===
+    "loading"
+  ){
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      initHolyBetelScroll
+    );
+
+  }
+
+  else{
+
+    initHolyBetelScroll();
+
+  }
+
+})();
+
+</script>
+
+</body>
+</html>

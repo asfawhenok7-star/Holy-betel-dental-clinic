@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Holy Betel Speciality Dental Clinic Center Admin Portal">
+
+<title>Admin Login | Holy Betel Speciality Dental Clinic Center</title>
+
+<style>
+:root{
+  --blue:#087ea5;
+  --blue-dark:#075b78;
+  --cyan:#12bfd3;
+  --navy:#17465c;
+  --text:#244f63;
+  --muted:#678391;
+  --soft:#f5fbfd;
+  --soft-blue:#eaf7fb;
+  --line:#d8eaf0;
+  --white:#ffffff;
+  --danger:#c94b4b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(245,251,253,.98),
+      rgba(234,247,251,.96)
+    );
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+}
+
+.login-wrapper{
+  width:100%;
+  max-width:1050px;
+  min-height:620px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 20px 60px rgba(23,70,92,.12);
+}
+
+/* LEFT SIDE */
+
+.login-brand{
+  position:relative;
+  overflow:hidden;
+  padding:55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(7,91,120,.95),
+      rgba(8,126,165,.88)
+    ),
+    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=90")
+    center/cover no-repeat;
+  color:#fff;
+}
+
+.login-brand::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  right:-120px;
+  bottom:-130px;
+  background:rgba(255,255,255,.08);
+}
+
+.brand-mark{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  font-size:27px;
+  margin-bottom:25px;
+}
+
+.login-brand h1{
+  font-size:clamp(34px,4vw,52px);
+  line-height:1.08;
+  letter-spacing:-1.8px;
+  margin-bottom:18px;
+}
+
+.login-brand h1 span{
+  color:#b9f3f7;
+}
+
+.login-brand p{
+  max-width:430px;
+  color:#e4f7fa;
+  font-size:15px;
+  line-height:1.8;
+}
+
+.admin-label{
+  margin-top:35px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.8px;
+  color:#b9f3f7;
+}
+
+.admin-label::before{
+  content:"";
+  width:27px;
+  height:2px;
+  background:#b9f3f7;
+}
+
+
+/* RIGHT SIDE */
+
+.login-panel{
+  padding:55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.login-panel-header{
+  margin-bottom:30px;
+}
+
+.login-panel-header .small-label{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.7px;
+  margin-bottom:11px;
+}
+
+.login-panel-header h2{
+  color:var(--navy);
+  font-size:32px;
+  letter-spacing:-1px;
+  margin-bottom:9px;
+}
+
+.login-panel-header p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+.form-group{
+  margin-bottom:19px;
+}
+
+.form-group label{
+  display:block;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.input-wrapper{
+  position:relative;
+}
+
+.input-icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--blue);
+  font-size:16px;
+}
+
+.form-group input{
+  width:100%;
+  height:50px;
+  padding:0 15px 0 43px;
+  border:1px solid #c9e1e8;
+  outline:none;
+  background:#fbfeff;
+  color:var(--text);
+  border-radius:4px;
+  transition:.2s ease;
+}
+
+.form-group input:focus{
+  border-color:var(--cyan);
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(18,191,211,.08);
+}
+
+.password-toggle{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  cursor:pointer;
+  font-size:14px;
+}
+
+.login-options{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:5px 0 23px;
+  gap:15px;
+}
+
+.remember{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.remember input{
+  accent-color:var(--blue);
+}
+
+.forgot{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.login-button{
+  width:100%;
+  min-height:51px;
+  border:0;
+  border-radius:4px;
+  background:var(--blue);
+  color:#fff;
+  font-size:13px;
+  font-weight:900;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.login-button:hover{
+  background:var(--blue-dark);
+  transform:translateY(-1px);
+}
+
+.login-button:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+  transform:none;
+}
+
+.message{
+  display:none;
+  padding:12px 14px;
+  margin-bottom:17px;
+  border-radius:4px;
+  font-size:12px;
+  line-height:1.5;
+}
+
+.message.error{
+  display:block;
+  color:var(--danger);
+  background:#fff3f3;
+  border:1px solid #f0cccc;
+}
+
+.message.success{
+  display:block;
+  color:#23724b;
+  background:#f0fbf5;
+  border:1px solid #c9ead7;
+}
+
+.security-note{
+  margin-top:25px;
+  padding:14px;
+  background:var(--soft);
+  border:1px solid var(--line);
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+
+.security-icon{
+  color:var(--blue);
+  font-size:17px;
+}
+
+.security-note p{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.6;
+}
+
+.back-link{
+  margin-top:22px;
+  text-align:center;
+}
+
+.back-link a{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+}
+
+.back-link a:hover{
+  color:var(--blue-dark);
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  body{
+    padding:15px;
+  }
+
+  .login-wrapper{
+    grid-template-columns:1fr;
+    max-width:520px;
+    min-height:auto;
+  }
+
+  .login-brand{
+    padding:35px;
+    min-height:280px;
+  }
+
+  .login-brand h1{
+    font-size:36px;
+  }
+
+  .login-brand p{
+    font-size:13px;
+  }
+
+  .admin-label{
+    margin-top:22px;
+  }
+
+  .login-panel{
+    padding:35px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  body{
+    padding:10px;
+  }
+
+  .login-brand{
+    padding:28px 23px;
+  }
+
+  .login-panel{
+    padding:28px 23px;
+  }
+
+  .login-panel-header h2{
+    font-size:27px;
+  }
+
+  .login-options{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+  <!-- =====================================================
+       BRAND PANEL
+  ====================================================== -->
+
+  <section class="login-brand">
+
+    <div class="brand-mark">
+      ✦
+    </div>
+
+    <div class="admin-label">
+      CLINIC ADMINISTRATION
+    </div>
+
+    <h1>
+      Holy Betel
+      <span>Admin Portal.</span>
+    </h1>
+
+    <p>
+      Securely manage appointments, patients, doctors,
+      dental services, clinic information, notifications
+      and AI assistant settings from one professional
+      administration system.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       LOGIN PANEL
+  ====================================================== -->
+
+  <section class="login-panel">
+
+    <div class="login-panel-header">
+
+      <div class="small-label">
+        SECURE ACCESS
+      </div>
+
+      <h2>
+        Welcome back.
+      </h2>
+
+      <p>
+        Sign in to access the Holy Betel clinic dashboard.
+      </p>
+
+    </div>
+
+
+    <div
+      class="message"
+      id="loginMessage">
+    </div>
+
+
+    <form id="loginForm">
+
+      <div class="form-group">
+
+        <label for="email">
+          Admin Email
+        </label>
+
+        <div class="input-wrapper">
+
+          <span class="input-icon">
+            ✉
+          </span>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter admin email"
+            autocomplete="username"
+            required>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="password">
+          Password
+        </label>
+
+        <div class="input-wrapper">
+
+          <span class="input-icon">
+            ●
+          </span>
+
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required>
+
+          <button
+            type="button"
+            class="password-toggle"
+            id="passwordToggle"
+            aria-label="Show password">
+            Show
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="login-options">
+
+        <label class="remember">
+
+          <input
+            type="checkbox"
+            id="remember">
+
+          Remember this device
+
+        </label>
+
+        <span
+          class="forgot"
+          id="forgotPassword">
+          Forgot password?
+        </span>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="login-button"
+        id="loginButton">
+
+        Sign In to Dashboard
+
+      </button>
+
+    </form>
+
+
+    <div class="security-note">
+
+      <div class="security-icon">
+        🔒
+      </div>
+
+      <p>
+        This is a protected clinic administration area.
+        Only authorized Holy Betel staff should attempt
+        to access this system.
+      </p>
+
+    </div>
+
+
+    <div class="back-link">
+
+      <a href="../index.html">
+        ← Back to Holy Betel Website
+      </a>
+
+    </div>
+
+  </section>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   PASSWORD VISIBILITY
+========================================================= */
+
+const password =
+  document.getElementById("password");
+
+const passwordToggle =
+  document.getElementById("passwordToggle");
+
+if(passwordToggle){
+
+  passwordToggle.addEventListener(
+    "click",
+    function(){
+
+      if(password.type === "password"){
+
+        password.type = "text";
+        passwordToggle.textContent = "Hide";
+
+      }
+
+      else{
+
+        password.type = "password";
+        passwordToggle.textContent = "Show";
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+const loginForm =
+  document.getElementById("loginForm");
+
+const loginButton =
+  document.getElementById("loginButton");
+
+const loginMessage =
+  document.getElementById("loginMessage");
+
+
+function showMessage(message,type){
+
+  loginMessage.textContent = message;
+
+  loginMessage.className =
+    "message " + type;
+
+}
+
+
+if(loginForm){
+
+  loginForm.addEventListener(
+    "submit",
+    async function(event){
+
+      event.preventDefault();
+
+      const email =
+        document.getElementById("email").value.trim();
+
+      const passwordValue =
+        document.getElementById("password").value;
+
+
+      if(!email || !passwordValue){
+
+        showMessage(
+          "Please enter your admin email and password.",
+          "error"
+        );
+
+        return;
+
+      }
+
+
+      loginButton.disabled = true;
+
+      loginButton.textContent =
+        "Signing in...";
+
+
+      try{
+
+        /*
+          The backend authentication endpoint will be
+          connected in the next step.
+        */
+
+        const response =
+          await fetch(
+            "/api/admin/login",
+            {
+              method:"POST",
+
+              headers:{
+                "Content-Type":"application/json"
+              },
+
+              body:JSON.stringify({
+                email:email,
+                password:passwordValue
+              })
+            }
+          );
+
+
+        const data =
+          await response.json();
+
+
+        if(response.ok && data.success){
+
+          showMessage(
+            "Login successful. Opening dashboard...",
+            "success"
+          );
+
+
+          /*
+            Token will be stored securely when the
+            backend authentication system is completed.
+          */
+
+          if(data.token){
+
+            localStorage.setItem(
+              "holyBetelAdminToken",
+              data.token
+            );
+
+          }
+
+
+          setTimeout(
+            function(){
+
+              window.location.href =
+                "dashboard.html";
+
+            },
+            700
+          );
+
+        }
+
+        else{
+
+          showMessage(
+            data.message ||
+            "Invalid admin email or password.",
+            "error"
+          );
+
+        }
+
+      }
+
+      catch(error){
+
+        showMessage(
+          "Unable to connect to the clinic server. Please try again.",
+          "error"
+        );
+
+      }
+
+      finally{
+
+        loginButton.disabled = false;
+
+        loginButton.textContent =
+          "Sign In to Dashboard";
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+const forgotPassword =
+  document.getElementById("forgotPassword");
+
+if(forgotPassword){
+
+  forgotPassword.addEventListener(
+    "click",
+    function(){
+
+      showMessage(
+        "Password recovery will be connected to the secure admin system.",
+        "success"
+      );
+
+    }
+  );
+
+}
+
+</script>
+
+</body>
+</html>

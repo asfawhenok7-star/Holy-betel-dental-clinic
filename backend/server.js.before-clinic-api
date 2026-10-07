@@ -1,0 +1,164 @@
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+require('dotenv').config();
+
+const { testDatabaseConnection } = require('./db');
+const appointmentsRouter = require('./routes-appointments');
+const assistantRouter = require('./routes-assistant');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// ============================================
+// SECURITY
+// ============================================
+
+app.use(helmet());
+
+app.use(cors({
+    origin: true,
+    credentials: true
+}));
+
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 200,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: {
+        success: false,
+        message: 'Too many requests. Please try again later.'
+    }
+});
+
+app.use('/api/', apiLimiter);
+
+// ============================================
+// REQUEST BODY
+// ============================================
+
+app.use(express.json({
+    limit: '1mb'
+}));
+
+app.use(express.urlencoded({
+    extended: true,
+    limit: '1mb'
+}));
+
+// ============================================
+// HEALTH CHECK
+// ============================================
+
+app.get('/api/health', async (req, res) => {
+    res.json({
+        success: true,
+        message: 'Dental Clinic API is running',
+        database: 'connected',
+        time: new Date().toISOString()
+    });
+});
+
+// ============================================
+// API INFORMATION
+// ============================================
+
+app.get('/api', (req, res) => {
+    res.json({
+        success: true,
+        name: 'Dental Clinic Management System',
+        version: '1.0.0',
+        features: [
+            'Website',
+            'Online Booking',
+            'AI Assistant',
+            'Clinic Dashboard'
+        ],
+        endpoints: {
+            health: '/api/health',
+            appointments: '/api/appointments',
+            assistant: '/api/assistant'
+        },
+        message: 'API is running'
+    });
+});
+
+// ============================================
+// APPOINTMENTS
+// ============================================
+// Existing working appointment system.
+// DO NOT MODIFY.
+
+app.use('/api/appointments', appointmentsRouter);
+
+// ============================================
+// AI DENTAL ASSISTANT
+// ============================================
+
+app.use('/api/assistant', assistantRouter);
+
+// ============================================
+// API 404 HANDLER
+// ============================================
+
+app.use((req, res, next) => {
+    if (req.path.startsWith('/api/')) {
+        return res.status(404).json({
+            success: false,
+            message: 'API endpoint not found'
+        });
+    }
+
+    next();
+});
+
+// ============================================
+// GLOBAL ERROR HANDLER
+// ============================================
+
+app.use((err, req, res, next) => {
+    console.error('Server error:', err);
+
+    res.status(err.status || 500).json({
+        success: false,
+        message: 'Internal server error'
+    });
+});
+
+// ============================================
+// START SERVER
+// ============================================
+
+async function startServer() {
+    try {
+        await testDatabaseConnection();
+
+        app.listen(PORT, () => {
+            console.log('');
+            console.log('============================================');
+            console.log('       DENTAL CLINIC API SERVER');
+            console.log('============================================');
+            console.log(`Server running: http://localhost:${PORT}`);
+            console.log(`Health check:   http://localhost:${PORT}/api/health`);
+            console.log(`Appointments:   http://localhost:${PORT}/api/appointments`);
+            console.log(`AI Assistant:   http://localhost:${PORT}/api/assistant`);
+            console.log('Database:       PostgreSQL connected');
+            console.log('============================================');
+            console.log('');
+        });
+
+    } catch (error) {
+        console.error('');
+        console.error('============================================');
+        console.error('DATABASE CONNECTION FAILED');
+        console.error('============================================');
+        console.error(error.message);
+        console.error('');
+        console.error('Check your .env PostgreSQL settings.');
+        process.exit(1);
+    }
+}
+
+startServer();

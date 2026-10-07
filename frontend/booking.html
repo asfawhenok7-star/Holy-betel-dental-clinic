@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Book a dental appointment online at BrightSmile Dental Clinic."
+    >
+
+    <title>Book an Appointment | BrightSmile Dental Clinic</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f5f9fc;
+            color: #172b4d;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5edf4;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            max-width: 1180px;
+            margin: auto;
+            padding: 18px 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #087ea4;
+        }
+
+        .back-link {
+            color: #087ea4;
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ==============================
+           PAGE HEADER
+        ============================== */
+
+        .page-header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #e9f8fc,
+                    #ffffff
+                );
+
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #12395b;
+        }
+
+        .page-header p {
+            color: #5f7285;
+            font-size: 17px;
+        }
+
+        /* ==============================
+           BOOKING CONTAINER
+        ============================== */
+
+        .booking-container {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .booking-card {
+            background: #ffffff;
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 35px rgba(
+                    31,
+                    76,
+                    105,
+                    0.10
+                );
+
+            padding: 35px;
+        }
+
+        .section-title {
+            margin-bottom: 22px;
+        }
+
+        .section-title h2 {
+            font-size: 22px;
+            color: #12395b;
+        }
+
+        .section-title p {
+            color: #718096;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* ==============================
+           FORM
+        ============================== */
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            color: #29445f;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            border: 1px solid #d6e2eb;
+            border-radius: 10px;
+
+            padding: 13px 14px;
+
+            font-size: 15px;
+            font-family: inherit;
+
+            background: #ffffff;
+            color: #172b4d;
+
+            outline: none;
+
+            transition: 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #0b9ac1;
+
+            box-shadow:
+                0 0 0 3px rgba(
+                    11,
+                    154,
+                    193,
+                    0.10
+                );
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .required {
+            color: #d64545;
+        }
+
+        /* ==============================
+           LOADING
+        ============================== */
+
+        .loading-text {
+            color: #718096;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        /* ==============================
+           TIME SLOTS
+        ============================== */
+
+        .time-section {
+            margin-top: 30px;
+        }
+
+        .time-slots {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(100px, 1fr));
+
+            gap: 12px;
+        }
+
+        .time-slot {
+            border: 1px solid #cbdde7;
+
+            background: #ffffff;
+            color: #24516b;
+
+            border-radius: 9px;
+
+            padding: 11px;
+
+            cursor: pointer;
+            text-align: center;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+        }
+
+        .time-slot:hover {
+            border-color: #0794ba;
+            background: #eefaff;
+        }
+
+        .time-slot.selected {
+            background: #087ea4;
+            border-color: #087ea4;
+            color: #ffffff;
+        }
+
+        .time-slot.disabled {
+            background: #f2f4f6;
+            color: #a1abb4;
+
+            cursor: not-allowed;
+
+            border-color: #e2e6e9;
+        }
+
+        .time-slot.loading {
+            opacity: 0.55;
+            cursor: wait;
+        }
+
+        .time-help {
+            color: #778899;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        /* ==============================
+           EMPTY TIMES
+        ============================== */
+
+        .empty-times {
+            grid-column: 1 / -1;
+
+            padding: 20px;
+
+            border: 1px dashed #cbdde7;
+            border-radius: 10px;
+
+            text-align: center;
+
+            color: #718096;
+            background: #f9fcfd;
+        }
+
+        /* ==============================
+           DIVIDER
+        ============================== */
+
+        .divider {
+            height: 1px;
+            background: #e7eef3;
+            margin: 35px 0;
+        }
+
+        /* ==============================
+           BUTTON
+        ============================== */
+
+        .submit-area {
+            margin-top: 30px;
+        }
+
+        .submit-button {
+            width: 100%;
+
+            border: none;
+            border-radius: 11px;
+
+            background: #087ea4;
+            color: #ffffff;
+
+            padding: 15px 20px;
+
+            font-size: 16px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .submit-button:hover {
+            background: #066b8b;
+        }
+
+        .submit-button:disabled {
+            background: #9bbbc7;
+            cursor: not-allowed;
+        }
+
+        /* ==============================
+           STATUS
+        ============================== */
+
+        .status-message {
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 14px 16px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .status-message.success {
+            display: block;
+
+            background: #eaf8ef;
+            color: #18733b;
+
+            border: 1px solid #bfe6cc;
+        }
+
+        .status-message.error {
+            display: block;
+
+            background: #fff0f0;
+            color: #a52d2d;
+
+            border: 1px solid #efc4c4;
+        }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            margin-top: 60px;
+
+            background: #12395b;
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 28px 20px;
+        }
+
+        footer p {
+            opacity: 0.85;
+            font-size: 14px;
+        }
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 700px) {
+
+            .nav {
+                padding: 16px;
+            }
+
+            .page-header {
+                padding: 40px 18px;
+            }
+
+            .page-header h1 {
+                font-size: 31px;
+            }
+
+            .booking-container {
+                margin: 25px auto;
+                padding: 0 14px;
+            }
+
+            .booking-card {
+                padding: 22px 18px;
+                border-radius: 14px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .time-slots {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
+    <header>
+
+        <nav class="nav">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                🦷 BrightSmile
+            </a>
+
+            <a
+                href="index.html"
+                class="back-link"
+            >
+                ← Back to Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         PAGE HEADER
+    ============================== -->
+
+    <section class="page-header">
+
+        <h1>
+            Book an Appointment
+        </h1>
+
+        <p>
+            Choose your service, preferred doctor,
+            date and available time.
+        </p>
+
+    </section>
+
+
+    <!-- ==============================
+         BOOKING FORM
+    ============================== -->
+
+    <main class="booking-container">
+
+        <div class="booking-card">
+
+            <div class="section-title">
+
+                <h2>
+                    Appointment Details
+                </h2>
+
+                <p>
+                    Please provide the information below
+                    to request your appointment.
+                </p>
+
+            </div>
+
+
+            <form id="bookingForm">
+
+                <div class="form-grid">
+
+                    <!-- SERVICE -->
+
+                    <div class="form-group">
+
+                        <label for="service">
+
+                            Dental Service
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <select
+                            id="service"
+                            required
+                        >
+
+                            <option value="">
+                                Loading services...
+                            </option>
+
+                        </select>
+
+                        <p
+                            id="serviceLoading"
+                            class="loading-text"
+                        ></p>
+
+                    </div>
+
+
+                    <!-- DOCTOR -->
+
+                    <div class="form-group">
+
+                        <label for="doctor">
+                            Preferred Doctor
+                        </label>
+
+                        <select id="doctor">
+
+                            <option value="">
+                                Any available doctor
+                            </option>
+
+                        </select>
+
+                        <p
+                            id="doctorLoading"
+                            class="loading-text"
+                        ></p>
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="form-group">
+
+                        <label for="date">
+
+                            Appointment Date
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PATIENT NAME -->
+
+                    <div class="form-group">
+
+                        <label for="patientName">
+
+                            Full Name
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="patientName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            maxlength="150"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+
+                            Phone Number
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="+251..."
+                            autocomplete="tel"
+                            maxlength="50"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            maxlength="150"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================
+                     TIME
+                =========================== -->
+
+                <div class="time-section">
+
+                    <div class="section-title">
+
+                        <h2>
+
+                            Available Time
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </h2>
+
+                        <p>
+                            Select an available appointment time.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="timeSlots"
+                        class="time-slots"
+                    >
+
+                        <div class="empty-times">
+                            Select a date to load available times.
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        id="timeHelp"
+                        class="time-help"
+                    >
+                        Available times are loaded directly
+                        from the clinic booking system.
+                    </p>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <!-- ==========================
+                     NOTES
+                =========================== -->
+
+                <div class="form-group">
+
+                    <label for="notes">
+
+                        Reason for Visit /
+                        Additional Notes
+
+                    </label>
+
+                    <textarea
+                        id="notes"
+                        maxlength="2000"
+                        placeholder="Tell us briefly why you would like to visit..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- ==========================
+                     SUBMIT
+                =========================== -->
+
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                        id="submitButton"
+                    >
+                        Request Appointment
+                    </button>
+
+                </div>
+
+
+                <!-- ==========================
+                     STATUS
+                =========================== -->
+
+                <div
+                    id="statusMessage"
+                    class="status-message"
+                    role="alert"
+                ></div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <p>
+            🦷 BrightSmile Dental Clinic
+        </p>
+
+        <p>
+            Professional dental care with easy online booking.
+        </p>
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+
+    <script>
+
+        // ============================================
+        // API CONFIGURATION
+        // ============================================
+
+        const API_BASE =
+            'http://localhost:5000';
+
+
+        const API_APPOINTMENTS =
+            `${API_BASE}/api/appointments`;
+
+
+        // ============================================
+        // ELEMENTS
+        // ============================================
+
+        const form =
+            document.getElementById(
+                'bookingForm'
+            );
+
+
+        const serviceSelect =
+            document.getElementById(
+                'service'
+            );
+
+
+        const doctorSelect =
+            document.getElementById(
+                'doctor'
+            );
+
+
+        const dateInput =
+            document.getElementById(
+                'date'
+            );
+
+
+        const timeSlots =
+            document.getElementById(
+                'timeSlots'
+            );
+
+
+        const timeHelp =
+            document.getElementById(
+                'timeHelp'
+            );
+
+
+        const statusMessage =
+            document.getElementById(
+                'statusMessage'
+            );
+
+
+        const submitButton =
+            document.getElementById(
+                'submitButton'
+            );
+
+
+        const serviceLoading =
+            document.getElementById(
+                'serviceLoading'
+            );
+
+
+        const doctorLoading =
+            document.getElementById(
+                'doctorLoading'
+            );
+
+
+        // ============================================
+        // STATE
+        // ============================================
+
+        let selectedTime = null;
+
+
+        // ============================================
+        // DATE
+        // ============================================
+
+        const now =
+            new Date();
+
+
+        const localYear =
+            now.getFullYear();
+
+
+        const localMonth =
+            String(
+                now.getMonth() + 1
+            ).padStart(2, '0');
+
+
+        const localDay =
+            String(
+                now.getDate()
+            ).padStart(2, '0');
+
+
+        const today =
+            `${localYear}-${localMonth}-${localDay}`;
+
+
+        dateInput.min = today;
+
+
+        // ============================================
+        // STATUS HELPER
+        // ============================================
+
+        function showStatus(
+            type,
+            message
+        ) {
+
+            statusMessage.className =
+                `status-message ${type}`;
+
+            statusMessage.textContent =
+                message;
+
+        }
+
+
+        function clearStatus() {
+
+            statusMessage.className =
+                'status-message';
+
+            statusMessage.textContent =
+                '';
+
+        }
+
+
+        // ============================================
+        // LOAD SERVICES
+        // ============================================
+
+        async function loadServices() {
+
+            serviceLoading.textContent =
+                'Loading services...';
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${API_APPOINTMENTS}/services`
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !response.ok ||
+                    !data.success
+                ) {
+
+                    throw new Error(
+                        data.message ||
+                        'Unable to load services.'
+                    );
+                }
+
+
+                serviceSelect.innerHTML = '';
+
+
+                const defaultOption =
+                    document.createElement(
+                        'option'
+                    );
+
+
+                defaultOption.value = '';
+
+                defaultOption.textContent =
+                    'Select a service';
+
+
+                serviceSelect.appendChild(
+                    defaultOption
+                );
+
+
+                data.services.forEach(
+                    service => {
+
+                        const option =
+                            document.createElement(
+                                'option'
+                            );
+
+
+                        option.value =
+                            service.id;
+
+
+                        // IMPORTANT:
+                        // Public website does NOT
+                        // display service prices.
+
+                        option.textContent =
+                            service.name;
+
+
+                        serviceSelect.appendChild(
+                            option
+                        );
+
+                    }
+                );
+
+
+                serviceLoading.textContent =
+                    `${data.services.length} services available.`;
+
+            } catch (error) {
+
+                console.error(
+                    'Services error:',
+                    error
+                );
+
+
+                serviceSelect.innerHTML = `
+                    <option value="">
+                        Unable to load services
+                    </option>
+                `;
+
+
+                serviceLoading.textContent =
+                    'Please refresh the page and try again.';
+
+            }
+
+        }
+
+
+        // ============================================
+        // LOAD DOCTORS
+        // ============================================
+
+        async function loadDoctors() {
+
+            doctorLoading.textContent =
+                'Loading doctors...';
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${API_APPOINTMENTS}/doctors`
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !response.ok ||
+                    !data.success
+                ) {
+
+                    throw new Error(
+                        data.message ||
+                        'Unable to load doctors.'
+                    );
+                }
+
+
+                doctorSelect.innerHTML = '';
+
+
+                const anyOption =
+                    document.createElement(
+                        'option'
+                    );
+
+
+                anyOption.value = '';
+
+                anyOption.textContent =
+                    'Any available doctor';
+
+
+                doctorSelect.appendChild(
+                    anyOption
+                );
+
+
+                data.doctors.forEach(
+                    doctor => {
+
+                        const option =
+                            document.createElement(
+                                'option'
+                            );
+
+
+                        option.value =
+                            doctor.id;
+
+
+                        option.textContent =
+                            `${doctor.full_name} — ${doctor.specialty}`;
+
+
+                        doctorSelect.appendChild(
+                            option
+                        );
+
+                    }
+                );
+
+
+                doctorLoading.textContent =
+                    `${data.doctors.length} doctors available.`;
+
+            } catch (error) {
+
+                console.error(
+                    'Doctors error:',
+                    error
+                );
+
+
+                doctorSelect.innerHTML = `
+                    <option value="">
+                        Any available doctor
+                    </option>
+                `;
+
+
+                doctorLoading.textContent =
+                    'Unable to load doctors.';
+
+            }
+
+        }
+
+
+        // ============================================
+        // FORMAT TIME
+        // ============================================
+
+        function formatTime(time) {
+
+            const parts =
+                String(time)
+                    .slice(0, 5)
+                    .split(':');
+
+
+            const hour =
+                Number(parts[0]);
+
+
+            const minute =
+                parts[1];
+
+
+            const suffix =
+                hour >= 12
+                    ? 'PM'
+                    : 'AM';
+
+
+            const displayHour =
+                hour % 12 || 12;
+
+
+            return `${String(displayHour).padStart(2, '0')}:${minute} ${suffix}`;
+
+        }
+
+
+        // ============================================
+        // LOAD AVAILABILITY
+        // ============================================
+
+        async function loadAvailability() {
+
+            selectedTime = null;
+
+
+            timeSlots.innerHTML = `
+                <div class="empty-times">
+                    Loading available times...
+                </div>
+            `;
+
+
+            const date =
+                dateInput.value;
+
+
+            if (!date) {
+
+                timeSlots.innerHTML = `
+                    <div class="empty-times">
+                        Select a date to load available times.
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            const doctorId =
+                doctorSelect.value;
+
+
+            let url =
+                `${API_APPOINTMENTS}/availability?date=${encodeURIComponent(date)}`;
+
+
+            if (doctorId) {
+
+                url +=
+                    `&doctorId=${encodeURIComponent(doctorId)}`;
+
+            }
+
+
+            try {
+
+                const response =
+                    await fetch(url);
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !response.ok ||
+                    !data.success
+                ) {
+
+                    throw new Error(
+                        data.message ||
+                        'Unable to load availability.'
+                    );
+                }
+
+
+                timeSlots.innerHTML = '';
+
+
+                const availableSlots =
+                    data.slots.filter(
+                        slot => slot.available
+                    );
+
+
+                if (
+                    availableSlots.length === 0
+                ) {
+
+                    timeSlots.innerHTML = `
+                        <div class="empty-times">
+                            No appointment times are currently available for this date.
+                        </div>
+                    `;
+
+                    timeHelp.textContent =
+                        'Please choose another date or doctor.';
+
+                    return;
+                }
+
+
+                data.slots.forEach(
+                    slot => {
+
+                        const button =
+                            document.createElement(
+                                'button'
+                            );
+
+
+                        button.type =
+                            'button';
+
+
+                        button.className =
+                            'time-slot';
+
+
+                        button.dataset.time =
+                            slot.time;
+
+
+                        button.textContent =
+                            formatTime(
+                                slot.time
+                            );
+
+
+                        if (!slot.available) {
+
+                            button.classList.add(
+                                'disabled'
+                            );
+
+                            button.disabled =
+                                true;
+
+                            button.title =
+                                'This time is already booked.';
+
+                        } else {
+
+                            button.addEventListener(
+                                'click',
+                                () => {
+
+                                    document
+                                        .querySelectorAll(
+                                            '.time-slot'
+                                        )
+                                        .forEach(
+                                            item => {
+                                                item.classList.remove(
+                                                    'selected'
+                                                );
+                                            }
+                                        );
+
+
+                                    button.classList.add(
+                                        'selected'
+                                    );
+
+
+                                    selectedTime =
+                                        slot.time;
+
+
+                                    clearStatus();
+
+                                }
+                            );
+
+                        }
+
+
+                        timeSlots.appendChild(
+                            button
+                        );
+
+                    }
+                );
+
+
+                timeHelp.textContent =
+                    `${availableSlots.length} appointment time(s) available.`;
+
+            } catch (error) {
+
+                console.error(
+                    'Availability error:',
+                    error
+                );
+
+
+                timeSlots.innerHTML = `
+                    <div class="empty-times">
+                        Unable to load appointment times.
+                        Please try again.
+                    </div>
+                `;
+
+
+                timeHelp.textContent =
+                    'There was a problem connecting to the booking system.';
+
+            }
+
+        }
+
+
+        // ============================================
+        // DATE CHANGE
+        // ============================================
+
+        dateInput.addEventListener(
+            'change',
+            () => {
+
+                clearStatus();
+
+                loadAvailability();
+
+            }
+        );
+
+
+        // ============================================
+        // DOCTOR CHANGE
+        // ============================================
+
+        doctorSelect.addEventListener(
+            'change',
+            () => {
+
+                clearStatus();
+
+                if (dateInput.value) {
+
+                    loadAvailability();
+
+                }
+
+            }
+        );
+
+
+        // ============================================
+        // SERVICE CHANGE
+        // ============================================
+
+        serviceSelect.addEventListener(
+            'change',
+            () => {
+
+                clearStatus();
+
+            }
+        );
+
+
+        // ============================================
+        // SUBMIT APPOINTMENT
+        // ============================================
+
+        form.addEventListener(
+            'submit',
+            async event => {
+
+                event.preventDefault();
+
+
+                clearStatus();
+
+
+                if (!selectedTime) {
+
+                    showStatus(
+                        'error',
+                        'Please select an available appointment time.'
+                    );
+
+                    return;
+                }
+
+
+                const serviceId =
+                    serviceSelect.value;
+
+
+                const doctorId =
+                    doctorSelect.value;
+
+
+                const date =
+                    dateInput.value;
+
+
+                const patientName =
+                    document
+                        .getElementById(
+                            'patientName'
+                        )
+                        .value
+                        .trim();
+
+
+                const phone =
+                    document
+                        .getElementById(
+                            'phone'
+                        )
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById(
+                            'email'
+                        )
+                        .value
+                        .trim();
+
+
+                const notes =
+                    document
+                        .getElementById(
+                            'notes'
+                        )
+                        .value
+                        .trim();
+
+
+                if (
+                    !serviceId ||
+                    !date ||
+                    !patientName ||
+                    !phone
+                ) {
+
+                    showStatus(
+                        'error',
+                        'Please complete all required fields.'
+                    );
+
+                    return;
+                }
+
+
+                submitButton.disabled =
+                    true;
+
+
+                submitButton.textContent =
+                    'Submitting Appointment...';
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            API_APPOINTMENTS,
+                            {
+                                method: 'POST',
+
+                                headers: {
+                                    'Content-Type':
+                                        'application/json'
+                                },
+
+                                body: JSON.stringify({
+
+                                    serviceId:
+                                        Number(
+                                            serviceId
+                                        ),
+
+                                    doctorId:
+                                        doctorId
+                                            ? Number(
+                                                doctorId
+                                            )
+                                            : null,
+
+                                    date,
+
+                                    startTime:
+                                        selectedTime,
+
+                                    patientName,
+
+                                    phone,
+
+                                    email,
+
+                                    reason:
+                                        notes,
+
+                                    notes
+
+                                })
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            data.message ||
+                            'Unable to create appointment.'
+                        );
+
+                    }
+
+
+                    const appointment =
+                        data.appointment;
+
+
+                    showStatus(
+                        'success',
+
+                        `Appointment request submitted successfully! Appointment #${appointment.id}. Date: ${appointment.date}. Time: ${formatTime(appointment.startTime)} - ${formatTime(appointment.endTime)}. Status: ${appointment.status}.`
+                    );
+
+
+                    // Clear selected time
+
+                    selectedTime =
+                        null;
+
+
+                    document
+                        .querySelectorAll(
+                            '.time-slot'
+                        )
+                        .forEach(
+                            button => {
+                                button.classList.remove(
+                                    'selected'
+                                );
+                            }
+                        );
+
+
+                    // Reset patient fields
+
+                    document
+                        .getElementById(
+                            'patientName'
+                        )
+                        .value = '';
+
+
+                    document
+                        .getElementById(
+                            'phone'
+                        )
+                        .value = '';
+
+
+                    document
+                        .getElementById(
+                            'email'
+                        )
+                        .value = '';
+
+
+                    document
+                        .getElementById(
+                            'notes'
+                        )
+                        .value = '';
+
+
+                    // Reload availability
+
+                    await loadAvailability();
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Appointment submission error:',
+                        error
+                    );
+
+
+                    showStatus(
+                        'error',
+                        error.message ||
+                        'Unable to submit your appointment. Please try again.'
+                    );
+
+                } finally {
+
+                    submitButton.disabled =
+                        false;
+
+
+                    submitButton.textContent =
+                        'Request Appointment';
+
+                }
+
+            }
+        );
+
+
+        // ============================================
+        // INITIALIZE PAGE
+        // ============================================
+
+        async function initializeBookingPage() {
+
+            await Promise.all([
+                loadServices(),
+                loadDoctors()
+            ]);
+
+        }
+
+
+        initializeBookingPage();
+
+    </script>
+
+</body>
+</html>
