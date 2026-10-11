@@ -3268,6 +3268,179 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 .review-form-card select{border:1.5px solid #6fc3da!important;}
 .review-submit{background:linear-gradient(135deg,#17465C,#087EA5 55%,#12BFD3)!important;}
 </style>
+
+<style id="holy-betel-care-colors-css">
+.care-point{
+  border-radius:18px!important;
+  border:1px solid transparent!important;
+  border-top-width:6px!important;
+  transition:transform .25s ease,box-shadow .25s ease!important;
+}
+.care-point:hover{transform:translateY(-6px)!important;}
+.care-point h1,.care-point h2,.care-point h3,.care-point h4,.care-point strong{color:#0f3446!important;}
+.care-point p,.care-point span{color:#2f5668!important;}
+
+/* 1 - Experienced Care: ocean blue */
+.care-point:nth-child(1){
+  background:linear-gradient(160deg,#e3f0fc 0%,#bfdcf5 100%)!important;
+  border-color:#5aa7e0!important;
+  box-shadow:0 14px 34px rgba(30,110,190,.25)!important;
+}
+/* 2 - Modern Dentistry: teal */
+.care-point:nth-child(2){
+  background:linear-gradient(160deg,#dcf8f3 0%,#b0ece2 100%)!important;
+  border-color:#14b8a6!important;
+  box-shadow:0 14px 34px rgba(20,184,166,.25)!important;
+}
+/* 3 - Patient Focused: violet */
+.care-point:nth-child(3){
+  background:linear-gradient(160deg,#eee6fd 0%,#d4c3f8 100%)!important;
+  border-color:#8b5cf6!important;
+  box-shadow:0 14px 34px rgba(139,92,246,.25)!important;
+}
+/* 4 - Complete Care: warm amber */
+.care-point:nth-child(4){
+  background:linear-gradient(160deg,#fff3d9 0%,#fddc9b 100%)!important;
+  border-color:#f5a623!important;
+  box-shadow:0 14px 34px rgba(245,166,35,.28)!important;
+}
+</style>
+
+<style id="holy-betel-service-colors-css">
+.service:nth-child(1) .service-content,
+.service:nth-child(2) .service-content,
+.service:nth-child(3) .service-content,
+.service:nth-child(6) .service-content{
+  border-top:5px solid transparent!important;
+}
+.service:nth-child(1) .service-content h3,
+.service:nth-child(2) .service-content h3,
+.service:nth-child(3) .service-content h3,
+.service:nth-child(6) .service-content h3{font-weight:800!important;}
+.service:nth-child(1) .service-content p,
+.service:nth-child(2) .service-content p,
+.service:nth-child(3) .service-content p,
+.service:nth-child(6) .service-content p{color:#2f4a58!important;}
+.service:nth-child(1) .service-link,
+.service:nth-child(2) .service-link,
+.service:nth-child(3) .service-link,
+.service:nth-child(6) .service-link{
+  display:inline-block!important;padding:9px 20px!important;border-radius:999px!important;
+  color:#ffffff!important;font-weight:700!important;text-decoration:none!important;
+  transition:transform .2s ease,box-shadow .2s ease!important;
+}
+.service:nth-child(1) .service-link:hover,
+.service:nth-child(2) .service-link:hover,
+.service:nth-child(3) .service-link:hover,
+.service:nth-child(6) .service-link:hover{transform:translateY(-2px)!important;}
+
+/* 1 - General Dentistry: ocean blue */
+.service:nth-child(1) .service-content{background:linear-gradient(160deg,#e3f0fc 0%,#bfdcf5 100%)!important;border-top-color:#2f8fe0!important;}
+.service:nth-child(1) .service-content h3{color:#0f4c81!important;}
+.service:nth-child(1) .service-link{background:linear-gradient(135deg,#1e6ebe,#3aa0f0)!important;box-shadow:0 8px 20px rgba(30,110,190,.35)!important;}
+
+/* 2 - Teeth Whitening: sunny amber */
+.service:nth-child(2) .service-content{background:linear-gradient(160deg,#fff3d9 0%,#fddc9b 100%)!important;border-top-color:#f5a623!important;}
+.service:nth-child(2) .service-content h3{color:#8a5200!important;}
+.service:nth-child(2) .service-link{background:linear-gradient(135deg,#e68a00,#f7b733)!important;box-shadow:0 8px 20px rgba(230,138,0,.35)!important;}
+
+/* 3 - Dental Implants: violet */
+.service:nth-child(3) .service-content{background:linear-gradient(160deg,#eee6fd 0%,#d4c3f8 100%)!important;border-top-color:#8b5cf6!important;}
+.service:nth-child(3) .service-content h3{color:#4c2a9a!important;}
+.service:nth-child(3) .service-link{background:linear-gradient(135deg,#6d3fd6,#9f7bf7)!important;box-shadow:0 8px 20px rgba(109,63,214,.35)!important;}
+
+/* 6 - Family Dentistry: coral pink */
+.service:nth-child(6) .service-content{background:linear-gradient(160deg,#ffe8ec 0%,#ffc2cd 100%)!important;border-top-color:#f0546e!important;}
+.service:nth-child(6) .service-content h3{color:#a3223c!important;}
+.service:nth-child(6) .service-link{background:linear-gradient(135deg,#e03a58,#ff7a8f)!important;box-shadow:0 8px 20px rgba(224,58,88,.35)!important;}
+</style>
+
+<style id="holy-betel-all-cards-css">
+
+/* ===== SERVICES: Gum Care + Cosmetic Dentistry ===== */
+.service:nth-child(4) .service-content,
+.service:nth-child(5) .service-content{border-top:5px solid transparent!important;}
+.service:nth-child(4) .service-content h3,
+.service:nth-child(5) .service-content h3{font-weight:800!important;}
+.service:nth-child(4) .service-content p,
+.service:nth-child(5) .service-content p{color:#2f4a58!important;}
+.service:nth-child(4) .service-link,
+.service:nth-child(5) .service-link{display:inline-block!important;padding:9px 20px!important;border-radius:999px!important;color:#ffffff!important;font-weight:700!important;text-decoration:none!important;transition:transform .2s ease!important;}
+.service:nth-child(4) .service-link:hover,
+.service:nth-child(5) .service-link:hover{transform:translateY(-2px)!important;}
+
+.service:nth-child(4) .service-content{background:linear-gradient(160deg,#dff7e6 0%,#b4ebc5 100%)!important;border-top-color:#22c55e!important;}
+.service:nth-child(4) .service-content h3{color:#14653a!important;}
+.service:nth-child(4) .service-link{background:linear-gradient(135deg,#16a34a,#4ade80)!important;box-shadow:0 8px 20px rgba(22,163,74,.35)!important;}
+
+.service:nth-child(5) .service-content{background:linear-gradient(160deg,#dcf8f3 0%,#a9ece1 100%)!important;border-top-color:#14b8a6!important;}
+.service:nth-child(5) .service-content h3{color:#0b6b62!important;}
+.service:nth-child(5) .service-link{background:linear-gradient(135deg,#0d9488,#2dd4bf)!important;box-shadow:0 8px 20px rgba(13,148,136,.35)!important;}
+
+/* ===== CARE POINTS: Experienced / Modern / Patient Focused / Complete ===== */
+.care-point{border-radius:18px!important;border:1px solid transparent!important;border-top-width:6px!important;transition:transform .25s ease,box-shadow .25s ease!important;}
+.care-point:hover{transform:translateY(-6px)!important;}
+.care-point h1,.care-point h2,.care-point h3,.care-point h4,.care-point strong{color:#0f3446!important;}
+.care-point p,.care-point span{color:#2f5668!important;}
+.care-point:nth-child(1){background:linear-gradient(160deg,#e3f0fc 0%,#bfdcf5 100%)!important;border-color:#5aa7e0!important;box-shadow:0 14px 34px rgba(30,110,190,.25)!important;}
+.care-point:nth-child(2){background:linear-gradient(160deg,#dcf8f3 0%,#b0ece2 100%)!important;border-color:#14b8a6!important;box-shadow:0 14px 34px rgba(20,184,166,.25)!important;}
+.care-point:nth-child(3){background:linear-gradient(160deg,#eee6fd 0%,#d4c3f8 100%)!important;border-color:#8b5cf6!important;box-shadow:0 14px 34px rgba(139,92,246,.25)!important;}
+.care-point:nth-child(4){background:linear-gradient(160deg,#fff3d9 0%,#fddc9b 100%)!important;border-color:#f5a623!important;box-shadow:0 14px 34px rgba(245,166,35,.28)!important;}
+
+/* ===== PROCESS STEPS: Book Online / We Contact You / Meet Your Dentist / Protect Your Smile ===== */
+.process-card{border-radius:18px!important;border:1px solid transparent!important;border-top-width:6px!important;transition:transform .25s ease,box-shadow .25s ease!important;}
+.process-card:hover{transform:translateY(-6px)!important;}
+.process-card p{color:#2f4a58!important;}
+.process-card:nth-child(1){background:linear-gradient(160deg,#e3f0fc 0%,#bfdcf5 100%)!important;border-color:#2f8fe0!important;box-shadow:0 14px 34px rgba(30,110,190,.25)!important;}
+.process-card:nth-child(1) .process-number{color:#1e6ebe!important;}
+.process-card:nth-child(1) h3{color:#0f4c81!important;}
+.process-card:nth-child(2){background:linear-gradient(160deg,#dcf8f3 0%,#b0ece2 100%)!important;border-color:#14b8a6!important;box-shadow:0 14px 34px rgba(20,184,166,.25)!important;}
+.process-card:nth-child(2) .process-number{color:#0d9488!important;}
+.process-card:nth-child(2) h3{color:#0b6b62!important;}
+.process-card:nth-child(3){background:linear-gradient(160deg,#eee6fd 0%,#d4c3f8 100%)!important;border-color:#8b5cf6!important;box-shadow:0 14px 34px rgba(139,92,246,.25)!important;}
+.process-card:nth-child(3) .process-number{color:#6d3fd6!important;}
+.process-card:nth-child(3) h3{color:#4c2a9a!important;}
+.process-card:nth-child(4){background:linear-gradient(160deg,#fff3d9 0%,#fddc9b 100%)!important;border-color:#f5a623!important;box-shadow:0 14px 34px rgba(245,166,35,.28)!important;}
+.process-card:nth-child(4) .process-number{color:#c27a00!important;}
+.process-card:nth-child(4) h3{color:#8a5200!important;}
+
+/* ===== CONTACT CARDS ===== */
+.contact-card{border-radius:18px!important;border:1px solid transparent!important;border-top-width:6px!important;transition:transform .25s ease,box-shadow .25s ease!important;}
+.contact-card:hover{transform:translateY(-6px)!important;}
+.contact-card p{color:#2f4a58!important;}
+.contact-card .contact-icon{color:#ffffff!important;border-radius:12px!important;}
+
+/* 1 Call - blue */
+.contact-card:nth-child(1){background:linear-gradient(160deg,#e3f0fc 0%,#bfdcf5 100%)!important;border-color:#2f8fe0!important;box-shadow:0 14px 34px rgba(30,110,190,.25)!important;}
+.contact-card:nth-child(1) h3{color:#0f4c81!important;}
+.contact-card:nth-child(1) .contact-icon{background:linear-gradient(135deg,#1e6ebe,#3aa0f0)!important;}
+.contact-card:nth-child(1) a[href^="tel:"]{color:#1e6ebe!important;}
+/* 2 Location - coral */
+.contact-card:nth-child(2){background:linear-gradient(160deg,#ffe8ec 0%,#ffc2cd 100%)!important;border-color:#f0546e!important;box-shadow:0 14px 34px rgba(224,58,88,.25)!important;}
+.contact-card:nth-child(2) h3{color:#a3223c!important;}
+.contact-card:nth-child(2) .contact-icon{background:linear-gradient(135deg,#e03a58,#ff7a8f)!important;}
+/* 3 Hours - amber */
+.contact-card:nth-child(3){background:linear-gradient(160deg,#fff3d9 0%,#fddc9b 100%)!important;border-color:#f5a623!important;box-shadow:0 14px 34px rgba(245,166,35,.28)!important;}
+.contact-card:nth-child(3) h3{color:#8a5200!important;}
+.contact-card:nth-child(3) .contact-icon{background:linear-gradient(135deg,#e68a00,#f7b733)!important;}
+/* 4 WhatsApp - green */
+.contact-card:nth-child(4){background:linear-gradient(160deg,#dff7e6 0%,#b4ebc5 100%)!important;border-color:#22c55e!important;box-shadow:0 14px 34px rgba(22,163,74,.25)!important;}
+.contact-card:nth-child(4) h3{color:#14653a!important;}
+.contact-card:nth-child(4) .contact-icon{background:linear-gradient(135deg,#16a34a,#4ade80)!important;}
+.contact-card:nth-child(4) a[href*="wa.me"]{background:linear-gradient(135deg,#16a34a,#4ade80)!important;box-shadow:0 8px 20px rgba(22,163,74,.35)!important;}
+/* 5 Online Appointment - violet */
+.contact-card:nth-child(5){background:linear-gradient(160deg,#eee6fd 0%,#d4c3f8 100%)!important;border-color:#8b5cf6!important;box-shadow:0 14px 34px rgba(139,92,246,.25)!important;}
+.contact-card:nth-child(5) h3{color:#4c2a9a!important;}
+.contact-card:nth-child(5) .contact-icon{background:linear-gradient(135deg,#6d3fd6,#9f7bf7)!important;}
+.contact-card:nth-child(5) a[href="booking.html"]{background:linear-gradient(135deg,#6d3fd6,#9f7bf7)!important;box-shadow:0 8px 20px rgba(109,63,214,.35)!important;}
+/* 6 TikTok - pink */
+.contact-card:nth-child(6),
+#tiktok-card{background:linear-gradient(160deg,#ffe3f1 0%,#ffb8d9 100%)!important;border-color:#ec4899!important;box-shadow:0 14px 34px rgba(236,72,153,.28)!important;}
+.contact-card:nth-child(6) h3,
+#tiktok-card h3{color:#9d174d!important;}
+.contact-card:nth-child(6) .contact-icon,
+#tiktok-card .contact-icon{background:linear-gradient(135deg,#db2777,#f472b6)!important;}
+</style>
 </head>
 
 <body>
