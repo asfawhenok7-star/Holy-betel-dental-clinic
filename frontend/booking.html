@@ -456,6 +456,199 @@
                     repeat(2, 1fr);
             }
         }
+    
+/* =========================================================
+   HOLY BETEL BOOKING PAGE COLORS
+   Colors, surfaces and button looks only
+   ========================================================= */
+
+body {
+    background: linear-gradient(180deg, #e2f3f8 0%, #c4e3ee 100%);
+    background-repeat: no-repeat;
+    background-color: #c4e3ee;
+    color: #17465c;
+}
+
+/* HEADER */
+header {
+    background: rgba(222, 241, 247, 0.94);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #a8d2e0;
+    box-shadow: 0 6px 24px rgba(7, 91, 120, 0.10);
+}
+
+.logo {
+    color: #17465c;
+}
+
+.back-link {
+    color: #087ea5;
+}
+
+.back-link:hover {
+    color: #075b78;
+}
+
+/* PAGE HEADER */
+.page-header {
+    background:
+        radial-gradient(circle at 85% 20%, rgba(18, 191, 211, 0.38), transparent 45%),
+        radial-gradient(circle at 10% 90%, rgba(18, 191, 211, 0.18), transparent 40%),
+        linear-gradient(135deg, #17465c 0%, #075b78 55%, #087ea5 100%);
+}
+
+.page-header h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 14px rgba(7, 40, 56, 0.35);
+}
+
+.page-header p {
+    color: #d4f1f7;
+}
+
+/* BOOKING CARD */
+.booking-card {
+    background: linear-gradient(145deg, rgba(242, 250, 253, 0.97), rgba(222, 242, 248, 0.93));
+    border: 1px solid #9ccbdb;
+    box-shadow:
+        inset 0 4px 0 #12bfd3,
+        0 18px 50px rgba(7, 91, 120, 0.18);
+}
+
+.section-title h2 {
+    color: #17465c;
+}
+
+.section-title p,
+.loading-text,
+.time-help {
+    color: #3f6071;
+}
+
+label {
+    color: #17465c;
+}
+
+/* FIELDS */
+input,
+select,
+textarea {
+    background: #eef8fb;
+    border: 1px solid #93c5d6;
+    color: #17465c;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #6b8d9b;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: #f6fcfe;
+    border-color: #12bfd3;
+    box-shadow: 0 0 0 3px rgba(18, 191, 211, 0.20);
+}
+
+/* TIME SLOTS */
+.time-slot {
+    background: #eef8fb;
+    border: 1px solid #93c5d6;
+    color: #17465c;
+    border-radius: 999px;
+}
+
+.time-slot:hover {
+    background: #d6edf4;
+    border-color: #12bfd3;
+}
+
+.time-slot.selected {
+    background: linear-gradient(135deg, #12bfd3 0%, #087ea5 55%, #075b78 100%);
+    border-color: #087ea5;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(8, 126, 165, 0.35);
+}
+
+.time-slot.disabled {
+    background: #d3e3ea;
+    border-color: #bfd3dc;
+    color: #86a0ab;
+    box-shadow: none;
+}
+
+.empty-times {
+    background: #e3f3f8;
+    border: 1px dashed #8cc5d8;
+    color: #3f6071;
+}
+
+.divider {
+    background: linear-gradient(90deg, transparent, #9ccbdb, transparent);
+}
+
+/* SUBMIT BUTTON (same look as homepage buttons) */
+.submit-button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #12bfd3 0%, #087ea5 55%, #075b78 100%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.4px;
+    box-shadow:
+        0 10px 26px rgba(8, 126, 165, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.submit-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #2fd0e2 0%, #0a8db8 55%, #075b78 100%);
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 32px rgba(18, 191, 211, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.submit-button:hover::after {
+    left: 130%;
+}
+
+.submit-button:disabled,
+.submit-button:disabled:hover {
+    background: #9bbbc7;
+    transform: none;
+    box-shadow: none;
+}
+
+.submit-button:disabled::after {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(180deg, #17465c 0%, #0f3446 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .submit-button::after {
+        transition: none;
+    }
+}
     </style>
 </head>
 

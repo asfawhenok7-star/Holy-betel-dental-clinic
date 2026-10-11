@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <title>Admin Dashboard | Holy Betel Speciality Dental Clinic Center</title>
+    <title>
+        Admin Dashboard | Holy Betel Speciality Dental Clinic Center
+    </title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -283,7 +288,11 @@
         }
 
         .welcome {
-            background: linear-gradient(110deg, #087ea4, #0b9cbd);
+            background: linear-gradient(
+                110deg,
+                #087ea4,
+                #0b9cbd
+            );
             border-radius: 17px;
             padding: 28px;
             color: white;
@@ -378,7 +387,9 @@
 
         .dashboard-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
+            grid-template-columns:
+                minmax(0, 1.7fr)
+                minmax(280px, 0.8fr);
             gap: 20px;
         }
 
@@ -418,7 +429,11 @@
 
         .appointment {
             display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr auto;
+            grid-template-columns:
+                1.2fr
+                1fr
+                1fr
+                auto;
             gap: 15px;
             align-items: center;
             padding: 16px 0;
@@ -567,6 +582,62 @@
         }
 
         /* =========================================
+           AUTH LOADING
+        ========================================= */
+
+        .auth-loading {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #f5f9fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .auth-loading-logo {
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
+            background: var(--blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            box-shadow: 0 12px 30px rgba(8,126,164,0.2);
+        }
+
+        .auth-loading-text {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .auth-loading-subtext {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .loading-spinner {
+            width: 28px;
+            height: 28px;
+            border: 3px solid #dce9ee;
+            border-top-color: var(--blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* =========================================
            OVERLAY
         ========================================= */
 
@@ -677,10 +748,34 @@
                 display: none;
             }
         }
+
     </style>
 </head>
 
 <body>
+
+<!-- =========================================
+     AUTHENTICATION LOADING SCREEN
+========================================== -->
+
+<div class="auth-loading" id="authLoading">
+
+    <div class="auth-loading-logo">
+        HB
+    </div>
+
+    <div class="loading-spinner"></div>
+
+    <div class="auth-loading-text">
+        Securing Admin Dashboard
+    </div>
+
+    <div class="auth-loading-subtext">
+        Verifying your administrator session...
+    </div>
+
+</div>
+
 
 <div class="app">
 
@@ -701,9 +796,12 @@
                 Dental Clinic Center
             </h1>
 
-            <p>Administration Portal</p>
+            <p>
+                Administration Portal
+            </p>
 
         </div>
+
 
         <nav class="nav">
 
@@ -712,69 +810,155 @@
             </div>
 
             <button class="nav-btn active">
-                <span class="nav-icon">▦</span>
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
                 Dashboard
+
             </button>
 
-            <button class="nav-btn" onclick="showComingSoon('Appointments')">
-                <span class="nav-icon">▣</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('Appointments')">
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
                 Appointments
+
             </button>
 
-            <button class="nav-btn" onclick="showComingSoon('Patients')">
-                <span class="nav-icon">♙</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('Patients')">
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
                 Patients
+
             </button>
 
-            <div class="nav-label" style="margin-top:18px;">
+
+            <div
+                class="nav-label"
+                style="margin-top:18px;">
+
                 Clinic
+
             </div>
 
-            <button class="nav-btn" onclick="showComingSoon('Doctors')">
-                <span class="nav-icon">♧</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('Doctors')">
+
+                <span class="nav-icon">
+                    ♧
+                </span>
+
                 Doctors
+
             </button>
 
-            <button class="nav-btn" onclick="showComingSoon('Services')">
-                <span class="nav-icon">✚</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('Services')">
+
+                <span class="nav-icon">
+                    ✚
+                </span>
+
                 Services
+
             </button>
 
-            <button class="nav-btn" onclick="showComingSoon('Clinic Settings')">
-                <span class="nav-icon">⚙</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('Clinic Settings')">
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
                 Clinic Settings
+
             </button>
 
-            <div class="nav-label" style="margin-top:18px;">
+
+            <div
+                class="nav-label"
+                style="margin-top:18px;">
+
                 System
+
             </div>
 
-            <button class="nav-btn" onclick="showComingSoon('AI Assistant')">
-                <span class="nav-icon">✦</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('AI Assistant')">
+
+                <span class="nav-icon">
+                    ✦
+                </span>
+
                 AI Assistant
+
             </button>
 
-            <button class="nav-btn" onclick="showComingSoon('Notifications')">
-                <span class="nav-icon">♢</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('Notifications')">
+
+                <span class="nav-icon">
+                    ♢
+                </span>
+
                 Notifications
+
             </button>
 
-            <button class="nav-btn" onclick="showComingSoon('Security')">
-                <span class="nav-icon">◇</span>
+
+            <button
+                class="nav-btn"
+                onclick="showComingSoon('Security')">
+
+                <span class="nav-icon">
+                    ◇
+                </span>
+
                 Security
+
             </button>
 
         </nav>
+
 
         <div class="sidebar-bottom">
 
             <div class="admin-mini">
 
-                <div class="avatar" id="adminAvatar">
+                <div
+                    class="avatar"
+                    id="adminAvatar">
+
                     HB
+
                 </div>
 
+
                 <div>
+
                     <strong id="adminName">
                         Administrator
                     </strong>
@@ -782,19 +966,31 @@
                     <span id="adminEmail">
                         Admin
                     </span>
+
                 </div>
 
             </div>
 
-            <button class="logout-btn" onclick="logout()">
+
+            <button
+                class="logout-btn"
+                onclick="logout()">
+
                 Sign Out
+
             </button>
 
         </div>
 
     </aside>
 
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+        onclick="closeSidebar()">
+    </div>
+
 
     <!-- =========================================
          MAIN
@@ -810,12 +1006,17 @@
                     class="mobile-menu"
                     onclick="toggleSidebar()"
                     aria-label="Open menu">
+
                     ☰
+
                 </button>
+
 
                 <div class="page-title">
 
-                    <h2>Dashboard</h2>
+                    <h2>
+                        Dashboard
+                    </h2>
 
                     <p>
                         Holy Betel clinic management
@@ -825,39 +1026,50 @@
 
             </div>
 
+
             <div class="topbar-right">
 
                 <div class="status-pill">
                     ● System Online
                 </div>
 
+
                 <button
                     class="website-btn"
                     onclick="window.open('/', '_blank')">
+
                     View Website
+
                 </button>
 
             </div>
 
         </header>
 
+
         <section class="content">
 
-            <!-- WELCOME -->
+            <!-- =========================================
+                 WELCOME
+            ========================================== -->
 
             <div class="welcome">
 
-                <h3>
+                <h3 id="welcomeTitle">
                     Welcome back, Administrator
                 </h3>
 
                 <p>
-                    Manage your clinic, appointments, patients and services from one place.
+                    Manage your clinic, appointments,
+                    patients and services from one place.
                 </p>
 
             </div>
 
-            <!-- STATS -->
+
+            <!-- =========================================
+                 STATS
+            ========================================== -->
 
             <div class="stats">
 
@@ -878,7 +1090,9 @@
                     <div
                         class="stat-number"
                         id="todayAppointments">
+
                         —
+
                     </div>
 
                     <div class="stat-note">
@@ -886,6 +1100,7 @@
                     </div>
 
                 </div>
+
 
                 <div class="stat-card">
 
@@ -904,7 +1119,9 @@
                     <div
                         class="stat-number"
                         id="pendingAppointments">
+
                         —
+
                     </div>
 
                     <div class="stat-note">
@@ -912,6 +1129,7 @@
                     </div>
 
                 </div>
+
 
                 <div class="stat-card">
 
@@ -930,7 +1148,9 @@
                     <div
                         class="stat-number"
                         id="confirmedAppointments">
+
                         —
+
                     </div>
 
                     <div class="stat-note">
@@ -938,6 +1158,7 @@
                     </div>
 
                 </div>
+
 
                 <div class="stat-card">
 
@@ -956,7 +1177,9 @@
                     <div
                         class="stat-number"
                         id="totalAppointments">
+
                         —
+
                     </div>
 
                     <div class="stat-note">
@@ -967,18 +1190,25 @@
 
             </div>
 
-            <!-- MAIN DASHBOARD -->
+
+            <!-- =========================================
+                 MAIN DASHBOARD
+            ========================================== -->
 
             <div class="dashboard-grid">
 
-                <!-- APPOINTMENTS -->
+                <!-- =====================================
+                     APPOINTMENTS
+                ====================================== -->
 
                 <div class="card">
 
                     <div class="card-header">
 
                         <div>
-                            <h3>Recent Appointments</h3>
+                            <h3>
+                                Recent Appointments
+                            </h3>
                         </div>
 
                         <span id="appointmentUpdated">
@@ -986,6 +1216,7 @@
                         </span>
 
                     </div>
+
 
                     <div
                         class="appointment-list"
@@ -999,15 +1230,21 @@
 
                 </div>
 
-                <!-- QUICK ACTIONS -->
+
+                <!-- =====================================
+                     QUICK ACTIONS
+                ====================================== -->
 
                 <div class="card">
 
                     <div class="card-header">
 
-                        <h3>Quick Actions</h3>
+                        <h3>
+                            Quick Actions
+                        </h3>
 
                     </div>
+
 
                     <div class="quick-actions">
 
@@ -1020,11 +1257,19 @@
                             </div>
 
                             <div>
-                                <strong>Manage Appointments</strong>
-                                <span>Review and update bookings</span>
+
+                                <strong>
+                                    Manage Appointments
+                                </strong>
+
+                                <span>
+                                    Review and update bookings
+                                </span>
+
                             </div>
 
                         </button>
+
 
                         <button
                             class="action"
@@ -1035,11 +1280,19 @@
                             </div>
 
                             <div>
-                                <strong>View Patients</strong>
-                                <span>Patient records and history</span>
+
+                                <strong>
+                                    View Patients
+                                </strong>
+
+                                <span>
+                                    Patient records and history
+                                </span>
+
                             </div>
 
                         </button>
+
 
                         <button
                             class="action"
@@ -1050,11 +1303,19 @@
                             </div>
 
                             <div>
-                                <strong>Manage Doctors</strong>
-                                <span>Doctors and specialties</span>
+
+                                <strong>
+                                    Manage Doctors
+                                </strong>
+
+                                <span>
+                                    Doctors and specialties
+                                </span>
+
                             </div>
 
                         </button>
+
 
                         <button
                             class="action"
@@ -1065,11 +1326,19 @@
                             </div>
 
                             <div>
-                                <strong>Manage Services</strong>
-                                <span>Dental services and pricing</span>
+
+                                <strong>
+                                    Manage Services
+                                </strong>
+
+                                <span>
+                                    Dental services and pricing
+                                </span>
+
                             </div>
 
                         </button>
+
 
                         <button
                             class="action"
@@ -1080,11 +1349,19 @@
                             </div>
 
                             <div>
-                                <strong>Clinic Settings</strong>
-                                <span>Contact and clinic information</span>
+
+                                <strong>
+                                    Clinic Settings
+                                </strong>
+
+                                <span>
+                                    Contact and clinic information
+                                </span>
+
                             </div>
 
                         </button>
+
 
                         <button
                             class="action"
@@ -1095,8 +1372,15 @@
                             </div>
 
                             <div>
-                                <strong>AI Assistant</strong>
-                                <span>Manage assistant knowledge</span>
+
+                                <strong>
+                                    AI Assistant
+                                </strong>
+
+                                <span>
+                                    Manage assistant knowledge
+                                </span>
+
                             </div>
 
                         </button>
@@ -1113,125 +1397,377 @@
 
 </div>
 
+
 <script>
 
-    // =========================================
-    // AUTHENTICATION
-    // =========================================
+    /* =========================================
+       AUTHENTICATION
+    ========================================= */
 
     const token =
-        localStorage.getItem('holyBetelAdminToken');
+        localStorage.getItem(
+            'holyBetelAdminToken'
+        );
 
-    if (!token) {
 
-        window.location.replace('login.html');
+    let authenticatedAdmin = null;
 
-    }
 
-    // =========================================
-    // LOAD ADMIN INFORMATION
-    // =========================================
+    /* =========================================
+       HIDE AUTH LOADING SCREEN
+    ========================================= */
 
-    function loadAdminInfo() {
+    function hideAuthLoading() {
 
-        try {
-
-            const payload =
-                JSON.parse(
-                    atob(
-                        token.split('.')[1]
-                            .replace(/-/g, '+')
-                            .replace(/_/g, '/')
-                    )
-                );
-
-            if (payload.name) {
-                document.getElementById('adminName').textContent =
-                    payload.name;
-
-                const initials =
-                    payload.name
-                        .split(' ')
-                        .map(word => word[0])
-                        .join('')
-                        .substring(0, 2)
-                        .toUpperCase();
-
-                document.getElementById('adminAvatar')
-                    .textContent = initials;
-            }
-
-            if (payload.email) {
-                document.getElementById('adminEmail').textContent =
-                    payload.email;
-            }
-
-        } catch (error) {
-
-            console.error(
-                'Unable to read admin session.'
+        const loading =
+            document.getElementById(
+                'authLoading'
             );
+
+        if (loading) {
+
+            loading.style.display = 'none';
 
         }
 
     }
 
-    // =========================================
-    // LOAD APPOINTMENTS
-    // =========================================
+
+    /* =========================================
+       VERIFY ADMIN SESSION WITH BACKEND
+    ========================================= */
+
+    async function verifyAdminSession() {
+
+        /*
+         * No token means the administrator
+         * is not logged in.
+         */
+
+        if (!token) {
+
+            window.location.replace(
+                'login.html'
+            );
+
+            return false;
+
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    '/api/admin/me',
+                    {
+                        method: 'GET',
+
+                        headers: {
+                            'Authorization':
+                                `Bearer ${token}`,
+
+                            'Accept':
+                                'application/json'
+                        }
+                    }
+                );
+
+
+            /*
+             * If the backend returns something
+             * that is not valid JSON, handle it
+             * safely instead of crashing.
+             */
+
+            let data = null;
+
+            try {
+
+                data =
+                    await response.json();
+
+            } catch (jsonError) {
+
+                data = null;
+
+            }
+
+
+            /*
+             * Token is invalid, expired,
+             * or administrator is inactive.
+             */
+
+            if (
+                !response.ok ||
+                !data ||
+                !data.success
+            ) {
+
+                localStorage.removeItem(
+                    'holyBetelAdminToken'
+                );
+
+                window.location.replace(
+                    'login.html'
+                );
+
+                return false;
+
+            }
+
+
+            /*
+             * Store the verified administrator
+             * information returned by PostgreSQL.
+             */
+
+            authenticatedAdmin =
+                data.admin || null;
+
+
+            hideAuthLoading();
+
+            return true;
+
+
+        } catch (error) {
+
+            console.error(
+                'Admin session verification failed:',
+                error
+            );
+
+
+            /*
+             * The server may be temporarily
+             * unavailable. Do not pretend the
+             * administrator is authenticated.
+             */
+
+            const loading =
+                document.getElementById(
+                    'authLoading'
+                );
+
+            if (loading) {
+
+                loading.innerHTML = `
+
+                    <div class="auth-loading-logo">
+                        HB
+                    </div>
+
+                    <div class="auth-loading-text">
+                        Unable to verify dashboard
+                    </div>
+
+                    <div class="auth-loading-subtext">
+                        Please make sure the dental clinic
+                        server is running and try again.
+                    </div>
+
+                    <button
+                        onclick="window.location.reload()"
+                        style="
+                            margin-top:8px;
+                            border:1px solid #dce9ee;
+                            background:white;
+                            color:#075b78;
+                            padding:10px 16px;
+                            border-radius:9px;
+                            font-weight:700;
+                            cursor:pointer;
+                        ">
+
+                        Try Again
+
+                    </button>
+
+                    <button
+                        onclick="logout()"
+                        style="
+                            border:0;
+                            background:transparent;
+                            color:#d64545;
+                            padding:6px 12px;
+                            font-size:12px;
+                            cursor:pointer;
+                        ">
+
+                        Return to Login
+
+                    </button>
+
+                `;
+
+            }
+
+            return false;
+
+        }
+
+    }
+
+
+    /* =========================================
+       LOAD VERIFIED ADMIN INFORMATION
+    ========================================= */
+
+    function loadAdminInfo() {
+
+        if (!authenticatedAdmin) {
+            return;
+        }
+
+
+        const name =
+            authenticatedAdmin.name ||
+            authenticatedAdmin.username ||
+            'Administrator';
+
+
+        const email =
+            authenticatedAdmin.email ||
+            'Admin';
+
+
+        document.getElementById(
+            'adminName'
+        ).textContent = name;
+
+
+        document.getElementById(
+            'adminEmail'
+        ).textContent = email;
+
+
+        const initials =
+            name
+                .split(' ')
+                .filter(Boolean)
+                .map(word => word[0])
+                .join('')
+                .substring(0, 2)
+                .toUpperCase();
+
+
+        document.getElementById(
+            'adminAvatar'
+        ).textContent =
+            initials || 'HB';
+
+
+        document.getElementById(
+            'welcomeTitle'
+        ).textContent =
+            `Welcome back, ${name}`;
+
+    }
+
+
+    /* =========================================
+       LOAD APPOINTMENTS
+    ========================================= */
 
     async function loadDashboardData() {
 
         try {
 
-            const response = await fetch(
-                '/api/appointments',
-                {
-                    headers: {
-                        'Authorization':
-                            `Bearer ${token}`,
-                        'Accept':
-                            'application/json'
-                    }
-                }
-            );
+            const response =
+                await fetch(
+                    '/api/appointments',
+                    {
+                        method: 'GET',
 
-            const data = await response.json();
+                        headers: {
+                            'Authorization':
+                                `Bearer ${token}`,
+
+                            'Accept':
+                                'application/json'
+                        }
+                    }
+                );
+
+
+            let data = null;
+
+            try {
+
+                data =
+                    await response.json();
+
+            } catch (jsonError) {
+
+                data = null;
+
+            }
+
 
             if (!response.ok) {
 
-                if (response.status === 401) {
+                /*
+                 * If the appointment endpoint
+                 * rejects the JWT, log the admin out.
+                 */
+
+                if (
+                    response.status === 401 ||
+                    response.status === 403
+                ) {
+
                     logout();
+
                     return;
+
                 }
 
+
                 throw new Error(
-                    data.message ||
-                    'Unable to load appointments.'
+                    data &&
+                    data.message
+                        ? data.message
+                        : 'Unable to load appointments.'
                 );
+
             }
 
+
             /*
-             * The appointment API may have different
-             * response shapes depending on the current
-             * backend implementation.
+             * Support the possible appointment
+             * response structures already used
+             * by this dashboard.
              */
 
             const appointments =
                 Array.isArray(data)
                     ? data
-                    : Array.isArray(data.appointments)
+                    : data &&
+                      Array.isArray(data.appointments)
                         ? data.appointments
-                        : Array.isArray(data.data)
+                        : data &&
+                          Array.isArray(data.data)
                             ? data.data
                             : [];
 
-            updateStatistics(appointments);
-            renderAppointments(appointments);
+
+            updateStatistics(
+                appointments
+            );
+
+
+            renderAppointments(
+                appointments
+            );
+
 
             document.getElementById(
                 'appointmentUpdated'
-            ).textContent = 'Updated just now';
+            ).textContent =
+                'Updated just now';
+
 
         } catch (error) {
 
@@ -1240,78 +1776,104 @@
                 error
             );
 
+
             /*
-             * Keep the dashboard usable even if the
-             * appointment endpoint has not yet been
-             * connected to the admin API.
+             * The dashboard itself remains
+             * available while appointment
+             * management is being connected.
              */
 
             document.getElementById(
                 'appointmentUpdated'
-            ).textContent = 'Awaiting appointment data';
+            ).textContent =
+                'Awaiting appointment data';
+
 
             document.getElementById(
                 'appointmentList'
             ).innerHTML = `
+
                 <div class="empty-state">
-                    Appointment management will appear here.
+
+                    Appointment management
+                    will appear here.
+
                 </div>
+
             `;
 
         }
 
     }
 
-    // =========================================
-    // STATISTICS
-    // =========================================
 
-    function updateStatistics(appointments) {
+    /* =========================================
+       STATISTICS
+    ========================================= */
+
+    function updateStatistics(
+        appointments
+    ) {
 
         const today =
-            new Date().toISOString().split('T')[0];
+            new Date()
+                .toISOString()
+                .split('T')[0];
+
 
         const todayAppointments =
-            appointments.filter(item => {
+            appointments.filter(
+                item => {
 
-                const date =
-                    item.appointment_date ||
-                    item.date ||
-                    item.booking_date;
+                    const date =
+                        item.appointment_date ||
+                        item.date ||
+                        item.booking_date;
 
-                return date &&
-                    String(date).substring(0, 10) === today;
 
-            });
+                    return date &&
+                        String(date)
+                            .substring(0, 10) === today;
+
+                }
+            );
+
 
         const pending =
-            appointments.filter(item =>
-                String(
-                    item.status || ''
-                ).toLowerCase() === 'pending'
+            appointments.filter(
+                item =>
+                    String(
+                        item.status || ''
+                    ).toLowerCase() === 'pending'
             );
 
+
         const confirmed =
-            appointments.filter(item =>
-                String(
-                    item.status || ''
-                ).toLowerCase() === 'confirmed'
+            appointments.filter(
+                item =>
+                    String(
+                        item.status || ''
+                    ).toLowerCase() === 'confirmed'
             );
+
 
         document.getElementById(
             'todayAppointments'
         ).textContent =
             todayAppointments.length;
 
+
         document.getElementById(
             'pendingAppointments'
         ).textContent =
             pending.length;
 
+
         document.getElementById(
             'confirmedAppointments'
         ).textContent =
             confirmed.length;
+
 
         document.getElementById(
             'totalAppointments'
@@ -1320,181 +1882,258 @@
 
     }
 
-    // =========================================
-    // RENDER APPOINTMENTS
-    // =========================================
 
-    function renderAppointments(appointments) {
+    /* =========================================
+       RENDER APPOINTMENTS
+    ========================================= */
+
+    function renderAppointments(
+        appointments
+    ) {
 
         const container =
             document.getElementById(
                 'appointmentList'
             );
 
+
         if (!appointments.length) {
 
             container.innerHTML = `
+
                 <div class="empty-state">
-                    No appointments have been recorded yet.
+
+                    No appointments have been
+                    recorded yet.
+
                 </div>
+
             `;
 
             return;
+
         }
+
 
         const recent =
             [...appointments]
-                .sort((a, b) => {
+                .sort(
+                    (a, b) => {
 
-                    const aDate =
-                        new Date(
-                            a.created_at ||
-                            a.createdAt ||
-                            a.appointment_date ||
-                            0
-                        );
+                        const aDate =
+                            new Date(
+                                a.created_at ||
+                                a.createdAt ||
+                                a.appointment_date ||
+                                0
+                            );
 
-                    const bDate =
-                        new Date(
-                            b.created_at ||
-                            b.createdAt ||
-                            b.appointment_date ||
-                            0
-                        );
 
-                    return bDate - aDate;
+                        const bDate =
+                            new Date(
+                                b.created_at ||
+                                b.createdAt ||
+                                b.appointment_date ||
+                                0
+                            );
 
-                })
+
+                        return bDate - aDate;
+
+                    }
+                )
                 .slice(0, 8);
 
+
         container.innerHTML =
-            recent.map(item => {
+            recent
+                .map(
+                    item => {
 
-                const name =
-                    item.patient_name ||
-                    item.patientName ||
-                    item.name ||
-                    'Patient';
+                        const name =
+                            item.patient_name ||
+                            item.patientName ||
+                            item.name ||
+                            'Patient';
 
-                const service =
-                    item.service_name ||
-                    item.serviceName ||
-                    item.service ||
-                    'Dental appointment';
 
-                const doctor =
-                    item.doctor_name ||
-                    item.doctorName ||
-                    item.doctor ||
-                    'Clinic';
+                        const service =
+                            item.service_name ||
+                            item.serviceName ||
+                            item.service ||
+                            'Dental appointment';
 
-                const date =
-                    item.appointment_date ||
-                    item.date ||
-                    item.booking_date ||
-                    'Date pending';
 
-                const time =
-                    item.appointment_time ||
-                    item.time ||
-                    '';
+                        const doctor =
+                            item.doctor_name ||
+                            item.doctorName ||
+                            item.doctor ||
+                            'Clinic';
 
-                const status =
-                    String(
-                        item.status ||
-                        'pending'
-                    ).toLowerCase();
 
-                const initials =
-                    name
-                        .split(' ')
-                        .map(word => word[0])
-                        .join('')
-                        .substring(0, 2)
-                        .toUpperCase();
+                        const date =
+                            item.appointment_date ||
+                            item.date ||
+                            item.booking_date ||
+                            'Date pending';
 
-                const safeStatus =
-                    [
-                        'pending',
-                        'confirmed',
-                        'completed',
-                        'cancelled'
-                    ].includes(status)
-                        ? status
-                        : 'pending';
 
-                return `
-                    <div class="appointment">
+                        const time =
+                            item.appointment_time ||
+                            item.time ||
+                            '';
 
-                        <div class="patient">
 
-                            <div class="patient-avatar">
-                                ${escapeHtml(initials)}
+                        const status =
+                            String(
+                                item.status ||
+                                'pending'
+                            ).toLowerCase();
+
+
+                        const initials =
+                            name
+                                .split(' ')
+                                .filter(Boolean)
+                                .map(
+                                    word => word[0]
+                                )
+                                .join('')
+                                .substring(0, 2)
+                                .toUpperCase();
+
+
+                        const safeStatus =
+                            [
+                                'pending',
+                                'confirmed',
+                                'completed',
+                                'cancelled'
+                            ].includes(status)
+                                ? status
+                                : 'pending';
+
+
+                        return `
+
+                            <div class="appointment">
+
+                                <div class="patient">
+
+                                    <div class="patient-avatar">
+
+                                        ${escapeHtml(
+                                            initials
+                                        )}
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+
+                                            ${escapeHtml(
+                                                name
+                                            )}
+
+                                        </strong>
+
+
+                                        <span>
+
+                                            ${escapeHtml(
+                                                service
+                                            )}
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="appointment-detail">
+
+                                    <strong>
+
+                                        ${escapeHtml(
+                                            formatDate(date)
+                                        )}
+
+                                    </strong>
+
+                                    ${escapeHtml(
+                                        time
+                                    )}
+
+                                </div>
+
+
+                                <div class="appointment-detail">
+
+                                    <strong>
+                                        Doctor
+                                    </strong>
+
+                                    ${escapeHtml(
+                                        doctor
+                                    )}
+
+                                </div>
+
+
+                                <div>
+
+                                    <span
+                                        class="badge ${safeStatus}">
+
+                                        ${escapeHtml(
+                                            safeStatus
+                                        )}
+
+                                    </span>
+
+                                </div>
+
                             </div>
 
-                            <div>
-                                <strong>
-                                    ${escapeHtml(name)}
-                                </strong>
+                        `;
 
-                                <span>
-                                    ${escapeHtml(service)}
-                                </span>
-                            </div>
-
-                        </div>
-
-                        <div class="appointment-detail">
-
-                            <strong>
-                                ${escapeHtml(
-                                    formatDate(date)
-                                )}
-                            </strong>
-
-                            ${escapeHtml(time)}
-
-                        </div>
-
-                        <div class="appointment-detail">
-
-                            <strong>
-                                Doctor
-                            </strong>
-
-                            ${escapeHtml(doctor)}
-
-                        </div>
-
-                        <div>
-                            <span class="badge ${safeStatus}">
-                                ${escapeHtml(safeStatus)}
-                            </span>
-                        </div>
-
-                    </div>
-                `;
-
-            }).join('');
+                    }
+                )
+                .join('');
 
     }
 
-    // =========================================
-    // HELPERS
-    // =========================================
+
+    /* =========================================
+       FORMAT DATE
+    ========================================= */
 
     function formatDate(value) {
 
         if (!value) {
+
             return 'Date pending';
+
         }
+
 
         const date =
             new Date(value);
 
-        if (Number.isNaN(date.getTime())) {
+
+        if (
+            Number.isNaN(
+                date.getTime()
+            )
+        ) {
+
             return String(value);
+
         }
+
 
         return date.toLocaleDateString(
             undefined,
@@ -1507,50 +2146,93 @@
 
     }
 
+
+    /* =========================================
+       HTML SECURITY HELPER
+    ========================================= */
+
     function escapeHtml(value) {
 
         return String(value)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#039;');
+            .replace(
+                /&/g,
+                '&amp;'
+            )
+            .replace(
+                /</g,
+                '&lt;'
+            )
+            .replace(
+                />/g,
+                '&gt;'
+            )
+            .replace(
+                /"/g,
+                '&quot;'
+            )
+            .replace(
+                /'/g,
+                '&#039;'
+            );
 
     }
 
-    // =========================================
-    // MOBILE SIDEBAR
-    // =========================================
+
+    /* =========================================
+       MOBILE SIDEBAR
+    ========================================= */
 
     function toggleSidebar() {
 
         document
-            .getElementById('sidebar')
-            .classList.toggle('open');
+            .getElementById(
+                'sidebar'
+            )
+            .classList.toggle(
+                'open'
+            );
+
 
         document
-            .getElementById('sidebarOverlay')
-            .classList.toggle('show');
+            .getElementById(
+                'sidebarOverlay'
+            )
+            .classList.toggle(
+                'show'
+            );
 
     }
+
 
     function closeSidebar() {
 
         document
-            .getElementById('sidebar')
-            .classList.remove('open');
+            .getElementById(
+                'sidebar'
+            )
+            .classList.remove(
+                'open'
+            );
+
 
         document
-            .getElementById('sidebarOverlay')
-            .classList.remove('show');
+            .getElementById(
+                'sidebarOverlay'
+            )
+            .classList.remove(
+                'show'
+            );
 
     }
 
-    // =========================================
-    // COMING SOON
-    // =========================================
 
-    function showComingSoon(section) {
+    /* =========================================
+       COMING SOON
+    ========================================= */
+
+    function showComingSoon(
+        section
+    ) {
 
         alert(
             section +
@@ -1559,9 +2241,10 @@
 
     }
 
-    // =========================================
-    // LOGOUT
-    // =========================================
+
+    /* =========================================
+       LOGOUT
+    ========================================= */
 
     function logout() {
 
@@ -1569,19 +2252,42 @@
             'holyBetelAdminToken'
         );
 
+
         window.location.replace(
             'login.html'
         );
 
     }
 
-    // =========================================
-    // START
-    // =========================================
 
-    loadAdminInfo();
+    /* =========================================
+       START DASHBOARD
+    ========================================= */
 
-    loadDashboardData();
+    (async function startDashboard() {
+
+        /*
+         * The dashboard does not start loading
+         * protected data until the backend has
+         * verified the administrator JWT.
+         */
+
+        const authenticated =
+            await verifyAdminSession();
+
+
+        if (!authenticated) {
+
+            return;
+
+        }
+
+
+        loadAdminInfo();
+
+        loadDashboardData();
+
+    })();
 
 </script>
 

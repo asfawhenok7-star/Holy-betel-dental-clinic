@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -209,7 +210,7 @@ img{
       rgba(255,255,255,.65) 61%,
       rgba(255,255,255,.08) 100%
     ),
-    url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=2200&q=90")
+    url("images/hero.jpg")
     center/cover no-repeat;
 }
 
@@ -415,7 +416,7 @@ section{
 .welcome-image{
   min-height:500px;
   background:
-    url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1500&q=90")
+    url("images/welcome.jpg")
     center/cover no-repeat;
 }
 
@@ -513,27 +514,27 @@ section{
 }
 
 .service:nth-child(1) .service-image{
-  background-image:url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=90");
+  background-image:url("images/general-dentistry.jpg");
 }
 
 .service:nth-child(2) .service-image{
-  background-image:url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=90");
+  background-image:url("images/family-dentistry.jpg");
 }
 
 .service:nth-child(3) .service-image{
-  background-image:url("https://images.unsplash.com/photo-1606265752439-1f18756aa2f4?auto=format&fit=crop&w=1200&q=90");
+  background-image:url("images/teeth-whitening.jpg");
 }
 
 .service:nth-child(4) .service-image{
-  background-image:url("https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1200&q=90");
+  background-image:url("images/dental-implants.jpg");
 }
 
 .service:nth-child(5) .service-image{
-  background-image:url("https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=1200&q=90");
+  background-image:url("images/gum-care.jpg");
 }
 
 .service:nth-child(6) .service-image{
-  background-image:url("https://images.unsplash.com/photo-1581585094787-82f1bda8f9c7?auto=format&fit=crop&w=1200&q=90");
+  background-image:url("images/cosmetic-dentistry.jpg");
 }
 
 .service-content{
@@ -578,7 +579,7 @@ section{
 .care-image{
   min-height:500px;
   background:
-    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1500&q=90")
+    url("images/hero.jpg")
     center/cover no-repeat;
 }
 
@@ -659,11 +660,11 @@ section{
 }
 
 .doctor:nth-child(1) .doctor-photo{
-  background-image:url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=90");
+  background-image:url("images/doctor-sarah.jpg");
 }
 
 .doctor:nth-child(2) .doctor-photo{
-  background-image:url("https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=90");
+  background-image:url("images/doctor-michael.jpg");
 }
 
 .doctor-info{
@@ -1028,7 +1029,7 @@ section{
       rgba(7,91,120,.94),
       rgba(7,126,165,.86)
     ),
-    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=90")
+    url("images/hero.jpg")
     center/cover no-repeat;
   color:#fff;
 }
@@ -2485,6 +2486,599 @@ footer{
 
 }
 
+/* =========================================================
+   HOLY BETEL LIGHT TEAL COLOR SYSTEM
+   Navy / dental blue / cyan on soft blue-teal surfaces
+   ========================================================= */
+
+:root{
+  --soft:#e2f3f8;
+  --soft-blue:#d3ebf3;
+  --text:#1f4658;
+  --muted:#3f6071;
+  --line:#aed5e3;
+  --card:linear-gradient(145deg,rgba(242,250,253,.94),rgba(222,242,248,.90));
+  --card-shadow:0 10px 30px rgba(7,91,120,.10);
+}
+
+/* PAGE */
+body{
+  background:linear-gradient(180deg,#e2f3f8 0%,#c4e3ee 100%);
+  color:var(--text);
+}
+
+/* TOP BAR + HEADER */
+.topbar{
+  background:linear-gradient(90deg,#17465c 0%,#075b78 100%);
+}
+
+.header{
+  background:rgba(222,241,247,.94);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #a8d2e0;
+  box-shadow:0 6px 24px rgba(7,91,120,.10);
+}
+
+.nav a{
+  color:#2b5266;
+}
+
+/* HERO (same overlay strength, tinted blue instead of white) */
+.hero{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(226,243,249,.86) 0%,
+      rgba(222,241,248,.80) 55%,
+      rgba(205,233,243,.45) 78%,
+      rgba(23,70,92,.06) 100%
+    ),
+    url("images/hero.jpg")
+    center/cover no-repeat;
+}
+
+.hero p{
+  color:#3b5d6f;
+}
+
+/* BUTTONS */
+.btn-primary{
+  background:linear-gradient(135deg,#0a8db8 0%,#075b78 100%);
+  box-shadow:0 8px 20px rgba(8,126,165,.25);
+}
+
+.btn-primary:hover{
+  background:linear-gradient(135deg,#087ea5 0%,#17465c 100%);
+}
+
+.btn-outline{
+  background:#e8f5fa;
+  border-color:#8cc5d8;
+  color:var(--blue-dark);
+}
+
+.btn-outline:hover{
+  background:#d6edf4;
+  border-color:var(--blue);
+  color:var(--blue);
+}
+
+/* TRUST STRIP */
+.trust{
+  background:linear-gradient(90deg,#cfe8f1 0%,#dff1f7 50%,#cfe8f1 100%);
+}
+
+.trust-icon{
+  background:#f0f9fc;
+  border:1px solid #9fcddc;
+}
+
+/* SECTION BACKGROUNDS (alternating light / deeper teal tints) */
+.welcome{
+  background:
+    radial-gradient(circle at 92% 8%,rgba(18,191,211,.16),transparent 42%),
+    linear-gradient(135deg,#e2f3f8 0%,#d0e9f1 100%);
+}
+
+.services{
+  background:
+    radial-gradient(circle at 6% 94%,rgba(8,126,165,.14),transparent 45%),
+    linear-gradient(135deg,#c9e5ef 0%,#b8dcea 100%);
+}
+
+.care{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(18,191,211,.15),transparent 42%),
+    linear-gradient(135deg,#e2f3f8 0%,#cde8f0 100%);
+}
+
+.doctors{
+  background:
+    radial-gradient(circle at 8% 10%,rgba(8,126,165,.12),transparent 42%),
+    linear-gradient(135deg,#c4e3ee 0%,#b4daea 100%);
+}
+
+.reviews{
+  background:
+    radial-gradient(circle at 88% 90%,rgba(18,191,211,.14),transparent 42%),
+    linear-gradient(135deg,#e2f3f8 0%,#d0e9f1 100%);
+}
+
+.process{
+  background:
+    radial-gradient(circle at 10% 90%,rgba(8,126,165,.12),transparent 45%),
+    linear-gradient(135deg,#c4e3ee 0%,#b0d8e8 100%);
+}
+
+.faq{
+  background:linear-gradient(135deg,#dcf0f6 0%,#cde8f0 100%);
+}
+
+.contact{
+  background:
+    radial-gradient(circle at 92% 10%,rgba(18,191,211,.13),transparent 42%),
+    linear-gradient(135deg,#c9e5ef 0%,#b3d9e8 100%);
+}
+
+/* CUBE AREA: soft cyan glow only, cube itself untouched */
+.holy-betel-dedicated-cube-area{
+  background:radial-gradient(circle at center,rgba(18,191,211,.20),transparent 56%) !important;
+}
+
+/* APPOINTMENT CTA + FOOTER: deep navy */
+.appointment{
+  background:
+    linear-gradient(90deg,rgba(23,70,92,.82),rgba(7,91,120,.66)),
+    url("images/hero.jpg")
+    center/cover no-repeat;
+}
+
+footer{
+  background:linear-gradient(180deg,#17465c 0%,#0f3446 100%);
+}
+
+/* CARDS: tinted glass instead of pure white */
+.service,
+.doctor,
+.review,
+.contact-card,
+.process-card,
+.faq-item,
+.care-point,
+.reviews-summary,
+.review-form-card,
+.reviews-loading,
+.reviews-empty{
+  background:var(--card);
+  border-color:#9ccbdb;
+  box-shadow:var(--card-shadow);
+}
+
+.service:hover,
+.review:hover{
+  border-color:var(--cyan);
+  box-shadow:0 16px 38px rgba(7,91,120,.18);
+}
+
+/* TEXT CONTRAST ON LIGHT SURFACES */
+.review p{
+  color:#3f6071;
+}
+
+.check{
+  color:#2f5668;
+}
+
+/* FORMS */
+.form-group input,
+.form-group textarea{
+  background:#eef8fb;
+  border-color:#93c5d6;
+  color:var(--text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  background:#f4fbfd;
+  border-color:var(--cyan);
+  box-shadow:0 0 0 3px rgba(18,191,211,.18);
+}
+
+.rating-star{
+  color:#8db6c4;
+}
+
+/* AI ASSISTANT PANEL (colors only) */
+.ai-panel{
+  background:#e2f3f8;
+  border-color:#9ccbdb;
+}
+
+.ai-messages{
+  background:#d6ecf3;
+}
+
+.ai-message{
+  background:#eef8fb;
+}
+
+.ai-message.user{
+  background:#bfe4ee;
+  color:#17465c;
+}
+
+.ai-form{
+  background:#e2f3f8;
+}
+
+.ai-form input{
+  background:#f0f9fc;
+  border-color:#93c5d6;
+}
+
+/* MOBILE / TABLET NAV PANEL */
+@media(max-width:1000px){
+  .nav{
+    background:#dff1f7;
+    border-color:#9ccbdb;
+    box-shadow:0 14px 30px rgba(7,91,120,.15);
+  }
+}
+
+/* =========================================================
+   HOLY BETEL BOLD HERO IMAGE
+   Photo shown at full strength, text sits on a glass panel
+   ========================================================= */
+
+.hero{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23,70,92,.14) 0%,
+      rgba(23,70,92,0) 45%,
+      rgba(23,70,92,.20) 100%
+    ),
+    url("images/hero.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+  padding:36px 38px;
+  background:linear-gradient(145deg,rgba(236,247,251,.86),rgba(214,238,246,.80));
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:8px;
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+  box-shadow:0 18px 50px rgba(7,91,120,.28);
+}
+
+@media(max-width:650px){
+  .hero-content{
+    padding:24px 20px;
+  }
+}
+
+/* =========================================================
+   HOLY BETEL TRANSPARENT HERO TEXT
+   No panel over the photo, soft glow keeps text readable
+   ========================================================= */
+
+.hero-content{
+  padding:0;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+}
+
+.hero h1{
+  text-shadow:
+    0 0 18px rgba(236,247,251,.95),
+    0 0 36px rgba(236,247,251,.75),
+    0 2px 4px rgba(236,247,251,.8);
+}
+
+.hero p{
+  color:#17465c;
+  font-weight:600;
+  text-shadow:
+    0 0 14px rgba(236,247,251,.95),
+    0 0 28px rgba(236,247,251,.75);
+}
+
+.hero-label{
+  text-shadow:
+    0 0 12px rgba(236,247,251,.95),
+    0 0 24px rgba(236,247,251,.75);
+}
+
+/* =========================================================
+   HOLY BETEL CUBE FACE IMAGE
+   Same dental image on every cube face, text stays on top
+   ========================================================= */
+
+.holy-betel-dedicated-cube-area .cube-face{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(23,70,92,.58),
+      rgba(8,126,165,.40)
+    ),
+    url("images/hero.jpg")
+    center/cover no-repeat !important;
+  color:#ffffff !important;
+  text-shadow:0 2px 10px rgba(7,40,56,.85),0 0 4px rgba(7,40,56,.7);
+  border:2px solid rgba(18,191,211,.55) !important;
+  box-shadow:
+    inset 0 0 30px rgba(18,191,211,.12),
+    0 18px 40px rgba(7,91,120,.30) !important;
+}
+
+.holy-betel-dedicated-cube-area .cube-face::before{
+  color:#12bfd3;
+  text-shadow:0 1px 6px rgba(7,40,56,.8);
+}
+
+/* =========================================================
+   HOLY BETEL ADMIN LINK
+   Small admin login link in the footer
+   ========================================================= */
+
+.admin-access{
+  max-width:1240px;
+  margin:0 auto;
+  padding:14px 5% 22px;
+  text-align:center;
+}
+
+.admin-access a{
+  display:inline-block;
+  padding:8px 18px;
+  border:1px solid rgba(18,191,211,.45);
+  border-radius:4px;
+  color:#8fe6f0;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.6px;
+  transition:.2s ease;
+}
+
+.admin-access a:hover{
+  background:#12bfd3;
+  border-color:#12bfd3;
+  color:#0f3446;
+}
+
+/* =========================================================
+   HOLY BETEL APPOINTMENT BUTTONS
+   Premium gradient pill buttons with glow and shine
+   ========================================================= */
+
+.btn-primary,
+.nav .appointment-link{
+  position:relative;
+  overflow:hidden;
+  border-radius:999px;
+  background:linear-gradient(135deg,#12bfd3 0%,#087ea5 55%,#075b78 100%);
+  color:#ffffff;
+  letter-spacing:.4px;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:
+    0 10px 26px rgba(8,126,165,.38),
+    inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+}
+
+.btn-primary::after,
+.nav .appointment-link::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:45%;
+  height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:skewX(-20deg);
+  transition:left .6s ease;
+  pointer-events:none;
+}
+
+.btn-primary:hover,
+.nav .appointment-link:hover{
+  background:linear-gradient(135deg,#2fd0e2 0%,#0a8db8 55%,#075b78 100%);
+  color:#ffffff;
+  transform:translateY(-2px);
+  box-shadow:
+    0 14px 32px rgba(18,191,211,.45),
+    inset 0 1px 0 rgba(255,255,255,.45);
+}
+
+.btn-primary:hover::after,
+.nav .appointment-link:hover::after{
+  left:130%;
+}
+
+.btn-outline{
+  border-radius:999px;
+}
+
+/* APPOINTMENT SECTION BUTTON (on dark navy) */
+.appointment .btn-primary{
+  background:linear-gradient(135deg,#ffffff 0%,#d4f5fa 100%);
+  color:#075b78;
+  border-color:rgba(255,255,255,.85);
+  box-shadow:
+    0 12px 30px rgba(18,191,211,.45),
+    0 0 0 4px rgba(18,191,211,.18);
+  animation:bsButtonGlow 2.8s ease-in-out infinite;
+}
+
+.appointment .btn-primary::after{
+  background:linear-gradient(100deg,transparent,rgba(18,191,211,.38),transparent);
+}
+
+.appointment .btn-primary:hover{
+  background:linear-gradient(135deg,#ffffff 0%,#bff0f7 100%);
+  color:#17465c;
+  box-shadow:
+    0 16px 36px rgba(18,191,211,.6),
+    0 0 0 5px rgba(18,191,211,.25);
+}
+
+@keyframes bsButtonGlow{
+  0%,100%{
+    box-shadow:0 12px 30px rgba(18,191,211,.40),0 0 0 4px rgba(18,191,211,.14);
+  }
+  50%{
+    box-shadow:0 14px 36px rgba(18,191,211,.65),0 0 0 8px rgba(18,191,211,.22);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .appointment .btn-primary{
+    animation:none;
+  }
+  .btn-primary::after,
+  .nav .appointment-link::after{
+    transition:none;
+  }
+}
+
+/* =========================================================
+   HOLY BETEL SERVICE IMAGE MATCH
+   Each service card shows its own picture
+   ========================================================= */
+
+.service:nth-child(1) .service-image{ background-image:url("images/general-dentistry.jpg"); }
+.service:nth-child(2) .service-image{ background-image:url("images/teeth-whitening.jpg"); }
+.service:nth-child(3) .service-image{ background-image:url("images/dental-implants.jpg"); }
+.service:nth-child(4) .service-image{ background-image:url("images/gum-care.jpg"); }
+.service:nth-child(5) .service-image{ background-image:url("images/cosmetic-dentistry.jpg"); }
+.service:nth-child(6) .service-image{ background-image:url("images/family-dentistry.jpg"); }
+
+/* =========================================================
+   HOLY BETEL GENERAL IMAGE
+   New picture for the General Dentistry card (1st card)
+   ========================================================= */
+
+.service:nth-child(1) .service-image{ background-image:url("images/general-new.jpg"); }
+
+/* =========================================================
+   HOLY BETEL FAMILY PHOTO
+   New picture for the Family Dentistry card (6th card)
+   ========================================================= */
+
+.service:nth-child(6) .service-image{ background-image:url("images/family-new.jpg"); }
+
+/* =========================================================
+   HOLY BETEL CIRCLE SWAP
+   Service cards swap places in a slow circle when scrolling stops
+   ========================================================= */
+
+.hb-idle .service,
+.hb-idle .doctor,
+.hb-idle .process-card,
+.hb-idle .contact-card,
+.hb-idle .trust-item,
+.hb-idle .care-point{
+  animation:none !important;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .services-grid.hb-circle > .service{
+    transition:translate 3.2s cubic-bezier(.45,.05,.55,.95), transform .2s ease, border-color .2s ease, opacity .7s ease !important;
+    will-change:translate;
+  }
+}
+
+/* =========================================================
+   HOLY BETEL MOBILE VIEW
+   Phone and tablet layout only, desktop is not affected
+   ========================================================= */
+
+html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+
+@media (max-width:900px){
+  .doctors-grid{ grid-template-columns:1fr; }
+  .contact-grid{ grid-template-columns:1fr; }
+}
+
+@media (max-width:650px){
+
+  .topbar-inner{ padding:0 4%; min-height:34px; justify-content:center; text-align:center; }
+  .topbar-left{ gap:8px; flex-wrap:wrap; justify-content:center; }
+  .topbar-left span{ font-size:11px; }
+  .topbar-left span:nth-child(2){ display:none; }
+
+  .header-inner{ min-height:68px; gap:12px; }
+  .nav{ top:68px; }
+  .logo{ gap:9px; }
+  .logo-mark{ width:38px; height:38px; font-size:19px; }
+  .logo-text{ font-size:17px; line-height:1.15; }
+  .logo-text span{ font-size:9.5px; }
+  .menu-btn{ font-size:30px; padding:6px 10px; }
+
+  section{ padding:58px 5%; }
+
+  .hero{
+    min-height:0;
+    background:
+      linear-gradient(180deg, rgba(226,243,249,.84) 0%, rgba(222,241,248,.66) 100%),
+      url("images/hero.jpg") center/cover no-repeat;
+  }
+  .hero-inner{ padding:56px 5% 40px; }
+  .hero-label{ font-size:11px; line-height:1.5; letter-spacing:1.2px; }
+  .hero h1{ font-size:clamp(34px,10vw,44px); letter-spacing:-1px; }
+  .hero p{ font-size:15.5px; line-height:1.7; }
+  .hero-actions{ flex-direction:column; align-items:stretch; }
+  .hero-actions .btn{ width:100%; }
+
+  .trust-inner{ grid-template-columns:1fr; }
+  .trust-item,
+  .trust-item:first-child{ min-height:84px; padding:16px 12px; border-left:0; border-right:0; }
+
+  .section-title{ font-size:30px; letter-spacing:-1px; }
+  .welcome-content h2,
+  .care-content h2{ font-size:32px; letter-spacing:-1px; }
+  .welcome-grid,
+  .care-grid{ gap:32px; }
+  .welcome-image,
+  .care-image{ min-height:260px; }
+
+  .services-header{ flex-direction:column; align-items:flex-start; gap:14px; margin-bottom:28px; }
+  .services-grid{ grid-template-columns:1fr; }
+  .service-image{ height:200px; }
+
+  .doctor{ grid-template-columns:1fr; }
+  .doctor-photo{ min-height:280px; }
+  .doctor-info{ padding:22px; }
+
+  .care-points{ grid-template-columns:1fr; }
+
+  .review-grid{ grid-template-columns:1fr; }
+  .review-form-card{ padding:24px 18px; margin-top:38px; }
+  .rating-star{ width:44px; height:44px; }
+
+  .process-grid{ grid-template-columns:1fr; }
+
+  .appointment h2{ font-size:32px; }
+
+  .footer-main{ grid-template-columns:1fr; gap:28px; padding:44px 6% 28px; }
+  .footer-bottom{ flex-direction:column; text-align:center; gap:8px; }
+
+  .ai-button{ width:54px; height:54px; right:14px; bottom:calc(14px + env(safe-area-inset-bottom,0px)); }
+  .ai-panel{ right:10px; bottom:80px; width:calc(100vw - 20px); height:min(72vh,500px); }
+
+  html .hb-lang{ left:12px; bottom:calc(14px + env(safe-area-inset-bottom,0px)); }
+  html .hb-lang button{ padding:10px 13px; font-size:12px; }
+
+  .bs-scroll-left{ transform:translateX(-36px); }
+  .bs-scroll-right{ transform:translateX(36px); }
+  .bs-scroll-image{ transform:translateX(40px) scale(.97); }
+}
 </style>
 </head>
 
@@ -3800,6 +4394,8 @@ footer{
 
   </div>
 
+
+<div class="admin-access"><a href="admin/login.html">Admin Login</a></div>
 </footer>
 
 
@@ -5188,7 +5784,7 @@ if(aiForm){
   document.head.appendChild(style);
 
 })();
-/* HOLY BETEL - CORRECTED 3D DENTAL CUBE */
+/* HOLY BETEL - PERFORMANCE OPTIMIZED 3D DENTAL CUBE */
 
 (function(){
 
@@ -5203,32 +5799,235 @@ if(aiForm){
   let rotationX = -12;
   let rotationY = 0;
 
-  let lastTime = performance.now();
+  let lastTime = 0;
+  let animationFrame = null;
+  let isVisible = true;
+  let isPageVisible = !document.hidden;
+
+  /*
+    Only animate when the cube is actually visible.
+  */
+
+  function shouldAnimate(){
+
+    return isVisible && isPageVisible;
+
+  }
 
   function animateCube(currentTime){
 
-    const delta = currentTime - lastTime;
+    if(!shouldAnimate()){
+
+      animationFrame = null;
+      return;
+
+    }
+
+    if(!lastTime){
+      lastTime = currentTime;
+    }
+
+    const delta =
+      Math.min(currentTime - lastTime, 32);
+
     lastTime = currentTime;
 
     rotationY += delta * 0.045;
 
-    rotationX = -12 + Math.sin(currentTime * 0.001) * 10;
+    rotationX =
+      -12 +
+      Math.sin(currentTime * 0.001) * 10;
 
     cube.style.transform =
-      "rotateX(" + rotationX + "deg) " +
-      "rotateY(" + rotationY + "deg)";
+      "rotateX(" +
+      rotationX +
+      "deg) rotateY(" +
+      rotationY +
+      "deg)";
 
-    requestAnimationFrame(animateCube);
+    animationFrame =
+      requestAnimationFrame(animateCube);
+
   }
 
-  requestAnimationFrame(animateCube);
+  function startAnimation(){
+
+    if(
+      animationFrame === null &&
+      shouldAnimate()
+    ){
+
+      lastTime = performance.now();
+
+      animationFrame =
+        requestAnimationFrame(animateCube);
+
+    }
+
+  }
+
+  function stopAnimation(){
+
+    if(animationFrame !== null){
+
+      cancelAnimationFrame(animationFrame);
+
+      animationFrame = null;
+
+    }
+
+  }
+
+  /*
+    Detect whether the cube is inside the viewport.
+  */
+
+  if("IntersectionObserver" in window){
+
+    const observer =
+      new IntersectionObserver(
+        function(entries){
+
+          const entry = entries[0];
+
+          isVisible =
+            entry.isIntersecting;
+
+          if(isVisible){
+
+            startAnimation();
+
+          }
+          else{
+
+            stopAnimation();
+
+          }
+
+        },
+        {
+          threshold:0.05
+        }
+      );
+
+    observer.observe(cube);
+
+  }
+
+  else{
+
+    startAnimation();
+
+  }
+
+  /*
+    Stop animation when browser tab is hidden.
+  */
+
+  document.addEventListener(
+    "visibilitychange",
+    function(){
+
+      isPageVisible =
+        !document.hidden;
+
+      if(isPageVisible){
+
+        startAnimation();
+
+      }
+      else{
+
+        stopAnimation();
+
+      }
+
+    }
+  );
 
 })();
 
 </script>
 
+<script>
+/* HOLY BETEL CIRCLE SWAP */
+(function () {
+  try {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { return; }
+    var grid = document.querySelector(".services-grid");
+    if (!grid) { return; }
+    var cards = Array.prototype.filter.call(grid.children, function (c) { return c.classList.contains("service"); });
+    if (cards.length !== 6) { return; }
+
+    var step = 0;
+    var timer = null;
+
+    function layout() {
+      var lefts = [];
+      cards.forEach(function (c) { if (lefts.indexOf(c.offsetLeft) === -1) { lefts.push(c.offsetLeft); } });
+      var cols = lefts.length;
+      return { cols: cols, rows: Math.ceil(cards.length / cols) };
+    }
+
+    function ring(cols, rows) {
+      var r; var c; var out = [];
+      for (c = 0; c < cols; c++) { out.push(c); }
+      for (r = 1; r < rows; r++) { out.push(r * cols + cols - 1); }
+      for (c = cols - 2; c >= 0 && rows > 1; c--) { out.push((rows - 1) * cols + c); }
+      for (r = rows - 2; r >= 1 && cols > 1; r--) { out.push(r * cols); }
+      return out;
+    }
+
+    function clearAll() {
+      cards.forEach(function (c) { c.style.translate = ""; });
+    }
+
+    function apply() {
+      var l = layout();
+      if (l.cols * l.rows !== cards.length) { clearAll(); return; }
+      var order = ring(l.cols, l.rows);
+      var n = order.length;
+      if (n !== cards.length) { clearAll(); return; }
+      for (var i = 0; i < n; i++) {
+        var from = cards[order[i]];
+        var to = cards[order[(i + step) % n]];
+        var dx = to.offsetLeft - from.offsetLeft;
+        var dy = to.offsetTop - from.offsetTop;
+        from.style.translate = dx + "px " + dy + "px";
+      }
+    }
+
+    function inView() {
+      var r = grid.getBoundingClientRect();
+      return r.top < window.innerHeight * 0.85 && r.bottom > window.innerHeight * 0.15;
+    }
+
+    function onIdle() {
+      if (!grid.classList.contains("bs-scroll-visible")) { return; }
+      if (!inView()) { return; }
+      var l = layout();
+      /* single column allowed */
+      step = (step + 1) % cards.length;
+      grid.classList.add("hb-circle");
+      apply();
+    }
+
+    window.addEventListener("scroll", function () {
+      clearTimeout(timer);
+      timer = setTimeout(onIdle, 700);
+    }, { passive: true });
+
+    window.addEventListener("resize", function () {
+      step = 0;
+      clearAll();
+    }, { passive: true });
+  } catch (err) { }
+})();
+</script>
+<script src="language-switch.js" charset="utf-8"></script>
 </body>
 </html>
+
 
 
 
