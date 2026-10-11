@@ -3441,6 +3441,61 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 .contact-card:nth-child(6) .contact-icon,
 #tiktok-card .contact-icon{background:linear-gradient(135deg,#db2777,#f472b6)!important;}
 </style>
+
+<style id="holy-betel-doctors-css">
+/* Both doctor cards always visible */
+.doctors-grid > .doctor,
+.doctors-grid.bs-stagger > *{
+  opacity:1 !important;
+  transform:none !important;
+  visibility:visible !important;
+}
+
+/* Photo area: fixed height, picture fills it, soft color behind */
+.doctor-photo{
+  min-height:340px !important;
+  background-color:#a8dfec !important;
+  background-size:cover !important;
+  background-position:center top !important;
+  background-repeat:no-repeat !important;
+}
+
+/* Colorful doctor cards */
+.doctor{
+  border-radius:20px !important;
+  overflow:hidden !important;
+  border:1px solid transparent !important;
+  border-top-width:6px !important;
+}
+.doctor-info h3{font-weight:800 !important;}
+.doctor-info p{color:#2f4a58 !important;}
+.doctor-link{
+  display:inline-block !important;
+  padding:10px 22px !important;
+  border-radius:999px !important;
+  color:#ffffff !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+}
+
+.doctors-grid > .doctor:nth-child(1){
+  background:linear-gradient(160deg,#e3f0fc 0%,#bfdcf5 100%) !important;
+  border-color:#2f8fe0 !important;
+  box-shadow:0 16px 38px rgba(30,110,190,.28) !important;
+}
+.doctors-grid > .doctor:nth-child(1) .role{color:#1e6ebe !important;}
+.doctors-grid > .doctor:nth-child(1) h3{color:#0f4c81 !important;}
+.doctors-grid > .doctor:nth-child(1) .doctor-link{background:linear-gradient(135deg,#1e6ebe,#3aa0f0) !important;}
+
+.doctors-grid > .doctor:nth-child(2){
+  background:linear-gradient(160deg,#eee6fd 0%,#d4c3f8 100%) !important;
+  border-color:#8b5cf6 !important;
+  box-shadow:0 16px 38px rgba(139,92,246,.28) !important;
+}
+.doctors-grid > .doctor:nth-child(2) .role{color:#6d3fd6 !important;}
+.doctors-grid > .doctor:nth-child(2) h3{color:#4c2a9a !important;}
+.doctors-grid > .doctor:nth-child(2) .doctor-link{background:linear-gradient(135deg,#6d3fd6,#9f7bf7) !important;}
+</style>
 </head>
 
 <body>
