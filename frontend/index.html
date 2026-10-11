@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -3080,6 +3080,194 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
   .bs-scroll-image{ transform:translateX(40px) scale(.97); }
 }
 </style>
+
+<style id="clinic-gallery-css">
+#clinic-gallery{padding:70px 20px;background:linear-gradient(180deg,#eaf6fa 0%,#d9eff5 100%);}
+#clinic-gallery .cg-wrap{max-width:980px;margin:0 auto;}
+#clinic-gallery .cg-title{text-align:center;color:#17465C;font-size:clamp(26px,4vw,38px);margin:0 0 8px;font-weight:700;}
+#clinic-gallery .cg-sub{text-align:center;color:#075B78;margin:0 0 28px;font-size:16px;}
+#clinic-gallery .cg-viewport{position:relative;overflow:hidden;border-radius:22px;box-shadow:0 18px 45px rgba(23,70,92,.28);background:#17465C;touch-action:pan-y;}
+#clinic-gallery .cg-track{display:flex;transition:transform .6s ease;will-change:transform;}
+#clinic-gallery .cg-slide{position:relative;min-width:100%;height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+#clinic-gallery .cg-bg{position:absolute;inset:-20px;background-size:cover;background-position:center;filter:blur(22px) brightness(.7);}
+#clinic-gallery .cg-slide img{position:relative;max-width:100%;max-height:100%;object-fit:contain;display:block;z-index:1;}
+#clinic-gallery .cg-caption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:34px 20px 16px;color:#fff;font-size:18px;font-weight:600;text-align:center;background:linear-gradient(0deg,rgba(23,70,92,.85),rgba(23,70,92,0));}
+#clinic-gallery .cg-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border:none;border-radius:50%;cursor:pointer;font-size:22px;line-height:1;color:#fff;background:rgba(8,126,165,.85);transition:background .2s,transform .2s;}
+#clinic-gallery .cg-btn:hover{background:#12BFD3;transform:translateY(-50%) scale(1.08);}
+#clinic-gallery .cg-prev{left:14px;}
+#clinic-gallery .cg-next{right:14px;}
+#clinic-gallery .cg-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;}
+#clinic-gallery .cg-dot{width:11px;height:11px;border:none;border-radius:50%;padding:0;cursor:pointer;background:#087EA5;opacity:.35;transition:all .3s;}
+#clinic-gallery .cg-dot.active{opacity:1;width:30px;border-radius:8px;background:#12BFD3;}
+@media(max-width:768px){
+  #clinic-gallery{padding:50px 14px;}
+  #clinic-gallery .cg-slide{height:360px;}
+  #clinic-gallery .cg-btn{width:38px;height:38px;font-size:18px;}
+  #clinic-gallery .cg-caption{font-size:15px;}
+}
+</style>
+
+<style id="holy-betel-fixes-css">
+/* ---- Contact cards: visible, attractive links ---- */
+.contact-card a[href^="tel:"]{color:#087EA5!important;font-weight:700!important;font-size:15px!important;text-decoration:none!important;}
+.contact-card a[href*="tt.site"],
+.contact-card a[href*="wa.me"],
+.contact-card a[href="booking.html"]{
+  display:inline-block!important;margin-top:6px!important;padding:10px 20px!important;border-radius:999px!important;
+  background:linear-gradient(135deg,#087EA5,#12BFD3)!important;color:#fff!important;font-weight:700!important;
+  font-size:13px!important;text-decoration:none!important;box-shadow:0 8px 20px rgba(8,126,165,.30)!important;
+  transition:transform .2s ease,box-shadow .2s ease!important;
+}
+.contact-card a[href*="tt.site"]:hover,
+.contact-card a[href*="wa.me"]:hover,
+.contact-card a[href="booking.html"]:hover{transform:translateY(-2px)!important;box-shadow:0 12px 26px rgba(8,126,165,.42)!important;}
+.contact-card h3{color:#17465C!important;}
+.contact-card p{color:#3f6071!important;}
+
+/* ---- Gum Care card text ---- */
+.service:nth-child(4) .service-content h3{color:#17465C!important;}
+.service:nth-child(4) .service-content p{color:#3f6071!important;}
+.service:nth-child(4) .service-link{color:#087EA5!important;font-weight:700!important;}
+
+/* ---- Book Online / process cards ---- */
+.process-card .process-number{color:#087EA5!important;font-weight:700!important;}
+.process-card h3{color:#17465C!important;}
+.process-card p{color:#3f6071!important;}
+
+/* ---- Reviews area ---- */
+.reviews-summary strong{color:#17465C!important;}
+.reviews-summary span{color:#3f6071!important;}
+.review strong{color:#17465C!important;}
+.review p{color:#3f6071!important;}
+.reviews-empty strong{color:#17465C!important;}
+.reviews-empty span{color:#3f6071!important;}
+.reviews-loading{color:#3f6071!important;}
+
+/* ---- Leave a review form ---- */
+.review-form-card{
+  background:linear-gradient(145deg,#ffffff 0%,#e3f5f9 100%)!important;
+  border:1px solid #9ccbdb!important;border-top:5px solid #12BFD3!important;
+  border-radius:22px!important;box-shadow:0 22px 50px rgba(7,91,120,.18)!important;
+}
+.review-form-header h3{color:#17465C!important;font-size:28px!important;}
+.review-form-header p{color:#3f6071!important;}
+.review-form-card label{color:#17465C!important;font-weight:600!important;}
+.review-form-card input:not([type="hidden"]),
+.review-form-card textarea,
+.review-form-card select{
+  background:#fff!important;color:#17465C!important;border:1.5px solid #9ccbdb!important;
+  border-radius:12px!important;padding:13px 15px!important;font-size:14px!important;
+  transition:border-color .2s ease,box-shadow .2s ease!important;
+}
+.review-form-card input:not([type="hidden"]):focus,
+.review-form-card textarea:focus,
+.review-form-card select:focus{
+  outline:none!important;border-color:#12BFD3!important;box-shadow:0 0 0 4px rgba(18,191,211,.22)!important;
+}
+.review-form-card ::placeholder{color:#7fa3b3!important;}
+.review-submit{
+  background:linear-gradient(135deg,#087EA5,#12BFD3)!important;color:#fff!important;border:none!important;
+  border-radius:999px!important;padding:14px 38px!important;font-weight:700!important;cursor:pointer!important;
+  box-shadow:0 10px 24px rgba(8,126,165,.35)!important;transition:transform .2s ease,box-shadow .2s ease!important;
+}
+.review-submit:hover{transform:translateY(-2px)!important;box-shadow:0 14px 30px rgba(8,126,165,.45)!important;}
+.review-submit:disabled{opacity:.6!important;cursor:not-allowed!important;transform:none!important;}
+.review-message.success{color:#0b7a4b!important;}
+.review-message.error{color:#b42318!important;}
+</style>
+
+<style id="holy-betel-contact-visible-css">
+#contact,
+#contact .contact-card{opacity:1 !important;transform:none !important;visibility:visible !important;}
+</style>
+
+<style id="holy-betel-no-shake-css">
+/* Text no longer slides left and right */
+.hb-idle-motion{animation:none !important;}
+
+/* Photos only: slow, tiny zoom */
+@media (prefers-reduced-motion:no-preference){
+  .service-image{animation:hbPhotoBreath 9s ease-in-out infinite alternate;will-change:transform;}
+}
+@keyframes hbPhotoBreath{
+  0%{transform:scale(1);}
+  100%{transform:scale(1.05);}
+}
+</style>
+
+<style id="holy-betel-reviews-css">
+/* ---- Section background ---- */
+.reviews{
+  background:
+    radial-gradient(circle at 10% 15%,rgba(18,191,211,.30),transparent 45%),
+    radial-gradient(circle at 90% 85%,rgba(8,126,165,.28),transparent 45%),
+    linear-gradient(135deg,#d6f1f8 0%,#bfe6f1 50%,#a9dbea 100%)!important;
+}
+
+/* ---- Rating summary panel ---- */
+.reviews-summary{
+  background:linear-gradient(135deg,#17465C 0%,#075B78 50%,#087EA5 100%)!important;
+  border:none!important;
+  border-radius:22px!important;
+  box-shadow:0 20px 48px rgba(23,70,92,.35)!important;
+}
+.reviews-summary,
+.reviews-summary *{color:#ffffff!important;}
+.reviews-summary strong{color:#ffffff!important;text-shadow:0 2px 10px rgba(0,0,0,.25);}
+.reviews-summary span{color:#c8f1f7!important;}
+#reviewsAverageStars{color:#ffd54a!important;text-shadow:0 2px 10px rgba(255,170,0,.45);}
+
+/* ---- Review cards ---- */
+.review{
+  background:linear-gradient(160deg,#ffffff 0%,#e8f7fb 100%)!important;
+  border:1px solid #9ccbdb!important;
+  border-left:7px solid #12BFD3!important;
+  border-radius:18px!important;
+  box-shadow:0 14px 34px rgba(7,91,120,.16)!important;
+  position:relative!important;
+  transition:transform .25s ease,box-shadow .25s ease!important;
+}
+.review:nth-child(4n+2){border-left-color:#087EA5!important;background:linear-gradient(160deg,#ffffff 0%,#e3f0fb 100%)!important;}
+.review:nth-child(4n+3){border-left-color:#14b8a6!important;background:linear-gradient(160deg,#ffffff 0%,#e2f8f3 100%)!important;}
+.review:nth-child(4n+4){border-left-color:#f5a623!important;background:linear-gradient(160deg,#ffffff 0%,#fff4de 100%)!important;}
+.review:hover{transform:translateY(-6px)!important;box-shadow:0 22px 44px rgba(7,91,120,.26)!important;}
+.review::before{
+  content:"\201C";
+  position:absolute;top:6px;right:18px;
+  font-size:64px;line-height:1;font-family:Georgia,serif;
+  color:#12BFD3;opacity:.35;pointer-events:none;
+}
+.review strong{color:#17465C!important;font-weight:800!important;}
+.review p{color:#2f5668!important;}
+.review [class*="star"]{color:#f5a623!important;text-shadow:0 1px 6px rgba(245,166,35,.45);}
+
+/* ---- Loading and empty states ---- */
+.reviews-loading,
+.reviews-empty{
+  background:linear-gradient(135deg,#e0f6fa 0%,#c8ecf5 100%)!important;
+  border:2px dashed #12BFD3!important;
+  border-radius:18px!important;
+  color:#075B78!important;
+}
+.reviews-empty strong{color:#17465C!important;}
+.reviews-empty span{color:#2f5668!important;}
+
+/* ---- Leave a review form ---- */
+.review-form-card{
+  background:linear-gradient(150deg,#d3f0f7 0%,#a8dfec 55%,#86d0e4 100%)!important;
+  border:1px solid #6fc3da!important;
+  border-top:6px solid #087EA5!important;
+  border-radius:24px!important;
+  box-shadow:0 24px 56px rgba(7,91,120,.28)!important;
+}
+.review-form-header h3{color:#0f3446!important;}
+.review-form-header p{color:#17465C!important;}
+.review-form-card label{color:#0f3446!important;}
+.review-form-card input:not([type="hidden"]),
+.review-form-card textarea,
+.review-form-card select{border:1.5px solid #6fc3da!important;}
+.review-submit{background:linear-gradient(135deg,#17465C,#087EA5 55%,#12BFD3)!important;}
+</style>
 </head>
 
 <body>
@@ -3099,7 +3287,7 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
     </div>
 
     <div class="topbar-right">
-      <a href="tel:+251000000000">☎ Call the Clinic</a>
+      <a href="tel:+251911956554">☎ Call the Clinic</a>
       <a href="#contact">Clinic Information</a>
     </div>
 
@@ -3118,7 +3306,7 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
     <a href="#home" class="logo">
 
-      <div class="logo-mark">✦</div>
+      <div class="logo-mark">&#129463;</div>
 
       <div class="logo-text">
         Holy Betel
@@ -3202,6 +3390,27 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
     
 </section>
+<section id="clinic-gallery">
+  <div class="cg-wrap">
+    <h2 class="cg-title">Take a Look Inside Our Clinic</h2>
+    <p class="cg-sub">Slide through to see our reception, waiting area and treatment rooms</p>
+    <div class="cg-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Clinic photo gallery">
+      <div class="cg-track">
+<div class="cg-slide" role="group" aria-label="Photo 1 of 7"><div class="cg-bg" style="background-image:url(images/clinic/clinic-1.png)"></div><img src="images/clinic/clinic-1.png" alt="Welcome to our clinic" loading="eager"><div class="cg-caption">Welcome to our clinic</div></div>
+<div class="cg-slide" role="group" aria-label="Photo 2 of 7"><div class="cg-bg" style="background-image:url(images/clinic/clinic-2.png)"></div><img src="images/clinic/clinic-2.png" alt="Friendly reception" loading="lazy"><div class="cg-caption">Friendly reception</div></div>
+<div class="cg-slide" role="group" aria-label="Photo 3 of 7"><div class="cg-bg" style="background-image:url(images/clinic/clinic-3.png)"></div><img src="images/clinic/clinic-3.png" alt="Comfortable waiting area" loading="lazy"><div class="cg-caption">Comfortable waiting area</div></div>
+<div class="cg-slide" role="group" aria-label="Photo 4 of 7"><div class="cg-bg" style="background-image:url(images/clinic/clinic-4.png)"></div><img src="images/clinic/clinic-4.png" alt="Relax before your visit" loading="lazy"><div class="cg-caption">Relax before your visit</div></div>
+<div class="cg-slide" role="group" aria-label="Photo 5 of 7"><div class="cg-bg" style="background-image:url(images/clinic/clinic-5.png)"></div><img src="images/clinic/clinic-5.png" alt="Modern treatment room" loading="lazy"><div class="cg-caption">Modern treatment room</div></div>
+<div class="cg-slide" role="group" aria-label="Photo 6 of 7"><div class="cg-bg" style="background-image:url(images/clinic/clinic-6.png)"></div><img src="images/clinic/clinic-6.png" alt="Gentle, professional care" loading="lazy"><div class="cg-caption">Gentle, professional care</div></div>
+<div class="cg-slide" role="group" aria-label="Photo 7 of 7"><div class="cg-bg" style="background-image:url(images/clinic/clinic-7.png)"></div><img src="images/clinic/clinic-7.png" alt="Clean and well-equipped" loading="lazy"><div class="cg-caption">Clean and well-equipped</div></div>
+      </div>
+      <button class="cg-btn cg-prev" aria-label="Previous photo">&#10094;</button>
+      <button class="cg-btn cg-next" aria-label="Next photo">&#10095;</button>
+    </div>
+    <div class="cg-dots"><button class="cg-dot active" aria-label="Go to photo 1"></button><button class="cg-dot" aria-label="Go to photo 2"></button><button class="cg-dot" aria-label="Go to photo 3"></button><button class="cg-dot" aria-label="Go to photo 4"></button><button class="cg-dot" aria-label="Go to photo 5"></button><button class="cg-dot" aria-label="Go to photo 6"></button><button class="cg-dot" aria-label="Go to photo 7"></button></div>
+  </div>
+</section>
+
 
 
 <!-- =======================================================
@@ -3214,7 +3423,7 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
     <div class="trust-item">
 
-      <div class="trust-icon">✓</div>
+      <div class="trust-icon">&#10003;</div>
 
       <div>
         <strong>Experienced Care</strong>
@@ -3225,7 +3434,7 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
     <div class="trust-item">
 
-      <div class="trust-icon">✦</div>
+      <div class="trust-icon">&#10003;</div>
 
       <div>
         <strong>Modern Dentistry</strong>
@@ -3236,7 +3445,7 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
     <div class="trust-item">
 
-      <div class="trust-icon">♡</div>
+      <div class="trust-icon">&#10003;</div>
 
       <div>
         <strong>Patient Focused</strong>
@@ -3247,7 +3456,7 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
     <div class="trust-item">
 
-      <div class="trust-icon">+</div>
+      <div class="trust-icon">&#10003;</div>
 
       <div>
         <strong>Complete Care</strong>
@@ -4181,78 +4390,127 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
      CONTACT
 ======================================================= -->
 
+
+
 <section class="contact auto-scroll" id="contact">
 
   <div class="section-inner">
 
-    <div style="text-align:center;">
+<div style="text-align:center;">
 
-      <div class="section-label">
-        CONTACT HOLY BETEL
-      </div>
+  <div class="section-label">CONTACT HOLY BETEL</div>
 
-      <h2 class="section-title">
-        We are here to help.
-      </h2>
+  <h2 class="section-title">We are here to help.</h2>
 
-      <p class="section-text" style="margin:auto;">
-        Have a question about our services or your appointment?
-        Contact the Holy Betel team.
-      </p>
+  <p class="section-text" style="margin:auto;">
+    Visit Holy Betel Speciality Dental Clinic Center in Hawassa.
+    Contact our team for appointments, services and support.
+  </p>
+
+</div>
+
+<div class="contact-grid">
+
+  <div class="contact-card">
+
+    <div class="contact-icon">&#9673;</div>
+
+    <h3>Call the Clinic</h3>
+
+    <p>
+      Contact us directly:<br>
+      <a href="tel:+251911956554">0911956554</a><br>
+      <a href="tel:+251912098182">0912098182</a>
+    </p>
+
+  </div>
+
+  <div class="contact-card">
+
+    <div class="contact-icon">&#9673;</div>
+
+    <h3>Our Location</h3>
+
+    <p>
+      Menaherya, Misirak Sub City,<br>
+      Hawassa City Administration,<br>
+      Sidama Region, Ethiopia.
+    </p>
+
+  </div>
+
+  <div class="contact-card">
+
+    <div class="contact-icon">&#9673;</div>
+
+    <h3>Opening Hours</h3>
+
+    <p>
+      Monday&ndash;Saturday:<br>
+      8:00 AM &ndash; 8:30 PM<br><br>
+      Sunday:<br>
+      9:00 AM &ndash; 5:00 PM
+    </p>
+
+  </div>
+
+  <div class="contact-card">
+
+    <div class="contact-icon">&#9673;</div>
+
+    <h3>WhatsApp</h3>
+
+    <p>
+      Contact the clinic through WhatsApp.
+      <br><br>
+      <a href="https://wa.me/251911956554"
+         target="_blank" rel="noopener noreferrer">
+        Chat with the Clinic
+      </a>
+    </p>
+
+  </div>
+
+  <div class="contact-card">
+
+    <div class="contact-icon">&#9673;</div>
+
+    <h3>Online Appointment</h3>
+
+    <p>
+      Request your preferred dental service and
+      appointment time through our booking system.
+      <br><br>
+      <a href="booking.html">Book an Appointment</a>
+    </p>
+
+  </div>
+
+  <div class="contact-card" id="tiktok-card" style="grid-column:1 / -1;text-align:center;opacity:1;visibility:visible;">
+
+    <div class="contact-icon" style="margin-left:auto;margin-right:auto;">&#9673;</div>
+
+    <h3>Follow Us on TikTok</h3>
+
+    <p>Watch our latest videos and follow the official Holy Betel pages.</p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:16px;">
+
+      <a href="https://www.tt.site/t/ZSbcAe6dA/" target="_blank" rel="noopener noreferrer"
+         style="display:inline-block;padding:13px 28px;border-radius:999px;background:linear-gradient(135deg,#087EA5,#12BFD3);color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 8px 20px rgba(8,126,165,.30);">
+        &#9654; Holy Betel Dental Clinic TikTok
+      </a>
+
+      <a href="https://www.tt.site/t/ZSbcAjj3b/" target="_blank" rel="noopener noreferrer"
+         style="display:inline-block;padding:13px 28px;border-radius:999px;background:linear-gradient(135deg,#17465C,#075B78);color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 8px 20px rgba(23,70,92,.30);">
+        &#9654; Owner Meskerem Abera TikTok
+      </a>
 
     </div>
 
+  </div>
 
-    <div class="contact-grid">
-
-      <div class="contact-card">
-
-        <div class="contact-icon">
-          ☎
-        </div>
-
-        <h3>Call the Clinic</h3>
-
-        <p>
-          Speak with the clinic team about appointments,
-          services and general questions.
-        </p>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="contact-icon">
-          ◉
-        </div>
-
-        <h3>WhatsApp</h3>
-
-        <p>
-          Contact Holy Betel through WhatsApp for
-          convenient communication and support.
-        </p>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="contact-icon">
-          ✉
-        </div>
-
-        <h3>Online Appointment</h3>
-
-        <p>
-          Request your preferred service and appointment
-          time through our online booking system.
-        </p>
-
-      </div>
-
-    </div>
+</div>
 
   </div>
 
@@ -4321,6 +4579,8 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
      FOOTER
 ======================================================= -->
 
+
+
 <footer>
 
   <div class="footer-main">
@@ -4329,7 +4589,7 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
       <a href="#home" class="logo">
 
-        <div class="logo-mark">✦</div>
+        <div class="logo-mark">&#129463;</div>
 
         <div class="logo-text">
           Holy Betel
@@ -4385,11 +4645,11 @@ html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
   <div class="footer-bottom">
 
     <span>
-      © 2026 Holy Betel Speciality Dental Clinic Center. All rights reserved.
+      &copy; 2026 Holy Betel Speciality Dental Clinic Center. All rights reserved.
     </span>
 
     <span>
-      Professional dental care.
+      Clinic Owner: Meskerem Abera | Menaherya, Hawassa, Sidama Region, Ethiopia.
     </span>
 
   </div>
@@ -6025,6 +6285,52 @@ if(aiForm){
 })();
 </script>
 <script src="language-switch.js" charset="utf-8"></script>
+
+<script id="clinic-gallery-js">
+(function(){
+  var root=document.getElementById('clinic-gallery');
+  if(!root)return;
+  var viewport=root.querySelector('.cg-viewport');
+  var track=root.querySelector('.cg-track');
+  var dots=root.querySelectorAll('.cg-dot');
+  var total=dots.length;
+  var index=0,timer=null,startX=0,deltaX=0,dragging=false;
+
+  function go(i){
+    index=(i+total)%total;
+    track.style.transform='translateX(-'+(index*100)+'%)';
+    for(var d=0;d<dots.length;d++){dots[d].classList.toggle('active',d===index);}
+  }
+  function start(){stop();timer=setInterval(function(){go(index+1);},4500);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+
+  root.querySelector('.cg-prev').addEventListener('click',function(){go(index-1);start();});
+  root.querySelector('.cg-next').addEventListener('click',function(){go(index+1);start();});
+  for(var k=0;k<dots.length;k++){
+    (function(n){dots[n].addEventListener('click',function(){go(n);start();});})(k);
+  }
+
+  viewport.addEventListener('mouseenter',stop);
+  viewport.addEventListener('mouseleave',start);
+  viewport.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'){go(index-1);start();}
+    if(e.key==='ArrowRight'){go(index+1);start();}
+  });
+
+  viewport.addEventListener('touchstart',function(e){
+    startX=e.touches[0].clientX;deltaX=0;dragging=true;stop();
+  },{passive:true});
+  viewport.addEventListener('touchmove',function(e){
+    if(dragging){deltaX=e.touches[0].clientX-startX;}
+  },{passive:true});
+  viewport.addEventListener('touchend',function(){
+    if(dragging&&Math.abs(deltaX)>50){go(deltaX<0?index+1:index-1);}
+    dragging=false;start();
+  });
+
+  go(0);start();
+})();
+</script>
 </body>
 </html>
 
